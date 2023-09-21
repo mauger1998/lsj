@@ -3,7 +3,7 @@
 .job-pool-back-bg{position: absolute; top: 20px; left: 0; width: 100%; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center;}
 .job-pool-card-wrap{gap: 2.1rem 1.125rem; width: 100%; margin-top: 8.375rem;}
 .job-pool-card{width: 100%; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: column; align-items: center; padding: 2.125rem 3rem 3rem; border: 1px solid var(--black); border-radius: 4px; background-color: var(--second-white);}
-.job-pool-card figure{max-width: 147px; margin-bottom: 2.375rem;}
+.job-pool-card figure{max-width: 147px; margin-bottom: 2.375rem; border-radius: 100%; overflow: hidden; max-height: 147px;}
 .job-pool-card h4{margin-bottom: 1rem; font-size: 24px; line-height: 1.1; font-family: var(--Montserrat); font-weight: 600;}
 .job-pool-card h5{margin-bottom: 1.75rem; font-family: var(--Montserrat); font-weight: 400; line-height: 1.1}
 .job-pool-inner h2{z-index: 1}
@@ -21,9 +21,13 @@
 
 @media only screen  and (max-width: 500px) {
 
+    .job-pool-back-bg { top: 40px; padding: 0 1rem;}
+    .job-pool-inner h2 img { position: absolute; margin: 3px 0 0 5px; width: 34px; }
+    
     .job-pool-wrap .wrapper { padding-inline: 1.75rem; }
-    .job-pool-card-wrap{grid-template-columns: 1fr;}
+    .job-pool-card-wrap{grid-template-columns: 1fr; margin-top: 4rem;}
     .job-pool-card {padding: 2.125rem 2rem 3rem;}
+    
 
 }
 @media only screen and (min-width: 501px) and (max-width: 700px) {

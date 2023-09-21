@@ -127,6 +127,8 @@
     .job-seekers-hero .secondery-hero-inner h2 img{ width: 32px; margin-top: 4px; }
     .secondery-hero-wrap:after { height: 82px;}
     .secondery-hero-inner figure img { max-width: 342px;}
+    .job-seekers-hero.secondery-hero-wrap .wrapper { padding-top: 5rem; padding-bottom: 8rem; }
+    .job-seekers-hero .secondery-hero-back-bg figure { padding: 0 1rem 1rem; }
 
     .why-with-us-card-wrap{margin-top: 4rem; grid-template-columns: 1fr;}
 
@@ -149,6 +151,7 @@
     .found-labourers-card-wrap{grid-template-columns: 1fr; padding-right: .5rem;}
     .faq-item-wrap { margin-top: 2rem; }
     .faq-main{border-radius: 40px;}
+    
 
 }
 @media only screen and (max-width: 374px) {

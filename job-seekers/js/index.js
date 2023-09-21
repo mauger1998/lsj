@@ -137,15 +137,154 @@ if (document.querySelector('.word') === null) {
 
 }
 
-// Accordian
-const items = document.querySelectorAll(".faq-accordion-trigger");
-items.forEach((item) => item.addEventListener("click", toggleAccordion));
-function toggleAccordion() {
-  const itemToggle = this.getAttribute("aria-expanded");
-  for (let item of items) {
-    item.setAttribute("aria-expanded", false);
-  }
-  if (itemToggle === "false") {
-    this.setAttribute("aria-expanded", true);
-  }
+
+
+
+let URL = "https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27jobSeekersFaq%27%5D%7B%0Aquestion%2C%0Aanswer%2C%0Aorder%0A%7D&perspective=published"
+
+// fetch the content
+fetch(URL)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    console.log(result)
+
+    const accordionFaq = document.querySelector(".faq-item-wrap")
+    if (result.length > 0) {
+      accordionFaq.innerHTML = ""
+      result.forEach((result) => {
+        let accordionItem = document.createElement("div")
+        accordionItem.classList.add("faq-item")
+        accordionFaq.appendChild(accordionItem)
+
+        let accordionQuestion = document.createElement("div")
+        accordionQuestion.classList.add("faq-accordion-trigger")
+        accordionQuestion.setAttribute("aria-expanded", "false")
+        accordionItem.appendChild(accordionQuestion)
+
+        let accordionTitle = document.createElement("h5")
+        accordionTitle.textContent = result.question
+        accordionQuestion.appendChild(accordionTitle)
+
+
+        let content = document.createElement("div")
+        content.classList.add("faq-hidden-content")
+
+        accordionItem.appendChild(content)
+
+        let contentP = document.createElement("p")
+        contentP.textContent = result.answer
+        content.appendChild(contentP)
+
+
+      });
+
+        // Accordian
+        const items = document.querySelectorAll(".faq-accordion-trigger");
+
+        items.forEach((item) => item.addEventListener("click", toggleAccordion));
+
+        function toggleAccordion() {
+          const itemToggle = this.getAttribute("aria-expanded");
+
+          for (let item of items) {
+            item.setAttribute("aria-expanded", false);
+          }
+
+          if (itemToggle === "false") {
+            this.setAttribute("aria-expanded", true);
+          }
 }
+      
+    }
+  })
+  .catch((err) => console.error(err));
+
+let URLTWO = "https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27projects%27%5D%7B%0A++text%2C%0A++%22image%22%3A+image.asset-%3Eurl%0A%7D&perspective=published"
+// fetch the content
+fetch(URLTWO)
+    .then((res) => res.json())
+    .then(({
+        result
+    }) => {
+        console.log(result)
+
+        const constructionWrap = document.querySelector(".workers-contribute-item-wrap")
+        if (result.length > 0) {
+            constructionWrap.innerHTML = ""
+            result.forEach((result) => {
+                let constructionItem = document.createElement("div")
+                constructionItem.classList.add("workers-contribute-item")
+                constructionWrap.appendChild(constructionItem)
+
+                let constructionImage = document.createElement("figure")
+                constructionImage.classList.add("anim-el", "clip-anim")
+                constructionItem.appendChild(constructionImage)
+
+                let constructionImageSrc = document.createElement("img")
+                constructionImageSrc.src = result.image
+                constructionImage.appendChild(constructionImageSrc)
+                
+                let constructionDesc = document.createElement("p")
+                constructionDesc.textContent = result.text
+                constructionItem.appendChild(constructionDesc)
+            });
+
+        }
+    })
+    .catch((err) => console.error(err));
+
+
+
+
+let URLTHREE = "https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27jobSeekersTestimonials%27%5D%7B%0A%22image%22%3A+image.asset-%3Eurl%2C%0Aname%2C%0Areview%0A%7D&perspective=published"
+// fetch the content
+fetch(URLTHREE)
+    .then((res) => res.json())
+    .then(({
+        result
+    }) => {
+        console.log(result)
+
+        const jobTestimonial = document.querySelector(".found-labourers-card-wrap")
+        if (result.length > 0) {
+            jobTestimonial.innerHTML = ""
+            result.forEach((result) => {
+                let jobTestimonialItem = document.createElement("div")
+                jobTestimonialItem.classList.add("found-labourers-card", "bg-early-dawn", "anim-el", )
+                jobTestimonial.appendChild(jobTestimonialItem)
+                
+                let jobTestimonialLayer = document.createElement("div")
+                jobTestimonialLayer.classList.add("layerd-bg", )
+                jobTestimonialItem.appendChild(jobTestimonialLayer)
+                
+                let jobTestimonialAuthor = document.createElement("div")
+                jobTestimonialAuthor.classList.add("found-labourers-author")
+                jobTestimonialItem.appendChild(jobTestimonialAuthor)
+                
+                let jobTestimonialImage = document.createElement("figure")
+                jobTestimonialAuthor.appendChild(jobTestimonialImage)
+                let jobTestimonialImageSrc = document.createElement("img")
+                jobTestimonialImageSrc.src = result.image
+                jobTestimonialImage.appendChild(jobTestimonialImageSrc)
+                
+                let jobTestimonialName = document.createElement("h4")
+                jobTestimonialName.textContent = result.name
+                jobTestimonialAuthor.appendChild(jobTestimonialName)
+                
+                let jobTestimonialReview = document.createElement("p")
+                jobTestimonialReview.textContent = result.review
+                jobTestimonialItem.appendChild(jobTestimonialReview)
+                
+                let jobTestimonialButton = document.createElement("a")
+                jobTestimonialButton.setAttribute('href',"../job-board");
+                jobTestimonialButton.classList.add("btn")
+                jobTestimonialItem.appendChild(jobTestimonialButton)
+                let jobTestimonialButtonSpan = document.createElement("span")
+                jobTestimonialButtonSpan.innerHTML = "See job board";
+                jobTestimonialButton.appendChild(jobTestimonialButtonSpan)
+
+            });
+
+        }
+    })
+    .catch((err) => console.error(err));

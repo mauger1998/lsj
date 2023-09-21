@@ -121,6 +121,9 @@
     .faq-big-circle { bottom: -11.638889%; right: -49.902778%; }
     .faq-main {min-height: auto; padding: 4rem 1rem; border-radius: 40px;}
     .faq-wrap .wrapper{padding-inline: 0;}
+    
+    .faq-accordion-trigger:before { top: 7px;}
+    .faq-accordion-trigger:after {top: 1px;}
 
 
 }

@@ -1,12 +1,13 @@
+
+const $body = document.querySelector("body")
+$body.classList.add("stop-scrolling");
 window.onload = function () {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-    });
+    setTimeout(function(){
+        $body.classList.remove("stop-scrolling");
+    }, 800)
 }
 /*Mobile Nav*/
 const mobiNav = document.querySelector(".hamburger");
-const $body = document.querySelector("body")
 mobiNav.addEventListener("click", function (event) {
     event.preventDefault();
     //add a class
@@ -16,23 +17,28 @@ mobiNav.addEventListener("click", function (event) {
 
 
 //Inview
-let elementsArray = document.querySelectorAll(".anim-el");
-console.log(elementsArray);
-window.addEventListener('scroll', fadeIn);
 
-function fadeIn() {
-    for (var i = 0; i < elementsArray.length; i++) {
-        var elem = elementsArray[i]
-        var distInView = elem.getBoundingClientRect().top - window.innerHeight + 100;
-        if (distInView < 0) {
-            elem.classList.add("inView");
-        } else {
-            elem.classList.remove("inView");
+
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        let elementsArray = document.querySelectorAll(".anim-el");
+        console.log(elementsArray);
+        window.addEventListener('scroll', fadeIn);
+
+        function fadeIn() {
+            for (var i = 0; i < elementsArray.length; i++) {
+                var elem = elementsArray[i]
+                var distInView = elem.getBoundingClientRect().top - window.innerHeight + 100;
+                if (distInView < 0) {
+                    elem.classList.add("inView");
+                } else {
+                    elem.classList.remove("inView");
+                }
+            }
         }
-    }
-}
-fadeIn();
-
+        fadeIn();
+    }, 800)
+})
 //Preloader
 var $preloader = document.querySelector(".preloader-wrap");
 window.addEventListener('load', function () {
@@ -52,5 +58,6 @@ window.addEventListener('load', function () {
         }, 1500)
     }, 700)
 })
+
 
 

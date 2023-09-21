@@ -37,6 +37,8 @@
 
 .vacancies-accordion-wrap{width: 100%; position: relative;}
 .vacancies-accordion-wrap:after{ content: ''; background: linear-gradient(0deg, #FDFDFD 0%, rgba(253, 253, 253, 0.63) 119.08%); width: 105%; height: 117px; position: absolute; top: auto; bottom: -15px; left: -2.5%; z-index: 1}
+.hide-loadmore .vacancies-accordion-wrap:after, .hide-loadmore .load-more-btn{display: none;}
+
 .vacancies-accordion{width: 100%; box-shadow: 9px 5px 0 var(--black); border: 1px solid var(--black); border-radius: 4px; margin-top: 1.375rem; padding: 1.625rem  2.125rem 1.8125rem; position: relative;}
 .vacancies-accordion.hidden {display: none;}
 .vacancies-accordion.accordion-active{box-shadow: 9px 20px 0 var(--black);}
@@ -47,7 +49,9 @@
 .vacancies-accordion-title h6:nth-child(1){width: 36.122%;}
 .vacancies-accordion-title h6:nth-child(2){width: 38.757%;}
 .vacancies-accordion-title h6:nth-child(3){width: 25%;}
-.vacancies-accordion-title-icon{width: 27px; height: 27px; display: flex; justify-content: center; align-items: center; background: var(--black); box-shadow: 2px 2px 0 #B3B3B3; border-radius: 4px; z-index: 1; cursor: pointer;}
+.vacancies-accordion-title-icon{width: 27px; height: 27px; display: flex; justify-content: center; align-items: center; background: var(--black); box-shadow: 2px 2px 0 #B3B3B3; border-radius: 4px; z-index: 1; cursor: pointer; position: relative;}
+.vacancies-accordion-title-icon:after{position: absolute; top: 50%; left: 50%; content: ''; width: 11px; height: 15px; background-repeat: no-repeat; background-size: 100% 100%; background-position: center center; background-image: url(../svgs/arrow-down-white.svg); transform: translate(-50%, -50%) rotate(-90deg); transition: .3s ease-in-out;}
+.vacancies-accordion-title-bar[aria-expanded=true] .vacancies-accordion-title-icon:after{transform: translate(-50%, -50%) rotate(0);}
 .vacancies-accordion-content{width: calc(100% - 27px); display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: row; /* margin-top: 1.5rem; */ max-height: 0; overflow: hidden; transition: all 300ms ease-in-out;}
 .vacancies-accordion-title-bar[aria-expanded=true] + .vacancies-accordion-content {max-height: 50rem; transition: all 300ms ease-in-out; margin-top: 1.5rem; padding-bottom: 0.6rem;}
 .vacancies-accordion-content-item:nth-child(1){width: 36.122%;}
@@ -70,10 +74,29 @@
 .texts-btn-inner a.btn{background-color: var(--sun);}
 /*End Submit Job Style*/
 
-
+.vacancies-container{float: left; width: 100%; display: flex; flex-flow: row wrap;}
+.empty-vacancies-wrap{float: left; width: 100%; display: flex; flex-flow: row wrap; margin-top: 7.5rem; display: none;}
+.empty-vacancies-thumb{width: 100%; justify-content: center;}
+.empty-vacancies-thumb figure{max-width: 265px;}
+.empty-vacancies-thumb lottie-player{max-width: 265px;}
+.empty-vacancies-thumb figure img{width: 100%;}
+.empty-vacancies-content{width: 100%; margin-top: 3rem;}
+.empty-vacancies-content h2{text-align: center; max-width: 703px; margin: 0 auto;}
+.empty-vacancies-form{width: 100%; justify-content: center; margin-top: 4rem;}
+.empty-vacancies-form form{width: 100%; max-width: 431px; display: flex; flex-flow: row wrap; justify-content: space-between;}
+.empty-vacancies-form form input { width: calc(100% - 186px); padding: 10px; background-color: var(--golden-tainoi); border-radius: 4px; border: 1px solid var(--black); color: var(--black); font-family: var(--Montserrat); font-size: 16px; font-weight: 400; line-height: 26px; box-shadow: 6px 6px 0 0 var(--black); -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; transition: all .4s ease-in-out; top: 0; left: 0; position: relative; }
+.empty-vacancies-form form input[type="submit"] { width: 170px; background-color: var(--black); color: var(--second-white); padding-right: 31px; background-repeat: no-repeat; background-position: 82% 50%; background-size: 14px 10px; background-repeat: no-repeat; box-shadow: 6px 6px 0 0 #B3B3B3; background-image: url(../../svgs/btn-arrow-white.svg); }
+.show-empty-vacancies .vacancies-container{display: none;}
+.show-empty-vacancies .empty-vacancies-wrap{display: block;}
 
 @media only screen and (max-width: 500px) {
 
+    .job-board-hero .companies-icon-wrap {margin-top: 3rem;}
+    .job-board-hero.secondery-hero-wrap .wrapper { padding-inline: 1rem; padding-block: 4rem 6rem;}
+    .job-board-hero .secondery-hero-inner p { margin-bottom: 2rem; }
+    .job-board-hero .secondery-hero-inner h2 { margin-bottom: 1rem; }
+    .job-board-hero .secondery-hero-back-bg {padding-inline: 1rem; padding-bottom: 1rem; }
+    
     .vacancies-title-bar{padding: 1rem;}
     .vacancies-accordion{padding: 1rem;}
     .vacancies-title h6, .vacancies-accordion-title h6, .vacancies-accordion-content-item h6{font-size: 14px; line-height: 20px;}
@@ -90,7 +113,6 @@
     .vacancies-accordion-content-item{padding-right: 5px;}
     .vacancies-accordion-content-item:last-child{padding-right: 0;}
     .vacancies-accordion-wrap:after {height: 80px;}
-    .job-board-hero .companies-icon-wrap {margin-top: 5.75rem;}
 
 }
 

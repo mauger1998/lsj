@@ -1,9 +1,7 @@
 window.onload = function () {
-    console.log('kkk')
     window.scrollTo({
-        top: 100,
-        left: 100,
-        behavior: "smooth",
+        top: 0,
+        left: 0,
     });
 }
 /*Mobile Nav*/

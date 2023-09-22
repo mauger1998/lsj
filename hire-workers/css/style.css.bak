@@ -17,29 +17,14 @@
 .texts-btn-inner h2{max-width: 690px; margin-bottom: 2rem; text-align: center;}
 .texts-btn-inner p { max-width: 425px; margin-bottom: 3rem; text-align: center; }
 /*End Submit Job Style*/
-.job-pool-container{float: left; width: 100%; display: flex; flex-flow: row wrap;}
-.empty-vacancies-wrap{float: left; width: 100%; display: flex; flex-flow: row wrap; margin-top: 7.5rem; display: none;}
-.empty-vacancies-thumb{width: 100%; justify-content: center;}
-.empty-vacancies-thumb figure{max-width: 265px;}
-.empty-vacancies-thumb lottie-player{max-width: 265px;}
-.empty-vacancies-thumb figure img{width: 100%;}
-.empty-vacancies-content{width: 100%; margin-top: 3rem;}
-.empty-vacancies-content h2{text-align: center; max-width: 703px; margin: 0 auto;}
-.empty-vacancies-form{width: 100%; justify-content: center; margin-top: 4rem;}
-.empty-vacancies-form form{width: 100%; max-width: 431px; display: flex; flex-flow: row wrap; justify-content: space-between;}
-.empty-vacancies-form form input { width: calc(100% - 186px); padding: 10px; background-color: var(--golden-tainoi); border-radius: 4px; border: 1px solid var(--black); color: var(--black); font-family: var(--Montserrat); font-size: 16px; font-weight: 400; line-height: 26px; box-shadow: 6px 6px 0 0 var(--black); -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; transition: all .4s ease-in-out; top: 0; left: 0; position: relative; }
-.empty-vacancies-form form input[type="submit"] { width: 170px; background-color: var(--black); color: var(--second-white); padding-right: 31px; background-repeat: no-repeat; background-position: 82% 50%; background-size: 14px 10px; background-repeat: no-repeat; box-shadow: 6px 6px 0 0 #B3B3B3; background-image: url(../../svgs/btn-arrow-white.svg); }
-.show-empty-workers .job-pool-container{display: none;}
-.show-empty-workers .empty-vacancies-wrap{display: block;}
 
 
 @media only screen  and (max-width: 500px) {
 
     .job-pool-back-bg { top: 40px; padding: 0 1rem;}
-    .job-pool-inner h2 img { position: absolute; margin: 3px 0 0 5px; width: 34px; }
     
     .job-pool-wrap .wrapper { padding-inline: 1.75rem; }
-    .job-pool-card-wrap{grid-template-columns: 1fr; margin-top: 4rem;}
+    .job-pool-card-wrap{grid-template-columns: 1fr;}
     .job-pool-card {padding: 2.125rem 2rem 3rem;}
     
 

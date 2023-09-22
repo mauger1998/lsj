@@ -1,5 +1,6 @@
 
 const $body = document.querySelector("body")
+const $nav = document.querySelector(".nav-wrap")
 $body.classList.add("stop-scrolling");
 window.onload = function () {
     setTimeout(function(){
@@ -12,6 +13,7 @@ mobiNav.addEventListener("click", function (event) {
     event.preventDefault();
     //add a class
     $body.classList.toggle("navShown");
+    $nav.classList.add("nav-smooth");
 });
 
 
@@ -43,9 +45,6 @@ window.addEventListener('load', function () {
 var $preloader = document.querySelector(".preloader-wrap");
 window.addEventListener('load', function () {
     setTimeout(function () {
-        $preloader.classList.add('preloader-load');
-    }, 100)
-    setTimeout(function () {
         $preloader.classList.add('preloader-loading');
         setTimeout(function () {
             $preloader.classList.add('preloader-loaded');
@@ -54,9 +53,12 @@ window.addEventListener('load', function () {
                 for (var i = 0; i < divs.length; i++) {
                     divs[i].classList.add('anim-loaded');
                 }
-            }, 1300)
-        }, 1500)
-    }, 700)
+                setTimeout(function () {
+                    $preloader.classList.add('hide-preloader');
+                }, 1000)
+            }, 1000)
+        }, 1000)
+    }, 500)
 })
 
 

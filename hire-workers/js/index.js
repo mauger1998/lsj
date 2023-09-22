@@ -44,5 +44,8 @@ fetch(URL)
             });
 
         }
+        if (result.length < 1) {
+            document.querySelector('.job-pool-inner').classList.add('show-empty-workers')
+        }
     })
     .catch((err) => console.error(err));

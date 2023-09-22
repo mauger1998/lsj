@@ -32,7 +32,6 @@
 /*Start Why With Us Style*/
 .why-with-us-wrap { padding: 1rem 0;}
 .why-with-us-card-wrap{display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4rem; width: 100%; margin-top: 8rem;}
-.hire-tradesmen-btn.align-left { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4rem; width: 100%; }
 .why-with-us-card h5{margin-bottom: 1.5rem; line-height: 1.2; max-width: 243px; min-height: 44px; color: var(--secondery-balck);}
 .hire-tradesmen-btn{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center; margin-top: 5rem;}
 .hire-tradesmen-btn a.btn{background-color: var(--sun);}
@@ -132,7 +131,7 @@
     .job-seekers-hero .secondery-hero-back-bg figure { padding: 0 1rem 1rem; }
 
     .why-with-us-card-wrap{margin-top: 4rem; grid-template-columns: 1fr;}
-    .hire-tradesmen-btn.align-left { grid-template-columns: 1fr;}
+
     .how-it-works-inner { margin-top: 5rem;}
     .how-it-works-item{padding-left: 3rem; margin-top: 5rem;}
     .how-it-work-progress { left: 0; transform: unset; width: 1rem;}
@@ -173,7 +172,6 @@
     .secondery-hero-inner figure img { max-width: 342px;}
 
     .why-with-us-card-wrap{margin-top: 4rem; grid-template-columns: 1fr;}
-    .hire-tradesmen-btn.align-left { grid-template-columns: 1fr; }
 
     .how-it-works-inner { margin-top: 5rem;}
     .how-it-works-item{padding-left: 3rem; margin-top: 5rem;}
@@ -201,7 +199,6 @@
     
     .job-seekers-hero .secondery-hero-inner h2 img{ margin-top: 4px; width: 38px;}
     .why-with-us-card-wrap{gap: 1rem; margin-top: 5rem;}
-    .hire-tradesmen-btn.align-left {gap: 1rem; }
     .card-thumb-ico {width: 36px; height: 36px; padding: 8px;}
     
     .how-it-works-wrap .wrapper{padding-inline: 2rem;}

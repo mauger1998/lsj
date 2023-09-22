@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
-        <title>LSJ | Hire Workers</title>
+        <title>LSJ | Job Seekers</title>
 
         <link rel="shortcut icon" href="../svgs/main-logo.svg" type="image/x-icon">
         <link type="text/css" rel="stylesheet" href="../css/style.css">
@@ -16,10 +16,9 @@
            <div class="preloader-wrap">
                <div class="preloader-inner">
                    <img src="../svgs/preloader-logo-text.png" alt="">
-                    <svg height="200" width="200">
-                        <circle class="circle desk" cx="88" cy="84" r="80" stroke="#31271d" stroke-width="4" fill-opacity="0"></circle>
-                        <circle class="circle mobi" cx="63" cy="59" r="49" stroke="#31271d" stroke-width="4" fill-opacity="0"></circle>
-                    </svg>
+                   <svg height="200" width="200">
+                       <circle class="circle" cx="130" cy="123" r="110" stroke="#31271d" stroke-width="4" fill-opacity="0"></circle>
+                   </svg>
                </div>
            </div>
             <!--  Beginning header section  -->
@@ -68,70 +67,54 @@
                                 </figure>
                             </div>
                             <h2 class="h2 anim-load"><span>Find</span> workers <img src="svgs/search.svg" alt=""></h2>
-                            <div class="job-pool-container">
-                                <div class="job-pool-card-wrap grid-3-col">
-                                    <div class="job-pool-card">
-                                        <figure class="anim-el clip-anim">
-                                            <img src="img/Tom-Ozanne.png" alt="Tom-Ozanne">
-                                        </figure>
-                                        <h4>Tom Ozanne</h4>
-                                        <h5>Carpenter</h5>
-                                        <a href="#" class="btn btn-dark"><span>See details</span></a>
-                                    </div>
-                                    <div class="job-pool-card">
-                                        <figure class="anim-el clip-anim">
-                                            <img src="img/Kyle-Johnson.png" alt="Kyle-Johnson">
-                                        </figure>
-                                        <h4>Kyle Johnson</h4>
-                                        <h5>Groundworker</h5>
-                                        <a href="#" class="btn btn-dark"><span>See details</span></a>
-                                    </div>
-                                    <div class="job-pool-card">
-                                        <figure class="anim-el clip-anim">
-                                            <img src="img/Jamie-Tyler.png" alt="Jamie-Tyler">
-                                        </figure>
-                                        <h4>Jamie Tyler</h4>
-                                        <h5>Electrician</h5>
-                                        <a href="#" class="btn btn-dark"><span>See details</span></a>
-                                    </div>
-                                    <div class="job-pool-card">
-                                        <figure class="anim-el clip-anim">
-                                            <img src="img/Tom-Ozanne-2.png" alt="Tom-Ozanne">
-                                        </figure>
-                                        <h4>Tom Ozanne</h4>
-                                        <h5>Labourer</h5>
-                                        <a href="#" class="btn btn-dark"><span>See details</span></a>
-                                    </div>
-                                    <div class="job-pool-card">
-                                        <figure class="anim-el clip-anim">
-                                            <img src="img/Kyle-Johnson-2.png" alt="Kyle-Johnson">
-                                        </figure>
-                                        <h4>Kyle Johnson</h4>
-                                        <h5>Labourer</h5>
-                                        <a href="#" class="btn btn-dark"><span>See details</span></a>
-                                    </div>
-                                    <div class="job-pool-card">
-                                        <figure class="anim-el clip-anim">
-                                            <img src="img/Jamie-Tyler-2.png" alt="Jamie-Tyler">
-                                        </figure>
-                                        <h4>Jamie Tyler</h4>
-                                        <h5>Plumber</h5>
-                                        <a href="#" class="btn btn-dark"><span>See details</span></a>
-                                    </div>
+                            <div class="job-pool-card-wrap grid-3-col">
+                                <div class="job-pool-card">
+                                    <figure class="anim-el clip-anim">
+                                        <img src="img/Tom-Ozanne.png" alt="Tom-Ozanne">
+                                    </figure>
+                                    <h4>Tom Ozanne</h4>
+                                    <h5>Carpenter</h5>
+                                    <a href="#" class="btn btn-dark"><span>See details</span></a>
                                 </div>
-                            </div>
-                            <div class="empty-vacancies-wrap">
-                                <div class="empty-vacancies-thumb flex">
-                                    <lottie-player src="../lottie/animation_lmsyu0vx.json" background="transparent"  speed="1"  loop autoplay></lottie-player>
+                                <div class="job-pool-card">
+                                    <figure class="anim-el clip-anim">
+                                        <img src="img/Kyle-Johnson.png" alt="Kyle-Johnson">
+                                    </figure>
+                                    <h4>Kyle Johnson</h4>
+                                    <h5>Groundworker</h5>
+                                    <a href="#" class="btn btn-dark"><span>See details</span></a>
                                 </div>
-                                <div class="empty-vacancies-content">
-                                    <h2>Looks like there’s no vacancies available. Leave your email to sign up and be notified when we have more.</h2>
+                                <div class="job-pool-card">
+                                    <figure class="anim-el clip-anim">
+                                        <img src="img/Jamie-Tyler.png" alt="Jamie-Tyler">
+                                    </figure>
+                                    <h4>Jamie Tyler</h4>
+                                    <h5>Electrician</h5>
+                                    <a href="#" class="btn btn-dark"><span>See details</span></a>
                                 </div>
-                                <div class="empty-vacancies-form flex">
-                                    <form action="#">
-                                        <input type="email" placeholder="Email...">
-                                        <input type="submit" value="Employers">
-                                    </form>
+                                <div class="job-pool-card">
+                                    <figure class="anim-el clip-anim">
+                                        <img src="img/Tom-Ozanne-2.png" alt="Tom-Ozanne">
+                                    </figure>
+                                    <h4>Tom Ozanne</h4>
+                                    <h5>Labourer</h5>
+                                    <a href="#" class="btn btn-dark"><span>See details</span></a>
+                                </div>
+                                <div class="job-pool-card">
+                                    <figure class="anim-el clip-anim">
+                                        <img src="img/Kyle-Johnson-2.png" alt="Kyle-Johnson">
+                                    </figure>
+                                    <h4>Kyle Johnson</h4>
+                                    <h5>Labourer</h5>
+                                    <a href="#" class="btn btn-dark"><span>See details</span></a>
+                                </div>
+                                <div class="job-pool-card">
+                                    <figure class="anim-el clip-anim">
+                                        <img src="img/Jamie-Tyler-2.png" alt="Jamie-Tyler">
+                                    </figure>
+                                    <h4>Jamie Tyler</h4>
+                                    <h5>Plumber</h5>
+                                    <a href="#" class="btn btn-dark"><span>See details</span></a>
                                 </div>
                             </div>
                         </div>
@@ -256,7 +239,6 @@
             <!-- //End main footer section -->
         </main>
 
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script type="text/javascript" src="../js/common-scripts.js" defer></script>
         <script type="text/javascript" src="js/index.js" defer></script>
     </body>

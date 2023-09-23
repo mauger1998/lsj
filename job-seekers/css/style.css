@@ -133,6 +133,7 @@
 
     .why-with-us-card-wrap{margin-top: 4rem; grid-template-columns: 1fr;}
     .hire-tradesmen-btn.align-left { grid-template-columns: 1fr;}
+    .hire-tradesmen-btn.align-left div:nth-child(1), .hire-tradesmen-btn.align-left div:nth-child(3){display: none;}
     .how-it-works-inner { margin-top: 5rem;}
     .how-it-works-item{padding-left: 3rem; margin-top: 5rem;}
     .how-it-work-progress { left: 0; transform: unset; width: 1rem;}
@@ -174,6 +175,7 @@
 
     .why-with-us-card-wrap{margin-top: 4rem; grid-template-columns: 1fr;}
     .hire-tradesmen-btn.align-left { grid-template-columns: 1fr; }
+    .hire-tradesmen-btn.align-left div:nth-child(1), .hire-tradesmen-btn.align-left div:nth-child(3){display: none;}
 
     .how-it-works-inner { margin-top: 5rem;}
     .how-it-works-item{padding-left: 3rem; margin-top: 5rem;}
@@ -221,6 +223,7 @@
     .found-labourers-card a.btn{ padding: 12px 14px;}
 
 }
+
 @media only screen and (min-width: 951px) and (max-width: 1024px) {
 
     .how-it-works-inner { margin-top: 8rem;}

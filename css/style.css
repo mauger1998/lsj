@@ -826,7 +826,9 @@ body,html{height: 100%;}
     
 
 }
-
+@media only screen and (min-width: 701px) and (max-width: 780px) {
+    .btn{padding: 1rem;}
+}
 
 @media only screen and (min-width: 951px) and (max-width: 1024px) {
     input[type="text"],input[type="email"],input[type="tel"],input[type="search"],input[type="number"],input[type="submit"],input[type="password"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}

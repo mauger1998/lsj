@@ -1,12 +1,12 @@
 
 const $body = document.querySelector("body")
 const $nav = document.querySelector(".nav-wrap")
-$body.classList.add("stop-scrolling");
-window.onload = function () {
-    setTimeout(function(){
-        $body.classList.remove("stop-scrolling");
-    }, 800)
-}
+//$body.classList.add("stop-scrolling");
+//window.onload = function () {
+//    setTimeout(function(){
+//        $body.classList.remove("stop-scrolling");
+//    }, 800)
+//}
 /*Mobile Nav*/
 const mobiNav = document.querySelector(".hamburger");
 mobiNav.addEventListener("click", function (event) {
@@ -56,9 +56,9 @@ window.addEventListener('load', function () {
                 setTimeout(function () {
                     $preloader.classList.add('hide-preloader');
                 }, 1000)
-            }, 1000)
-        }, 1000)
-    }, 500)
+            }, 800)
+        }, 700)
+    }, 300)
 })
 
 

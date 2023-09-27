@@ -200,6 +200,8 @@ let data = fetch(URLTHREE)
 
                 if (hid.length == 0) {
                     loadmore.classList.add('hidden')
+                }
+                if (hid.length == 0) {
                     hideShape.classList.add('shape-hidden')
                 }
             })

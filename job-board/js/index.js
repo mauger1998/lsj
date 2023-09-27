@@ -203,7 +203,7 @@ let data = fetch(URLTHREE)
                 
                   // If all items have been shown, hide the "Load More" button
                   if (lastItemIndex + itemsToShow >= items.length - 1) {
-                    document.getElementById('load-more-button').style.display = 'none';
+                    document.getElementById('loadmore').style.display = 'none';
                   }
                 }
                 

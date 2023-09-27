@@ -1,255 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <title>LSJ | Job Board</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <title>LSJ | Job Board</title>
+        <link
+            rel="shortcut icon"
+            href="../svgs/main-logo.svg"
+            type="image/x-icon"
+        />
+        <link type="text/css" rel="stylesheet" href="../css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
 
-    <link rel="shortcut icon" href="../svgs/main-logo.svg" type="image/x-icon">
-    <link type="text/css" rel="stylesheet" href="../css/style.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-</head>
+        <script
+            charset="utf-8"
+            type="text/javascript"
+            src="//js-eu1.hsforms.net/forms/embed/v2.js"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
 
-<body>
-    <main class="main-wrap">
-        <div class="preloader-wrap">
-            <div class="preloader-inner">
-                <img src="../svgs/preloader-logo-text.png" alt="">
-                <svg height="200" width="200">
-                    <circle class="circle desk" cx="88" cy="84" r="80" stroke="#31271d" stroke-width="4" fill-opacity="0"></circle>
-                    <circle class="circle mobi" cx="63" cy="59" r="49" stroke="#31271d" stroke-width="4" fill-opacity="0"></circle>
-                </svg>
-            </div>
-        </div>
-        <!--  Beginning header section  -->
-        <header class="main-header-section bg-early-dawn">
-            <div class="wrapper clear">
-                <div class="header-inner flex-box flex-vertical-align">
-                    <div class="logo-wrap">
-                        <div class="main-logo">
-                            <a href="../"><img src="../svgs/main-logo.svg" alt="Logo"></a>
-                        </div>
-                        <div class="hamburger">
-                            <div></div>
-                        </div>
-                    </div>
-                    <div class="nav-wrap flex-box flex-vertical-align">
-                        <div class="header-social">
-                            <a href="#" class="social-btn social-btn-dark"><img src="../svgs/insta.svg" alt="Instagram"></a>
-                            <a href="#" class="social-btn"><img src="../svgs/fb.svg" alt="Facebook"></a>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li><a href="../">Home</a></li>
-                                <li><a href="../employers">Employers</a></li>
-                                <li><a href="../job-seekers">Job Seekers</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header-btns flex-box">
-                            <a href="" class="btn"><span>Find work now</span></a>
-                            <a href="../hire-workers" class="btn btn-dark"><span>Hire tradesmen</span></a>
-                        </div>
-                    </div>
+    <body>
+        <main class="main-wrap">
+            <div class="preloader-wrap">
+                <div class="preloader-inner">
+                    <img src="../svgs/preloader-logo-text.png" alt="" />
+                    <svg height="200" width="200">
+                        <circle
+                            class="circle desk"
+                            cx="88"
+                            cy="84"
+                            r="80"
+                            stroke="#31271d"
+                            stroke-width="4"
+                            fill-opacity="0"
+                        ></circle>
+                        <circle
+                            class="circle mobi"
+                            cx="63"
+                            cy="59"
+                            r="49"
+                            stroke="#31271d"
+                            stroke-width="4"
+                            fill-opacity="0"
+                        ></circle>
+                    </svg>
                 </div>
             </div>
-        </header>
-        <!-- //End header section -->
-
-        <!-- Beginning main content section  -->
-        <section class="main-content-wrap">
-
-            <!-- Hero Section -->
-            <section class="secondery-hero-wrap job-board-hero bg-early-dawn">
-                <div class="wrapper">
-                    <div class="secondery-hero-back-bg position-bottom">
-                        <figure>
-                            <img src="svgs/job-board.svg" alt="">
-                        </figure>
-                    </div>
-                    <div class="secondery-hero-inner">
-                        <h2 class="h2 anim-load">Vacancies @ lsj.je</h2>
-                        <p class="anim-load">Without the hassle or commitment of full time employment</p>
-                        <a href="#" class="btn anim-load"><span>Get started</span></a>
-                    </div>
-                    <div class="companies-icon-wrap">
-                        <div class="companies-icon anim-load">
-                            <img src="../svgs/ap-cons.svg" alt="">
+            <!--  Beginning header section  -->
+            <header class="main-header-section bg-early-dawn">
+                <div class="wrapper clear">
+                    <div class="header-inner flex-box flex-vertical-align">
+                        <div class="logo-wrap">
+                            <div class="main-logo">
+                                <a href="../"
+                                    ><img
+                                        src="../svgs/main-logo.svg"
+                                        alt="Logo"
+                                /></a>
+                            </div>
+                            <div class="hamburger">
+                                <div></div>
+                            </div>
                         </div>
-                        <div class="companies-icon anim-load">
-                            <img src="../svgs/hacquoil.svg" alt="">
-                        </div>
-                        <div class="companies-icon anim-load">
-                            <img src="../svgs/rnd.svg" alt="">
-                        </div>
-                        <div class="companies-icon anim-load">
-                            <img src="../svgs/jersey-dev-comp.svg" alt="">
+                        <div class="nav-wrap flex-box flex-vertical-align">
+                            <div class="header-social">
+                                <a href="#" class="social-btn social-btn-dark"
+                                    ><img
+                                        src="../svgs/insta.svg"
+                                        alt="Instagram"
+                                /></a>
+                                <a href="#" class="social-btn"
+                                    ><img src="../svgs/fb.svg" alt="Facebook"
+                                /></a>
+                            </div>
+                            <nav>
+                                <ul>
+                                    <li><a href="../">Home</a></li>
+                                    <li>
+                                        <a href="../employers">Employers</a>
+                                    </li>
+                                    <li>
+                                        <a href="../job-seekers">Job Seekers</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header-btns flex-box">
+                                <a href="" class="btn"
+                                    ><span>Find work now</span></a
+                                >
+                                <a href="../hire-workers" class="btn btn-dark"
+                                    ><span>Hire tradesmen</span></a
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Hero Section -->
+            </header>
+            <!-- //End header section -->
 
-            <!--Job Vacancies Section-->
-            <section class="vacancies-wrap" id="current-opportunities">
-                <div class="wrapper">
-                    <div class="vacancies-inner flex-common">
-                        <h2 class="anim-el clip-anim">Current opportunities</h2>
-                        <div class="vacancies-container">
-                            <div class="vacancies-title-bar bg-black">
-                                <div class="vacancies-title">
-                                    <h6>Job Title</h6>
-                                    <h6>Start Date</h6>
-                                    <h6>Duration</h6>
+            <!-- Beginning main content section  -->
+            <section class="main-content-wrap">
+                <!-- Hero Section -->
+                <section
+                    class="secondery-hero-wrap job-board-hero bg-early-dawn"
+                >
+                    <div class="wrapper">
+                        <div class="secondery-hero-back-bg position-bottom">
+                            <figure>
+                                <img src="svgs/job-board.svg" alt="" />
+                            </figure>
+                        </div>
+                        <div class="secondery-hero-inner">
+                            <h2 class="h2 anim-load">Vacancies @ lsj.je</h2>
+                            <p class="anim-load">
+                                Without the hassle or commitment of full time
+                                employment
+                            </p>
+                            <a href="#" class="btn anim-load"
+                                ><span>Get started</span></a
+                            >
+                        </div>
+                        <div class="companies-icon-wrap">
+                            <div class="companies-icon anim-load">
+                                <img src="../svgs/ap-cons.svg" alt="" />
+                            </div>
+                            <div class="companies-icon anim-load">
+                                <img src="../svgs/hacquoil.svg" alt="" />
+                            </div>
+                            <div class="companies-icon anim-load">
+                                <img src="../svgs/rnd.svg" alt="" />
+                            </div>
+                            <div class="companies-icon anim-load">
+                                <img src="../svgs/jersey-dev-comp.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Hero Section -->
+
+                <!--Job Vacancies Section-->
+                <section class="vacancies-wrap" id="current-opportunities">
+                    <div class="wrapper">
+                        <div class="pop-up">
+                            <div class="pop-up-container">
+                                <div class="application-content">
+                                    <h3>You are applying for</h3>
+                                    <div class="application-wrapper">
+                                        <div class="application-item">
+                                            <h4>Job:</h4>
+                                            <p>Carpenter</p>
+                                        </div>
+                                        <div class="application-item">
+                                            <h4>Company:</h4>
+                                            <p>AP Construction</p>
+                                        </div>
+                                        <div class="application-item">
+                                            <h4>Duration:</h4>
+                                            <p>4 Weeks</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="vacancies-title-icon">
-                                    <img src="svgs/Star.svg" alt="Star Ico">
+                                <button class="x-button">
+                                    <img
+                                        src="svgs/close-ellipse-svgrepo-com.svg"
+                                        alt="Close Button"
+                                    />
+                                </button>
+
+                                <script>
+                                    hbspt.forms.create({
+                                        region: 'eu1',
+                                        portalId: '143358931',
+                                        formId: '30de0f2c-a4ad-4562-8aea-c412a91c8e9a',
+                                        onFormReady: function ($form) {
+                                            const dataFunction = (NEWURL) => {
+                                                fetch(NEWURL)
+                                                    .then((res) => res.json())
+                                                    .then(({ result }) => {
+                                                        return result
+                                                    })
+                                                    .then((result) => {
+                                                        const select =
+                                                            $form.find(
+                                                                'input[name="applying_for_"]'
+                                                            )
+
+                                                        // if (
+                                                        //     $form.find(
+                                                        //         '.cookie-reset-container'
+                                                        //     ) == null
+                                                        // ) {
+
+                                                        // }
+
+                                                        // console.log(
+                                                        //     $form.find(
+                                                        //         '.cookie-reset-container'
+                                                        //     )
+                                                        // )
+
+                                                        // const cookieContainer =
+                                                        //     $form.find(
+                                                        //         '.cookie-reset-container'
+                                                        //     )
+
+                                                        // const cookieContainerElement =
+                                                        //     cookieContainer[0]
+
+                                                        // cookieContainerElement.style.fontSize =
+                                                        //     '1.5rem'
+                                                        // cookieContainerElement.style.position =
+                                                        //     'absolute'
+                                                        // cookieContainerElement.style.bottom =
+                                                        //     '4rem'
+                                                        // cookieContainerElement.style.right =
+                                                        //     '1rem'
+                                                        // cookieContainerElement.style.cursor =
+                                                        //     'pointer'
+                                                        // cookieContainerElement.style.zIndex =
+                                                        // ;('100')
+
+                                                        const selectMenu =
+                                                            select
+                                                                .prevObject[0][8]
+
+                                                        console.log(select)
+
+                                                        result.forEach(
+                                                            (result, index) => {
+                                                                const option =
+                                                                    document.createElement(
+                                                                        'option'
+                                                                    )
+
+                                                                option.textContent = `${result.jobTitle} | ${result.companyName}`
+                                                                option.value = `${
+                                                                    result.jobTitle
+                                                                }-${result.companyName
+                                                                    .split(' ')
+                                                                    .join('-')}`
+
+                                                                selectMenu.appendChild(
+                                                                    option
+                                                                )
+                                                            }
+                                                        )
+                                                        let anchorButton =
+                                                            document.querySelectorAll(
+                                                                '.anchor-button'
+                                                            )
+
+                                                        anchorButton.forEach(
+                                                            (button, index) => {
+                                                                button.addEventListener(
+                                                                    'click',
+                                                                    () => {
+                                                                        selectMenu.selectedIndex =
+                                                                            index +
+                                                                            2
+                                                                        const jobField =
+                                                                            document.querySelector(
+                                                                                '.application-wrapper .application-item:nth-child(1) p'
+                                                                            )
+                                                                        const companyField =
+                                                                            document.querySelector(
+                                                                                '.application-wrapper .application-item:nth-child(2) p'
+                                                                            )
+                                                                        const durationField =
+                                                                            document.querySelector(
+                                                                                '.application-wrapper .application-item:nth-child(3) p'
+                                                                            )
+
+                                                                        jobField.textContent =
+                                                                            result[
+                                                                                index
+                                                                            ].jobTitle
+                                                                        companyField.textContent =
+                                                                            result[
+                                                                                index
+                                                                            ].companyName
+                                                                        durationField.textContent =
+                                                                            result[
+                                                                                index
+                                                                            ].duration
+                                                                    }
+                                                                )
+                                                            }
+                                                        )
+                                                    })
+                                            }
+
+                                            const returnedData = dataFunction(
+                                                'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27vacancies%27%5D%7B%0AjobTitle%2C%0AstartDate%2C%0Aduration%2C%0AcompanyName%2C%0Askills%2C%0Adescription%0A%7D&perspective=published'
+                                            )
+                                        },
+                                    })
+                                </script>
+                            </div>
+                        </div>
+                        <div class="vacancies-inner flex-common">
+                            <h2 class="anim-el clip-anim">
+                                Current opportunities
+                            </h2>
+                            <div class="vacancies-container">
+                                <div class="vacancies-title-bar bg-black">
+                                    <div class="vacancies-title">
+                                        <h6>Job Title</h6>
+                                        <h6>Start Date</h6>
+                                        <h6>Duration</h6>
+                                    </div>
+                                    <div class="vacancies-title-icon">
+                                        <img
+                                            src="svgs/Star.svg"
+                                            alt="Star Ico"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="vacancies-accordion-wrap"></div>
+                                <div class="load-more-btn" id="loadmore">
+                                    <a href="javascript:void(0)" class="btn"
+                                        ><span>Load More</span></a
+                                    >
                                 </div>
                             </div>
-                            <div class="vacancies-accordion-wrap">
-
-                            </div>
-                            <div class="load-more-btn" id="loadmore">
-                                <a href="javascript:void(0)" class="btn"><span>Load More</span></a>
+                            <div class="empty-vacancies-wrap">
+                                <div class="empty-vacancies-thumb flex">
+                                    <lottie-player
+                                        src="../lottie/animation_lmsyu0vx.json"
+                                        background="transparent"
+                                        speed="1"
+                                        loop
+                                        autoplay
+                                    ></lottie-player>
+                                </div>
+                                <div class="empty-vacancies-content">
+                                    <h2>
+                                        Looks like there’s no vacancies
+                                        available. Leave your email to sign up
+                                        and be notified when we have more.
+                                    </h2>
+                                </div>
+                                <div class="empty-vacancies-form flex">
+                                    <form action="#">
+                                        <input
+                                            type="email"
+                                            placeholder="Email..."
+                                        />
+                                        <input
+                                            type="submit"
+                                            value="Employers"
+                                        />
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                        <div class="empty-vacancies-wrap">
-                            <div class="empty-vacancies-thumb flex">
-                                <lottie-player src="../lottie/animation_lmsyu0vx.json" background="transparent" speed="1" loop autoplay></lottie-player>
-                            </div>
-                            <div class="empty-vacancies-content">
-                                <h2>Looks like there’s no vacancies available. Leave your email to sign up and be notified when we have more.</h2>
-                            </div>
-                            <div class="empty-vacancies-form flex">
-                                <form action="#">
-                                    <input type="email" placeholder="Email...">
-                                    <input type="submit" value="Employers">
-                                </form>
-                            </div>
-                        </div>
-
                     </div>
-                </div>
-            </section>
-            <!--Job Vacancies Section-->
+                </section>
+                <!--Job Vacancies Section-->
 
-            <!-- Texts Btn Section -->
-            <section class="texts-btn-wrap job-board" id="submit-your-profile">
+                <!-- Texts Btn Section -->
+                <section
+                    class="texts-btn-wrap job-board"
+                    id="submit-your-profile"
+                >
+                    <div class="wrapper">
+                        <div class="pop-up">
+                            <div class="pop-up-container">
+                                <div
+                                    style="
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    "
+                                    class="application-content"
+                                >
+                                    <h3
+                                        style="
+                                            line-height: 1.4;
+                                            max-width: 26ch;
+                                            text-align: center;
+                                        "
+                                    >
+                                        Submit your job to be added to our
+                                        vacancies board.
+                                    </h3>
+                                </div>
+                                <button class="x-button">
+                                    <img
+                                        src="../../job-board/svgs/close-ellipse-svgrepo-com.svg"
+                                        alt="Close Button"
+                                    />
+                                </button>
+                                <script>
+                                    hbspt.forms.create({
+                                        region: 'eu1',
+                                        portalId: '143358931',
+                                        formId: '3578ea0a-fc2d-414b-87ed-2e6733d8997b',
+                                    })
+                                </script>
+                            </div>
+                        </div>
+                        <div class="texts-btn-inner flex-common">
+                            <h2>
+                                Don’t worry if you don’t see any roles you want
+                                to apply for. 😱
+                            </h2>
+                            <p>
+                                Register your interest now to be added to our
+                                talent pool and notified when new roles get
+                                posted
+                            </p>
+                            <a class="btn submit-job-button"
+                                ><span>Register now</span></a
+                            >
+                        </div>
+                    </div>
+                </section>
+                <!-- Texts Btn Section -->
+            </section>
+            <!-- //End main content section -->
+
+            <!-- Beginning footer section-->
+            <footer class="main-footer-section">
                 <div class="wrapper">
-                    <div class="texts-btn-inner flex-common">
-                        <h2>Don’t worry if you don’t see any roles you want to apply for. 😱</h2>
-                        <p> Register your interest now to be added to our talent pool and notified when new roles get posted</p>
-                        <a href="#" class="btn"><span>Register now</span></a>
-                    </div>
-                </div>
-            </section>
-            <!-- Texts Btn Section -->
-
-        </section>
-        <!-- //End main content section -->
-
-        <!-- Beginning footer section-->
-        <footer class="main-footer-section">
-            <div class="wrapper">
-                <div class="footer-inner flex">
-                    <div class="newsletter-wrap flex">
-                        <div class="newsletter-content">
-                            <h5>Leave your <span>email</span> to be <span>notified</span> when we have new positions <span>available</span> or when we have <span>new</span> candidates</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit.</p>
+                    <div class="footer-inner flex">
+                        <div class="newsletter-wrap flex">
+                            <div class="newsletter-content">
+                                <h5>
+                                    Leave your <span>email</span> to be
+                                    <span>notified</span> when we have new
+                                    positions <span>available</span> or when we
+                                    have <span>new</span> candidates
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Ut et massa mi. Aliquam in
+                                    hendrerit urna. Pellentesque sit.
+                                </p>
+                            </div>
+                            <div class="newsletter-form-wrap">
+                                <div
+                                    class="newsletter-form employers-newsletter"
+                                >
+                                    <h6>Employers</h6>
+                                    <form action="#">
+                                        <input
+                                            type="email"
+                                            placeholder="Email..."
+                                        />
+                                        <input
+                                            type="submit"
+                                            value="Employers"
+                                        />
+                                    </form>
+                                </div>
+                                <div class="newsletter-form seekers-newsletter">
+                                    <h6>Job Seekers</h6>
+                                    <form action="#">
+                                        <input
+                                            type="email"
+                                            placeholder="Email..."
+                                        />
+                                        <input
+                                            type="submit"
+                                            value="Employers"
+                                        />
+                                    </form>
+                                </div>
+                                <p>
+                                    By subscribing you agree to with our
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                            </div>
                         </div>
-                        <div class="newsletter-form-wrap">
-                            <div class="newsletter-form employers-newsletter">
+                        <div class="footer-widget-wrap flex">
+                            <div class="footer-widget footer-logo">
+                                <a href="../"
+                                    ><img
+                                        src="svgs/main-logo.svg"
+                                        alt="main-logo"
+                                /></a>
+                            </div>
+                            <div class="footer-widget">
+                                <h6>Home</h6>
+                                <ul>
+                                    <li>
+                                        <a href="../#why-choose-us"
+                                            >Why choose us?</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../#what-we-provide"
+                                            >What we provide</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget">
                                 <h6>Employers</h6>
-                                <form action="#">
-                                    <input type="email" placeholder="Email...">
-                                    <input type="submit" value="Employers">
-                                </form>
+                                <ul>
+                                    <li>
+                                        <a href="../employers/#why-hire-with-us"
+                                            >Why hire with us?</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../employers/#how-it-works"
+                                            >How it works</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../employers/#what-we-provide"
+                                            >What we provide</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../employers/#our-projects"
+                                            >Our projects</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../employers/#testimonial"
+                                            >Testimonial</a
+                                        >
+                                    </li>
+                                    <li><a href="../employers/#faq">FAQ</a></li>
+                                </ul>
                             </div>
-                            <div class="newsletter-form seekers-newsletter">
+                            <div class="footer-widget">
                                 <h6>Job Seekers</h6>
-                                <form action="#">
-                                    <input type="email" placeholder="Email...">
-                                    <input type="submit" value="Employers">
-                                </form>
+                                <ul>
+                                    <li>
+                                        <a href="../job-seekers/#why-us"
+                                            >Why us?</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../job-seekers/#how-it-works"
+                                            >How it works</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../job-seekers/#our-projects"
+                                            >Our projects</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../job-seekers/#testimonials"
+                                            >Testimonials</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../job-seekers/#faq">FAQ</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <p>By subscribing you agree to with our <a href="#">Privacy Policy</a></p>
+                            <div class="footer-widget">
+                                <h6>Candidate Pool</h6>
+                                <ul>
+                                    <li>
+                                        <a href="../#hire-tradesman"
+                                            >Hire Tradesman</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../#submit-your-job"
+                                            >Submit Your job</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget">
+                                <h6>Vacancies</h6>
+                                <ul>
+                                    <li>
+                                        <a href="#current-opportunities"
+                                            >Current Opportunities</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#submit-your-profile"
+                                            >Submit your profile</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="footer-widget-wrap flex">
-                        <div class="footer-widget footer-logo">
-                            <a href="../"><img src="svgs/main-logo.svg" alt="main-logo"></a>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Home</h6>
-                            <ul>
-                                <li><a href="../#why-choose-us">Why choose us?</a></li>
-                                <li><a href="../#what-we-provide">What we provide</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Employers</h6>
-                            <ul>
-                                <li><a href="../employers/#why-hire-with-us">Why hire with us?</a></li>
-                                <li><a href="../employers/#how-it-works">How it works</a></li>
-                                <li><a href="../employers/#what-we-provide">What we provide</a></li>
-                                <li><a href="../employers/#our-projects">Our projects</a></li>
-                                <li><a href="../employers/#testimonial">Testimonial</a></li>
-                                <li><a href="../employers/#faq">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Job Seekers</h6>
-                            <ul>
-                                <li><a href="../job-seekers/#why-us">Why us?</a></li>
-                                <li><a href="../job-seekers/#how-it-works">How it works</a></li>
-                                <li><a href="../job-seekers/#our-projects">Our projects</a></li>
-                                <li><a href="../job-seekers/#testimonials">Testimonials</a></li>
-                                <li><a href="../job-seekers/#faq">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Candidate Pool</h6>
-                            <ul>
-                                <li><a href="../#hire-tradesman">Hire Tradesman</a></li>
-                                <li><a href="../#submit-your-job">Submit Your job</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Vacancies</h6>
-                            <ul>
-                                <li><a href="#current-opportunities">Current Opportunities</a></li>
-                                <li><a href="#submit-your-profile">Submit your profile</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-bottom flex">
-                        <div class="footer-nav">
-                            <p>2022 Relume. All right reserved.</p>
-                            <ul>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">Cookies Settings</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-social">
-                            <ul>
-                                <li><a href="#"><img src="../svgs/Facebook.svg" alt="Facebook"></a></li>
-                                <li><a href="#"><img src="../svgs/Instagram.svg" alt="Instagram"></a></li>
-                                <li><a href="#"><img src="../svgs/Twitter.svg" alt="Twitter"></a></li>
-                                <li><a href="#"><img src="../svgs/LinkedIn.svg" alt="LinkedIn"></a></li>
-                            </ul>
+                        <div class="footer-bottom flex">
+                            <div class="footer-nav">
+                                <p>2022 Relume. All right reserved.</p>
+                                <ul>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Cookies Settings</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-social">
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                            ><img
+                                                src="../svgs/Facebook.svg"
+                                                alt="Facebook"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><img
+                                                src="../svgs/Instagram.svg"
+                                                alt="Instagram"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><img
+                                                src="../svgs/Twitter.svg"
+                                                alt="Twitter"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><img
+                                                src="../svgs/LinkedIn.svg"
+                                                alt="LinkedIn"
+                                        /></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- //End main footer section -->
-    </main>
+            </footer>
+            <!-- //End main footer section -->
+        </main>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script type="text/javascript" src="../js/common-scripts.js" defer></script>
-    <script type="text/javascript" src="js/index.js" defer></script>
-</body>
-
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            type="text/javascript"
+            src="../js/common-scripts.js"
+            defer
+        ></script>
+        <script type="text/javascript" src="js/index.js" defer></script>
+    </body>
 </html>

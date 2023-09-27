@@ -199,6 +199,7 @@ let data = fetch(URLTHREE)
 
                 if (hid.length == 0) {
                     loadmore.classList.add('hidden')
+                    documents.querySelectorAll('.vacancies-accordion-wrap').classList.add('shape-hidden')
                 }
             })
         }

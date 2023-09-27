@@ -846,7 +846,7 @@ html {
 .hero-inner p {
     width: 100%;
     margin-bottom: 4rem;
-    max-width: 310px;
+    max-width: 70ch;
 }
 .hero-btn {
     position: relative;
@@ -1070,8 +1070,8 @@ html {
     margin-bottom: 2rem;
     color: var(--secondery-black);
 }
-.provide-tradesmen-content h2 em{
-	width: 100%;
+.provide-tradesmen-content h2 em {
+    width: 100%;
 }
 .provide-tradesmen-content p {
     max-width: 360px;
@@ -3097,12 +3097,12 @@ html {
     .provide-tradesmen-content {
         width: 100%;
     }
-.tradesmen-accordion-wrap {
-	width: 100%;
-	max-width: 100%;
-	margin: 0 auto;
-	margin-top: 4rem;
-}
+    .tradesmen-accordion-wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 4rem;
+    }
     .companies-icon-wrap {
         margin-top: 5rem;
     }

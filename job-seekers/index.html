@@ -1,418 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <title>LSJ | Job Seekers</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <title>LSJ | Job Seekers</title>
+        <link
+            rel="shortcut icon"
+            href="../svgs/main-logo.svg"
+            type="image/x-icon" />
+        <link type="text/css" rel="stylesheet" href="../css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+    </head>
 
-    <link rel="shortcut icon" href="../svgs/main-logo.svg" type="image/x-icon">
-    <link type="text/css" rel="stylesheet" href="../css/style.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <main class="main-wrap">
-       <div class="preloader-wrap">
-           <div class="preloader-inner">
-               <img src="../svgs/preloader-logo-text.png" alt="">
-                <svg height="200" width="200">
-                    <circle class="circle desk" cx="88" cy="84" r="80" stroke="#31271d" stroke-width="4" fill-opacity="0"></circle>
-                    <circle class="circle mobi" cx="63" cy="59" r="49" stroke="#31271d" stroke-width="4" fill-opacity="0"></circle>
-                </svg>
-           </div>
-       </div>
-        <!--  Beginning header section  -->
-        <header class="main-header-section">
-            <div class="wrapper clear">
-                <div class="header-inner flex-box flex-vertical-align">
-                    <div class="logo-wrap">
-                        <div class="main-logo">
-                            <a href="../"><img src="../svgs/main-logo.svg" alt="Logo"></a>
-                        </div>
-                        <div class="hamburger">
-                            <div></div>
-                        </div>
-                    </div>
-                    <div class="nav-wrap flex-box flex-vertical-align">
-                        <div class="header-social">
-                            <a href="#" class="social-btn social-btn-dark"><img src="../svgs/insta.svg" alt="Instagram"></a>
-                            <a href="#" class="social-btn"><img src="../svgs/fb.svg" alt="Facebook"></a>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li><a href="../">Home</a></li>
-                                <li><a href="../employers">Employers</a></li>
-                                <li class="current"><a href="">Job Seekers</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header-btns flex-box">
-                            <a href="../job-board" class="btn"><span>Find work now</span></a>
-                            <a href="../hire-workers" class="btn btn-dark"><span>Hire tradesmen</span></a>
-                        </div>
-                    </div>
+    <body>
+        <main class="main-wrap">
+            <div class="preloader-wrap">
+                <div class="preloader-inner">
+                    <img src="../svgs/preloader-logo-text.png" alt="" />
+                    <svg height="200" width="200">
+                        <circle
+                            class="circle desk"
+                            cx="88"
+                            cy="84"
+                            r="80"
+                            stroke="#31271d"
+                            stroke-width="4"
+                            fill-opacity="0"></circle>
+                        <circle
+                            class="circle mobi"
+                            cx="63"
+                            cy="59"
+                            r="49"
+                            stroke="#31271d"
+                            stroke-width="4"
+                            fill-opacity="0"></circle>
+                    </svg>
                 </div>
             </div>
-        </header>
-        <!-- //End header section -->
-
-        <!-- Beginning main content section  -->
-        <section class="main-content-wrap">
-
-            <!-- Hero Section -->
-            <section class="secondery-hero-wrap job-seekers-hero">
-                <div class="secondery-hero-back-bg position-bottom">
-                    <figure>
-                        <img src="svgs/simple.svg" alt="simple">
-                    </figure>
-                </div>
-                <div class="wrapper">
-                    <div class="secondery-hero-inner">
-                        <h2 class="h2 anim-load"><span>Finding</span> work in the Jersey construction industry has never been <span>easier</span> <img src="../svgs/search.svg" alt="Search"></h2>
-                        <p class="anim-load">Without the hassle or commitment of full time employment</p>
-                        <div class="lottie-wrapper">
-                            <lottie-player class="anim-load" src="../lottie/Animation-1694761764672.json" background="transparent" speed="1" loop autoplay></lottie-player>
+            <!--  Beginning header section  -->
+            <header class="main-header-section">
+                <div class="wrapper clear">
+                    <div class="header-inner flex-box flex-vertical-align">
+                        <div class="logo-wrap">
+                            <div class="main-logo">
+                                <a href="../"
+                                    ><img
+                                        src="../svgs/main-logo.svg"
+                                        alt="Logo"
+                                /></a>
+                            </div>
+                            <div class="hamburger">
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="nav-wrap flex-box flex-vertical-align">
+                            <div class="header-social">
+                                <a href="#" class="social-btn social-btn-dark"
+                                    ><img
+                                        src="../svgs/insta.svg"
+                                        alt="Instagram"
+                                /></a>
+                                <a href="#" class="social-btn"
+                                    ><img src="../svgs/fb.svg" alt="Facebook"
+                                /></a>
+                            </div>
+                            <nav>
+                                <ul>
+                                    <li><a href="../">Home</a></li>
+                                    <li>
+                                        <a href="../employers">Employers</a>
+                                    </li>
+                                    <li class="current">
+                                        <a href="">Job Seekers</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header-btns flex-box">
+                                <a href="../job-board" class="btn"
+                                    ><span>Find work now</span></a
+                                >
+                                <a href="../hire-workers" class="btn btn-dark"
+                                    ><span>Hire tradesmen</span></a
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Hero Section -->
+            </header>
+            <!-- //End header section -->
 
-            <!-- Why With Us Section -->
-            <section class="why-with-us-wrap bg-early-dawn" id="why-us">
-                <div class="wrapper">
-                    <div class="why-with-us-inner">
-                        <h2 class="anim-el clip-anim">Why use us for your job search?</h2>
-                        <div class="why-with-us-card-wrap">
-                            <div class="why-with-us-card">
-                                <div class="card-thumb">
-                                    <div class="card-thumb-ico">
-                                        <img src="../svgs/commitments.svg" alt="commitments">
+            <!-- Beginning main content section  -->
+            <section class="main-content-wrap">
+                <!-- Hero Section -->
+                <section class="secondery-hero-wrap job-seekers-hero">
+                    <div class="secondery-hero-back-bg position-bottom">
+                        <figure>
+                            <img src="svgs/simple.svg" alt="simple" />
+                        </figure>
+                    </div>
+                    <div class="wrapper">
+                        <div class="secondery-hero-inner">
+                            <h2 class="h2 anim-load">
+                                <span>Finding</span> work in the Jersey
+                                construction industry has never been
+                                <span>easier</span>
+                                <img src="../svgs/search.svg" alt="Search" />
+                            </h2>
+                            <p class="anim-load">
+                                Without the hassle or commitment of full time
+                                employment
+                            </p>
+                            <div class="lottie-wrapper">
+                                <lottie-player
+                                    class="anim-load"
+                                    src="../lottie/Animation-1694761764672.json"
+                                    background="transparent"
+                                    speed="1"
+                                    loop
+                                    autoplay></lottie-player>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Hero Section -->
+
+                <!-- Why With Us Section -->
+                <section class="why-with-us-wrap bg-early-dawn" id="why-us">
+                    <div class="wrapper">
+                        <div class="why-with-us-inner">
+                            <h2 class="anim-el clip-anim">
+                                Why use us for your job search?
+                            </h2>
+                            <div class="why-with-us-card-wrap">
+                                <div class="why-with-us-card">
+                                    <div class="card-thumb">
+                                        <div class="card-thumb-ico">
+                                            <img
+                                                src="../svgs/commitments.svg"
+                                                alt="commitments" />
+                                        </div>
+                                        <figure class="anim-el clip-anim">
+                                            <img
+                                                src="img/job-search-1.png"
+                                                alt="job-search" />
+                                        </figure>
                                     </div>
+                                    <h5>
+                                        It’s easy to find a role that suits your
+                                        skills
+                                    </h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut et massa mi.
+                                    </p>
+                                </div>
+                                <div class="why-with-us-card">
+                                    <div class="card-thumb">
+                                        <div class="card-thumb-ico">
+                                            <img
+                                                src="../svgs/group.svg"
+                                                alt="card-thumb-ico" />
+                                        </div>
+                                        <figure class="anim-el clip-anim">
+                                            <img
+                                                src="img/job-search-2.png"
+                                                alt="card-thumb" />
+                                        </figure>
+                                    </div>
+                                    <h5>Great rates of pay</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut et massa mi.
+                                    </p>
+                                </div>
+                                <div class="why-with-us-card">
+                                    <div class="card-thumb">
+                                        <div class="card-thumb-ico">
+                                            <img
+                                                src="../svgs/group.svg"
+                                                alt="card-thumb-ico" />
+                                        </div>
+                                        <figure class="anim-el clip-anim">
+                                            <img
+                                                src="img/job-search-3.png"
+                                                alt="card-thumb" />
+                                        </figure>
+                                    </div>
+                                    <h5>Find flexible work easily</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut et massa mi.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hire-tradesmen-btn align-left">
+                                <div></div>
+                                <div>
+                                    <a href="../job-board" class="btn"
+                                        ><span>Find work now</span></a
+                                    >
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Why With Us Section -->
+
+                <!--How it Works Section-->
+                <section class="how-it-works-wrap" id="how-it-works">
+                    <div class="wrapper">
+                        <h2 class="anim-el clip-anim">How does it work?</h2>
+                        <div class="how-it-works-inner">
+                            <div class="how-it-work-progress">
+                                <div></div>
+                            </div>
+                            <div class="how-it-works-item-wrap">
+                                <div class="how-it-works-item">
+                                    <p>
+                                        Simply look through our pre vetted pool
+                                        of candidates until you see someone you
+                                        like. Click more details.
+                                    </p>
+                                </div>
+                                <div class="how-it-works-item">
+                                    <p>
+                                        Check out the candidates photo and some
+                                        more information on their skill set. If
+                                        you’re happy click “Hire Now”.
+                                    </p>
+                                </div>
+                                <div class="how-it-works-item">
+                                    <p>
+                                        Leave your details and we will be in
+                                        contact with you promptly to arrange
+                                        your new candidate.
+                                    </p>
+                                </div>
+                                <div class="how-it-works-item">
+                                    <p>
+                                        Happy with your candidate? Make sure you
+                                        leave us a review.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--How it Works Section-->
+
+                <!--Our Workers Contribute Section-->
+                <section
+                    class="workers-contribute-wrap bg-early-dawn"
+                    id="our-projects">
+                    <div class="wrapper">
+                        <div class="workers-contribute-inner flex-common">
+                            <h2 class="anim-el clip-anim">
+                                See all the construction projects all over
+                                Jersey our workers have contributed to
+                            </h2>
+                            <div
+                                class="workers-contribute-item-wrap grid-3-col">
+                                <div class="workers-contribute-item">
                                     <figure class="anim-el clip-anim">
-                                        <img src="img/job-search-1.png" alt="job-search">
+                                        <img
+                                            src="img/workers-contribute-1.jpg"
+                                            alt="workers-contribute" />
                                     </figure>
+                                    <p>
+                                        We assisted a home owner with a sunken
+                                        trampoline and front garden tidy up with
+                                        a border added.
+                                    </p>
                                 </div>
-                                <h5>It’s easy to find a role that suits your skills</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
-                            </div>
-                            <div class="why-with-us-card">
-                                <div class="card-thumb">
-                                    <div class="card-thumb-ico">
-                                        <img src="../svgs/group.svg" alt="card-thumb-ico">
-                                    </div>
+                                <div class="workers-contribute-item">
                                     <figure class="anim-el clip-anim">
-                                        <img src="img/job-search-2.png" alt="card-thumb">
+                                        <img
+                                            src="img/workers-contribute-2.jpg"
+                                            alt="workers-contribute" />
                                     </figure>
+                                    <p>
+                                        Full rip out of 2 bedroom flat including
+                                        some demo. Nice fast job all materials
+                                        removed and disposed off through out
+                                        tipper service.
+                                    </p>
                                 </div>
-                                <h5>Great rates of pay</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
-                            </div>
-                            <div class="why-with-us-card">
-                                <div class="card-thumb">
-                                    <div class="card-thumb-ico">
-                                        <img src="../svgs/group.svg" alt="card-thumb-ico">
-                                    </div>
+                                <div class="workers-contribute-item">
                                     <figure class="anim-el clip-anim">
-                                        <img src="img/job-search-3.png" alt="card-thumb">
+                                        <img
+                                            src="img/workers-contribute-3.jpg"
+                                            alt="workers-contribute" />
                                     </figure>
+                                    <p>
+                                        We are delighted to be assisting Maretts
+                                        with the Fort D’Auvergne project. We
+                                        have assisted with many jobs such as
+                                        site maintenance, lifting and shifting,
+                                        blackjacking and floor kingspan install.
+                                    </p>
                                 </div>
-                                <h5>Find flexible work easily</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
                             </div>
-                        </div>
-                        <div class="hire-tradesmen-btn align-left">
-                            <div></div>
-                            <div>
-                                <a href="../job-board" class="btn"><span>Find work now</span></a>
+                            <div class="hire-tradesmen-btn align-left">
+                                <div></div>
+                                <div>
+                                    <a href="../job-board" class="btn"
+                                        ><span>Find work now</span></a
+                                    >
+                                </div>
+                                <div></div>
                             </div>
-                            <div></div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- Why With Us Section -->
+                </section>
+                <!--Our Workers Contribute Section-->
 
-            <!--How it Works Section-->
-            <section class="how-it-works-wrap" id="how-it-works">
+                <!--Found Labourers Section-->
+                <section class="found-labourers-wrap" id="testimonials">
+                    <div class="wrapper">
+                        <div class="found-labourers-inner">
+                            <h2 class="anim-el clip-anim">
+                                These Jersey labourers who found work with us
+                                agree
+                            </h2>
+                            <div class="found-labourers-card-wrap grid-3-col">
+                                <div
+                                    class="found-labourers-card bg-early-dawn anim-el">
+                                    <div class="layerd-bg"></div>
+                                    <div class="found-labourers-author">
+                                        <figure>
+                                            <img
+                                                src="img/Tom-Ozanne.png"
+                                                alt="Tom-Ozanne" />
+                                        </figure>
+                                        <h4>Tom Ozanne</h4>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut et massa mi.
+                                    </p>
+                                    <a href="../job-board" class="btn"
+                                        ><span>See job board</span></a
+                                    >
+                                </div>
+                                <div
+                                    class="found-labourers-card bg-early-dawn anim-el">
+                                    <div class="layerd-bg"></div>
+                                    <div class="found-labourers-author">
+                                        <figure>
+                                            <img
+                                                src="img/Kyle-Johnson.png"
+                                                alt="Kyle Johnson" />
+                                        </figure>
+                                        <h4>Kyle Johnson</h4>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut et massa mi.
+                                    </p>
+                                    <a href="../job-board" class="btn"
+                                        ><span>See job board</span></a
+                                    >
+                                </div>
+                                <div
+                                    class="found-labourers-card bg-early-dawn anim-el">
+                                    <div class="layerd-bg"></div>
+                                    <div class="found-labourers-author">
+                                        <figure>
+                                            <img
+                                                src="img/Jamie-Tyler.png"
+                                                alt="Jamie Tyler" />
+                                        </figure>
+                                        <h4>Jamie Tyler</h4>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Ut et massa mi.
+                                    </p>
+                                    <a href="../job-board" class="btn"
+                                        ><span>See job board</span></a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--Found Labourers Section-->
+
+                <section class="faq-wrap" id="faq">
+                    <div class="faq-small-circle"></div>
+                    <div class="wrapper">
+                        <div class="faq-inner flex-common">
+                            <div class="faq-main flex-common">
+                                <h2>FAQ</h2>
+                                <div class="faq-item-wrap">
+                                    <div class="faq-item">
+                                        <div
+                                            class="faq-accordion-trigger"
+                                            aria-expanded="false">
+                                            <h5>
+                                                Can I make requests for jobs
+                                                that aren’t listed?
+                                            </h5>
+                                        </div>
+                                        <div class="faq-hidden-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit.
+                                                Reprehenderit soluta beatae
+                                                laborum aut corporis totam.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <div
+                                            class="faq-accordion-trigger"
+                                            aria-expanded="false">
+                                            <h5>
+                                                Can I make requests for jobs
+                                                that aren’t listed?
+                                            </h5>
+                                        </div>
+                                        <div class="faq-hidden-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit.
+                                                Reprehenderit soluta beatae
+                                                laborum aut corporis totam.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <div
+                                            class="faq-accordion-trigger"
+                                            aria-expanded="false">
+                                            <h5>
+                                                Can I make requests for jobs
+                                                that aren’t listed?
+                                            </h5>
+                                        </div>
+                                        <div class="faq-hidden-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit.
+                                                Reprehenderit soluta beatae
+                                                laborum aut corporis totam.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <div
+                                            class="faq-accordion-trigger"
+                                            aria-expanded="false">
+                                            <h5>
+                                                Can I make requests for jobs
+                                                that aren’t listed?
+                                            </h5>
+                                        </div>
+                                        <div class="faq-hidden-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit.
+                                                Reprehenderit soluta beatae
+                                                laborum aut corporis totam.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <div
+                                            class="faq-accordion-trigger"
+                                            aria-expanded="false">
+                                            <h5>
+                                                Can I make requests for jobs
+                                                that aren’t listed?
+                                            </h5>
+                                        </div>
+                                        <div class="faq-hidden-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit.
+                                                Reprehenderit soluta beatae
+                                                laborum aut corporis totam.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <div
+                                            class="faq-accordion-trigger"
+                                            aria-expanded="false">
+                                            <h5>
+                                                Can I make requests for jobs
+                                                that aren’t listed?
+                                            </h5>
+                                        </div>
+                                        <div class="faq-hidden-content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit.
+                                                Reprehenderit soluta beatae
+                                                laborum aut corporis totam.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-big-circle"></div>
+                </section>
+            </section>
+            <!-- //End main content section -->
+
+            <!-- Beginning footer section-->
+            <footer class="main-footer-section">
                 <div class="wrapper">
-                    <h2 class="anim-el clip-anim">How does it work?</h2>
-                    <div class="how-it-works-inner">
-                        <div class="how-it-work-progress">
-                            <div></div>
-                        </div>
-                        <div class="how-it-works-item-wrap">
-                            <div class="how-it-works-item">
-                                <p>Simply look through our pre vetted pool of candidates until you see someone you like. Click more details.</p>
+                    <div class="footer-inner flex">
+                        <div class="newsletter-wrap flex">
+                            <div class="newsletter-content">
+                                <h5>
+                                    Leave your <span>email</span> to be
+                                    <span>notified</span> when we have new
+                                    positions <span>available</span> or when we
+                                    have <span>new</span> candidates
+                                </h5>
+                                <p>
+                                    Leave your email in the relevant box and you
+                                    will be notified when new vacancies or
+                                    tradesmen become available.
+                                </p>
                             </div>
-                            <div class="how-it-works-item">
-                                <p>Check out the candidates photo and some more information on their skill set. If you’re happy click “Hire Now”.</p>
-                            </div>
-                            <div class="how-it-works-item">
-                                <p>Leave your details and we will be in contact with you promptly to arrange your new candidate.</p>
-                            </div>
-                            <div class="how-it-works-item">
-                                <p>Happy with your candidate? Make sure you leave us a review.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--How it Works Section-->
-
-            <!--Our Workers Contribute Section-->
-            <section class="workers-contribute-wrap bg-early-dawn" id="our-projects">
-                <div class="wrapper">
-                    <div class="workers-contribute-inner flex-common">
-                        <h2 class="anim-el clip-anim">See all the construction projects all over Jersey our workers have contributed to</h2>
-                        <div class="workers-contribute-item-wrap grid-3-col">
-                            <div class="workers-contribute-item">
-                                <figure class="anim-el clip-anim">
-                                    <img src="img/workers-contribute-1.jpg" alt="workers-contribute">
-                                </figure>
-                                <p>We assisted a home owner with a sunken trampoline and front garden tidy up with a border added.</p>
-                            </div>
-                            <div class="workers-contribute-item">
-                                <figure class="anim-el clip-anim">
-                                    <img src="img/workers-contribute-2.jpg" alt="workers-contribute">
-                                </figure>
-                                <p>Full rip out of 2 bedroom flat including some demo. Nice fast job all materials removed and disposed off through out tipper service.</p>
-                            </div>
-                            <div class="workers-contribute-item">
-                                <figure class="anim-el clip-anim">
-                                    <img src="img/workers-contribute-3.jpg" alt="workers-contribute">
-                                </figure>
-                                <p>We are delighted to be assisting Maretts with the Fort D’Auvergne project. We have assisted with many jobs such as site maintenance, lifting and shifting, blackjacking and floor kingspan install.</p>
+                            <div class="newsletter-form-wrap">
+                                <div
+                                    class="newsletter-form employers-newsletter">
+                                    <h6>Employers</h6>
+                                    <form action="#">
+                                        <input
+                                            type="email"
+                                            placeholder="Email..." />
+                                        <input
+                                            type="submit"
+                                            value="Employers" />
+                                    </form>
+                                </div>
+                                <div class="newsletter-form seekers-newsletter">
+                                    <h6>Job Seekers</h6>
+                                    <form action="#">
+                                        <input
+                                            type="email"
+                                            placeholder="Email..." />
+                                        <input
+                                            type="submit"
+                                            value="Employers" />
+                                    </form>
+                                </div>
+                                <p>
+                                    By subscribing you agree to with our
+                                    <a href="#">Privacy Policy</a>
+                                </p>
                             </div>
                         </div>
-                        <div class="hire-tradesmen-btn align-left">
-                            <div></div>
-                            <div>
-                                <a href="../job-board" class="btn"><span>Find work now</span></a>
+                        <div class="footer-widget-wrap flex">
+                            <div class="footer-widget footer-logo">
+                                <a href="../"
+                                    ><img
+                                        src="svgs/main-logo.svg"
+                                        alt="main-logo"
+                                /></a>
                             </div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--Our Workers Contribute Section-->
-
-            <!--Found Labourers Section-->
-            <section class="found-labourers-wrap" id="testimonials">
-                <div class="wrapper">
-                    <div class="found-labourers-inner">
-                        <h2 class="anim-el clip-anim">These Jersey labourers who found work with us agree</h2>
-                        <div class="found-labourers-card-wrap grid-3-col">
-                            <div class="found-labourers-card bg-early-dawn anim-el">
-                                <div class="layerd-bg"></div>
-                                <div class="found-labourers-author">
-                                    <figure>
-                                        <img src="img/Tom-Ozanne.png" alt="Tom-Ozanne">
-                                    </figure>
-                                    <h4>Tom Ozanne</h4>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
-                                <a href="../job-board" class="btn"><span>See job board</span></a>
+                            <div class="footer-widget">
+                                <h6>Home</h6>
+                                <ul>
+                                    <li>
+                                        <a href="../#why-choose-us"
+                                            >Why choose us?</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../#what-we-provide"
+                                            >What we provide</a
+                                        >
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="found-labourers-card bg-early-dawn anim-el">
-                                <div class="layerd-bg"></div>
-                                <div class="found-labourers-author">
-                                    <figure>
-                                        <img src="img/Kyle-Johnson.png" alt="Kyle Johnson">
-                                    </figure>
-                                    <h4>Kyle Johnson</h4>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
-                                <a href="../job-board" class="btn"><span>See job board</span></a>
-                            </div>
-                            <div class="found-labourers-card bg-early-dawn anim-el">
-                                <div class="layerd-bg"></div>
-                                <div class="found-labourers-author">
-                                    <figure>
-                                        <img src="img/Jamie-Tyler.png" alt="Jamie Tyler">
-                                    </figure>
-                                    <h4>Jamie Tyler</h4>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
-                                <a href="../job-board" class="btn"><span>See job board</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--Found Labourers Section-->
-
-            <section class="faq-wrap" id="faq">
-                <div class="faq-small-circle">
-                </div>
-                <div class="wrapper">
-                    <div class="faq-inner flex-common">
-                        <div class="faq-main flex-common">
-                            <h2>FAQ</h2>
-                            <div class="faq-item-wrap">
-                                <div class="faq-item">
-                                    <div class="faq-accordion-trigger" aria-expanded="false">
-                                        <h5>Can I make requests for jobs that aren’t listed?</h5>
-                                    </div>
-                                    <div class="faq-hidden-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit soluta beatae laborum aut corporis totam.</p>
-                                    </div>
-                                </div>
-                                <div class="faq-item">
-                                    <div class="faq-accordion-trigger" aria-expanded="false">
-                                        <h5>Can I make requests for jobs that aren’t listed?</h5>
-                                    </div>
-                                    <div class="faq-hidden-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit soluta beatae laborum aut corporis totam.</p>
-                                    </div>
-                                </div>
-                                <div class="faq-item">
-                                    <div class="faq-accordion-trigger" aria-expanded="false">
-                                        <h5>Can I make requests for jobs that aren’t listed?</h5>
-                                    </div>
-                                    <div class="faq-hidden-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit soluta beatae laborum aut corporis totam.</p>
-                                    </div>
-                                </div>
-                                <div class="faq-item">
-                                    <div class="faq-accordion-trigger" aria-expanded="false">
-                                        <h5>Can I make requests for jobs that aren’t listed?</h5>
-                                    </div>
-                                    <div class="faq-hidden-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit soluta beatae laborum aut corporis totam.</p>
-                                    </div>
-                                </div>
-                                <div class="faq-item">
-                                    <div class="faq-accordion-trigger" aria-expanded="false">
-                                        <h5>Can I make requests for jobs that aren’t listed?</h5>
-                                    </div>
-                                    <div class="faq-hidden-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit soluta beatae laborum aut corporis totam.</p>
-                                    </div>
-                                </div>
-                                <div class="faq-item">
-                                    <div class="faq-accordion-trigger" aria-expanded="false">
-                                        <h5>Can I make requests for jobs that aren’t listed?</h5>
-                                    </div>
-                                    <div class="faq-hidden-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit soluta beatae laborum aut corporis totam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-big-circle">
-                </div>
-            </section>
-
-
-        </section>
-        <!-- //End main content section -->
-
-        <!-- Beginning footer section-->
-        <footer class="main-footer-section">
-            <div class="wrapper">
-                <div class="footer-inner flex">
-                    <div class="newsletter-wrap flex">
-                        <div class="newsletter-content">
-                            <h5>Leave your <span>email</span> to be <span>notified</span> when we have new positions <span>available</span> or when we have <span>new</span> candidates</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit.</p>
-                        </div>
-                        <div class="newsletter-form-wrap">
-                            <div class="newsletter-form employers-newsletter">
+                            <div class="footer-widget">
                                 <h6>Employers</h6>
-                                <form action="#">
-                                    <input type="email" placeholder="Email...">
-                                    <input type="submit" value="Employers">
-                                </form>
+                                <ul>
+                                    <li>
+                                        <a href="../employers/#why-hire-with-us"
+                                            >Why hire with us?</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../employers/#how-it-works"
+                                            >How it works</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../employers/#what-we-provide"
+                                            >What we provide</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../employers/#our-projects"
+                                            >Our projects</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../employers/#testimonial"
+                                            >Testimonial</a
+                                        >
+                                    </li>
+                                    <li><a href="../employers/#faq">FAQ</a></li>
+                                </ul>
                             </div>
-                            <div class="newsletter-form seekers-newsletter">
+                            <div class="footer-widget">
                                 <h6>Job Seekers</h6>
-                                <form action="#">
-                                    <input type="email" placeholder="Email...">
-                                    <input type="submit" value="Employers">
-                                </form>
+                                <ul>
+                                    <li><a href="#why-us">Why us?</a></li>
+                                    <li>
+                                        <a href="#how-it-works">How it works</a>
+                                    </li>
+                                    <li>
+                                        <a href="#our-projects">Our projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="#testimonials">Testimonials</a>
+                                    </li>
+                                    <li><a href="#faq">FAQ</a></li>
+                                </ul>
                             </div>
-                            <p>By subscribing you agree to with our <a href="#">Privacy Policy</a></p>
+                            <div class="footer-widget">
+                                <h6>Candidate Pool</h6>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="../hire-workers/#hire-tradesman"
+                                            >Hire Tradesman</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../hire-workers/#submit-your-job"
+                                            >Submit Your job</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget">
+                                <h6>Vacancies</h6>
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="../job-board/#current-opportunities"
+                                            >Current Opportunities</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../job-board/#submit-your-profile"
+                                            >Submit your profile</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="footer-widget-wrap flex">
-                        <div class="footer-widget footer-logo">
-                            <a href="../"><img src="svgs/main-logo.svg" alt="main-logo"></a>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Home</h6>
-                            <ul>
-                                <li><a href="../#why-choose-us">Why choose us?</a></li>
-                                <li><a href="../#what-we-provide">What we provide</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Employers</h6>
-                            <ul>
-                                <li><a href="../employers/#why-hire-with-us">Why hire with us?</a></li>
-                                <li><a href="../employers/#how-it-works">How it works</a></li>
-                                <li><a href="../employers/#what-we-provide">What we provide</a></li>
-                                <li><a href="../employers/#our-projects">Our projects</a></li>
-                                <li><a href="../employers/#testimonial">Testimonial</a></li>
-                                <li><a href="../employers/#faq">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Job Seekers</h6>
-                            <ul>
-                                <li><a href="#why-us">Why us?</a></li>
-                                <li><a href="#how-it-works">How it works</a></li>
-                                <li><a href="#our-projects">Our projects</a></li>
-                                <li><a href="#testimonials">Testimonials</a></li>
-                                <li><a href="#faq">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Candidate Pool</h6>
-                            <ul>
-                                <li><a href="../hire-workers/#hire-tradesman">Hire Tradesman</a></li>
-                                <li><a href="../hire-workers/#submit-your-job">Submit Your job</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-widget">
-                            <h6>Vacancies</h6>
-                            <ul>
-                                <li><a href="../job-board/#current-opportunities">Current Opportunities</a></li>
-                                <li><a href="../job-board/#submit-your-profile">Submit your profile</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-bottom flex">
-                        <div class="footer-nav">
-                            <p>2022 Relume. All right reserved.</p>
-                            <ul>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">Cookies Settings</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-social">
-                            <ul>
-                                <li><a href="#"><img src="../svgs/Facebook.svg" alt="Facebook"></a></li>
-                                <li><a href="#"><img src="../svgs/Instagram.svg" alt="Instagram"></a></li>
-                                <li><a href="#"><img src="../svgs/Twitter.svg" alt="Twitter"></a></li>
-                                <li><a href="#"><img src="../svgs/LinkedIn.svg" alt="LinkedIn"></a></li>
-                            </ul>
+                        <div class="footer-bottom flex">
+                            <div class="footer-nav">
+                                <p>2022 Relume. All right reserved.</p>
+                                <ul>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Cookies Settings</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-social">
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                            ><img
+                                                src="../svgs/Facebook.svg"
+                                                alt="Facebook"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><img
+                                                src="../svgs/Instagram.svg"
+                                                alt="Instagram"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><img
+                                                src="../svgs/Twitter.svg"
+                                                alt="Twitter"
+                                        /></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><img
+                                                src="../svgs/LinkedIn.svg"
+                                                alt="LinkedIn"
+                                        /></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- //End main footer section -->
-    </main>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script type="text/javascript" src="js/gsap.min.js"></script>
-    <script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
-    <script type="text/javascript" src="../js/common-scripts.js" defer></script>
-    <script type="text/javascript" src="js/index.js" defer></script>
-</body>
-
+            </footer>
+            <!-- //End main footer section -->
+        </main>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script type="text/javascript" src="js/gsap.min.js"></script>
+        <script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
+        <script
+            type="text/javascript"
+            src="../js/common-scripts.js"
+            defer></script>
+        <script type="text/javascript" src="js/index.js" defer></script>
+    </body>
 </html>

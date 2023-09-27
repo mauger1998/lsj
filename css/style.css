@@ -1064,11 +1064,14 @@ html {
     justify-content: space-between;
 }
 .provide-tradesmen-content {
-    width: 40%;
+    width: 50%;
 }
 .provide-tradesmen-content h2 {
     margin-bottom: 2rem;
     color: var(--secondery-black);
+}
+.provide-tradesmen-content h2 em{
+	width: 100%;
 }
 .provide-tradesmen-content p {
     max-width: 360px;

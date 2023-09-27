@@ -30,8 +30,7 @@ let data = fetch(URLTHREE)
                 let vacanciesItem = document.createElement('div')
                 vacanciesItem.classList.add(
                     'vacancies-accordion',
-                    'bg-sun',
-                    'hidden'
+                    'bg-sun'
                 )
                 vacanciesWrap.appendChild(vacanciesItem)
 

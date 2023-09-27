@@ -183,62 +183,33 @@ let data = fetch(URLTHREE)
             }
 
 
-                // Function to load more items
-                function loadMoreItems() {
-                  // Get the container element
-                  var itemsContainer = document.getElementById('vacancies-accordion-wrap');
-                
-                  // Get all the items inside the container
-                  var items = itemsContainer.getElementsByClassName('vacancies-accordion');
-                
-                  // Calculate how many items to show
-                  var itemsToShow = 6;
-                
-                  // Calculate the index of the last item currently shown
-                  var lastItemIndex = Array.prototype.indexOf.call(itemsContainer.children, items[items.length - 1]);
-                
-                  // Loop through the remaining items and show them
-                  for (var i = lastItemIndex + 1; i < lastItemIndex + itemsToShow + 1 && i < items.length; i++) {
-                    items[i].style.display = 'block';
-                  }
-                
-                  // If all items have been shown, hide the "Load More" button
-                  if (lastItemIndex + itemsToShow >= items.length - 1) {
-                    document.getElementById('loadmore').style.display = 'none';
-                      itemsContainer.classList.add('shape-none')
-                  }
-                }
-                
-                // Add a click event listener to the "Load More" button
-                document.getElementById('loadmore').addEventListener('click', loadMoreItems);
-
 
             
             //Load More
-            // const loadMore = document.querySelectorAll('#loadmore a')
-            // const hideShape = document.querySelectorAll('.vacancies-accordion-wrap')
-            // const hid = [
-            //     ...document.querySelectorAll('.vacancies-accordion.hidden'),
-            // ]
+            const loadMore = document.querySelectorAll('#loadmore a')
+            var hideShape = document.getElementById('vacancies-accordion-wrap');
+            const hid = [
+                ...document.querySelectorAll('.vacancies-accordion.hidden'),
+            ]
 
-            // hid.splice(0, 6).forEach((elem) => elem.classList.remove('hidden'))
+            hid.splice(0, 6).forEach((elem) => elem.classList.remove('hidden'))
 
-            // loadmore.addEventListener('click', function (e) {
-            //     e.preventDefault()
+            loadmore.addEventListener('click', function (e) {
+                e.preventDefault()
 
-            //     hid.splice(0, 6).forEach((elem) =>
-            //         elem.classList.remove('hidden')
-            //     )
+                hid.splice(0, 6).forEach((elem) =>
+                    elem.classList.remove('hidden')
+                )
 
-            //     if (hid.length == 0) {
-            //         loadmore.classList.add('hidden')
-            //     }
-            //     if (hid.length == 0) {
-            //         setTimeout(function(){
-            //             hideShape.classList.add('shape-hidden')
-            //         }, 400)
-            //     }
-            // })
+                if (hid.length == 0) {
+                    loadmore.classList.add('hidden')
+                }
+                if (hid.length == 0) {
+                    setTimeout(function(){
+                        hideShape.classList.add('shape-none')
+                    }, 400)
+                }
+            })
         }
 
         if (result.length < 1) {

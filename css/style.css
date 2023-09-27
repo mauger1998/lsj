@@ -3097,10 +3097,12 @@ html {
     .provide-tradesmen-content {
         width: 100%;
     }
-    .tradesmen-accordion-wrap {
-        width: 100%;
-        max-width: 504px;
-    }
+.tradesmen-accordion-wrap {
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	margin-top: 4rem;
+}
     .companies-icon-wrap {
         margin-top: 5rem;
     }

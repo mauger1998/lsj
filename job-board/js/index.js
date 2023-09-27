@@ -30,7 +30,8 @@ let data = fetch(URLTHREE)
                 let vacanciesItem = document.createElement('div')
                 vacanciesItem.classList.add(
                     'vacancies-accordion',
-                    'bg-sun'
+                    'bg-sun',
+                    'hidden'
                 )
                 vacanciesWrap.appendChild(vacanciesItem)
 
@@ -204,6 +205,7 @@ let data = fetch(URLTHREE)
                   // If all items have been shown, hide the "Load More" button
                   if (lastItemIndex + itemsToShow >= items.length - 1) {
                     document.getElementById('loadmore').style.display = 'none';
+                      itemsContainer.classList.add('shape-none')
                   }
                 }
                 

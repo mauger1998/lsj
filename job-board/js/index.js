@@ -184,6 +184,7 @@ let data = fetch(URLTHREE)
 
             //Load More
             const loadMore = document.querySelectorAll('#loadmore a')
+            const hideShape = document.querySelectorAll('.vacancies-accordion-wrap')
             const hid = [
                 ...document.querySelectorAll('.vacancies-accordion.hidden'),
             ]
@@ -199,7 +200,7 @@ let data = fetch(URLTHREE)
 
                 if (hid.length == 0) {
                     loadmore.classList.add('hidden')
-                    document.querySelectorAll('.vacancies-accordion-wrap').classList.add('shape-hidden')
+                    hideShape.classList.add('shape-hidden')
                 }
             })
         }

@@ -202,7 +202,9 @@ let data = fetch(URLTHREE)
                     loadmore.classList.add('hidden')
                 }
                 if (hid.length == 0) {
-                    hideShape.classList.add('shape-hidden')
+                    setTimeout(function(){
+                        hideShape.classList.add('shape-hidden')
+                    }, 400)
                 }
             })
         }

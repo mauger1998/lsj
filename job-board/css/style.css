@@ -169,11 +169,15 @@ a {
     bottom: -15px;
     left: -2.5%;
     z-index: 1;
+    transition: height 0.4s ease-out;
 }
+.vacancies-accordion-wrap.shape-none:after {height: 0;}
+
 .hide-loadmore .vacancies-accordion-wrap:after,
 .hide-loadmore .load-more-btn {
     display: none;
 }
+.load-more-btn.hidden{display: none;}
 
 .vacancies-accordion {
     width: 100%;

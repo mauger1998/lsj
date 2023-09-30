@@ -165,6 +165,7 @@
                                         region: 'eu1',
                                         portalId: '143358931',
                                         formId: '9a5472f3-70c1-43d4-822a-0ab4e286b241',
+
                                         onFormReady: function ($form) {
                                             const dataFunction = (
                                                 NEWURLTWO
@@ -179,41 +180,6 @@
                                                             $form.find(
                                                                 'input[name="worker_"]'
                                                             )
-
-                                                        // if (
-                                                        //     $form.find(
-                                                        //         '.cookie-reset-container'
-                                                        //     ) == null
-                                                        // ) {
-
-                                                        // }
-
-                                                        // console.log(
-                                                        //     $form.find(
-                                                        //         '.cookie-reset-container'
-                                                        //     )
-                                                        // )
-
-                                                        // const cookieContainer =
-                                                        //     $form.find(
-                                                        //         '.cookie-reset-container'
-                                                        //     )
-
-                                                        // const cookieContainerElement =
-                                                        //     cookieContainer[0]
-
-                                                        // cookieContainerElement.style.fontSize =
-                                                        //     '1.5rem'
-                                                        // cookieContainerElement.style.position =
-                                                        //     'absolute'
-                                                        // cookieContainerElement.style.bottom =
-                                                        //     '4rem'
-                                                        // cookieContainerElement.style.right =
-                                                        //     '1rem'
-                                                        // cookieContainerElement.style.cursor =
-                                                        //     'pointer'
-                                                        // cookieContainerElement.style.zIndex =
-                                                        // ;('100')
 
                                                         const selectMenu =
                                                             select
@@ -425,6 +391,121 @@
                                         region: 'eu1',
                                         portalId: '143358931',
                                         formId: '3578ea0a-fc2d-414b-87ed-2e6733d8997b',
+                                        onFormSubmit: function ($form) {
+                                            var formData = {
+                                                firstName: $form
+                                                    .find(
+                                                        "input[name='firstname']"
+                                                    )
+                                                    .val(),
+                                                lastName: $form
+                                                    .find(
+                                                        "input[name='lastname']"
+                                                    )
+                                                    .val(),
+                                                email: $form
+                                                    .find("input[name='email']")
+                                                    .val(),
+                                                phone: $form
+                                                    .find("input[name='phone']")
+                                                    .val(),
+                                                yearsExperience: $form
+                                                    .find(
+                                                        "input[name='years_experience_']"
+                                                    )
+                                                    .val(),
+
+                                                age: $form
+                                                    .find("input[name='age_']")
+                                                    .val(),
+                                                trade: $form
+                                                    .find(
+                                                        "input[name='trade_']"
+                                                    )
+                                                    .val(),
+                                                message: $form
+                                                    .find(
+                                                        "textarea[name='message_']"
+                                                    )
+                                                    .val(),
+                                            }
+
+                                            console.log(formData)
+
+                                            // Create a request object
+                                            const mutations = {
+                                                mutations: [
+                                                    {
+                                                        create: {
+                                                            _id: 'profile.',
+                                                            _type: 'profiles',
+                                                            firstName:
+                                                                formData.firstName,
+                                                            lastName:
+                                                                formData.lastName,
+                                                            email: formData.email,
+                                                            phone: formData.phone,
+                                                            yearsExperience:
+                                                                Number(
+                                                                    formData.yearsExperience
+                                                                ),
+                                                            age: Number(
+                                                                formData.age
+                                                            ),
+                                                            trade: formData.trade,
+
+                                                            message:
+                                                                formData.message,
+                                                            approved: false,
+                                                        },
+                                                    },
+                                                ],
+                                            }
+
+                                            const request = new Request(
+                                                'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/mutate/production',
+                                                {
+                                                    method: 'POST',
+                                                    headers: {
+                                                        'Content-Type':
+                                                            'application/json',
+                                                        // If you have an API token, you can add it as an Authorization header
+                                                        Authorization: `Bearer skm6bV5h0MCZP2KZbWOlNK0RPZxtSDziSfplw7HkI3JxO9jW7c5jxa9mmR4UTGbsI4r1bNo7IYULJvqMTPLaPxmJdPXaG908v3aw9EHvx4oVFND6Cy3ir2rCofmd16WvSC1M56nT4khJaNj9VpLjiKAtcoKIF9KfqF4RWPLPX3VDyhEyO7YG`,
+                                                    },
+                                                    body: JSON.stringify(
+                                                        mutations
+                                                    ),
+                                                }
+                                            )
+
+                                            // Send the request
+                                            fetch(request)
+                                                .then((response) => {
+                                                    if (response.ok) {
+                                                        // Request was successful
+                                                        return response.json()
+                                                    } else {
+                                                        // Request failed
+                                                        throw new Error(
+                                                            'Error sending form data to Sanity Studio'
+                                                        )
+                                                    }
+                                                })
+                                                .then((data) => {
+                                                    // Handle the response data here
+                                                    console.log(
+                                                        'Form data sent to Sanity Studio:',
+                                                        data
+                                                    )
+                                                })
+                                                .catch((error) => {
+                                                    // Handle errors
+                                                    console.error(
+                                                        'Error:',
+                                                        error
+                                                    )
+                                                })
+                                        },
                                     })
                                 </script>
                             </div>

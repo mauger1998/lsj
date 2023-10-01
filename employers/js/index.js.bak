@@ -172,7 +172,6 @@ fetch(URL)
     .then(({
         result
     }) => {
-        console.log(result)
 
         const companyWrap = document.querySelector(".construction-companies-item-wrap")
         if (result.length > 0) {
@@ -215,7 +214,6 @@ fetch(URLTWO)
     .then(({
         result
     }) => {
-        console.log(result)
 
         const accordionFaq = document.querySelector(".faq-item-wrap")
         if (result.length > 0) {

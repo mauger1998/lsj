@@ -1,8 +1,8 @@
-let URL =
-    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27profiles%27%5D%7B%0A%22image%22%3A+image.asset-%3Eurl%2C%0Aname%2C%0AjobTitle%2C%0Aage%2C%0AyearsExperience%2C%0Abio%0A%7D&perspective=published'
+const PROFILEURL =
+    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27profiles%27+%26%26+approved+%5D+%0A%0A'
 
 // fetch the content
-fetch(URL)
+fetch(PROFILEURL)
     .then((res) => res.json())
     .then(({ result }) => {
         const jobPoolWrap = document.querySelector('.job-pool-card-wrap ')
@@ -23,7 +23,7 @@ fetch(URL)
                 jobPoolImage.appendChild(jobPoolImageSrc)
 
                 let jobPoolName = document.createElement('h4')
-                jobPoolName.textContent = result.name
+                jobPoolName.textContent = `${result.firstName}  ${result.lastName}`
                 jobPoolItem.appendChild(jobPoolName)
 
                 let jobPoolTitle = document.createElement('h5')

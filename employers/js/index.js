@@ -192,8 +192,6 @@ let URLTWO =
 fetch(URLTWO)
     .then((res) => res.json())
     .then(({ result }) => {
-        console.log(result)
-
         const accordionFaq = document.querySelector('.faq-item-wrap')
         if (result.length > 0) {
             accordionFaq.innerHTML = ''
@@ -249,8 +247,6 @@ let URLTHREE =
 fetch(URLTHREE)
     .then((res) => res.json())
     .then(({ result }) => {
-        console.log(result)
-
         const constructionWrap = document.querySelector(
             '.workers-contribute-item-wrap'
         )

@@ -166,7 +166,7 @@
                                         alt="Close Button" />
                                 </button>
 
-                                <script>
+                                <!-- <script>
                                     hbspt.forms.create({
                                         region: 'eu1',
                                         portalId: '143358931',
@@ -357,6 +357,24 @@
                                             )
                                         },
                                     })
+                                </script> -->
+                                <script>
+                                    async function fetchSanityApprovedJobs() {
+                                        const response = await fetch(
+                                            `https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22vacancies%22%5D+%7B%0A++email%2C%0A++approved%2C%0A++++duration%2C%0A++++skills%2C%0A++++lastName%2C%0A++++description%2C%0A++++phone%2C%0A++++startDate%2C%0A++++firstName%2C%0A++++companyName%2C%0A++++jobTitle%0A%7D`
+                                        )
+                                        const approvedJobs =
+                                            await response.json()
+                                        return approvedJobs
+                                    }
+
+                                    fetchSanityApprovedJobs().then(
+                                        (approvedJobs) => {
+                                            const { result } = approvedJobs
+
+                                            console.log(result)
+                                        }
+                                    )
                                 </script>
                             </div>
                         </div>
@@ -543,7 +561,6 @@
 
                                                             description:
                                                                 formData.description,
-                                                            approved: false,
                                                         },
                                                     },
                                                 ],

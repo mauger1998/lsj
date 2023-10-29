@@ -1,253 +1,812 @@
 /*Start Secondery Hero Style*/
-.secondery-hero-wrap{position: relative;}
-.secondery-hero-wrap:after {content: ''; position: absolute; top: auto; left: 0; bottom: 0; width: 100%; height: 14.8%; background-color: #2070AD;}
-.secondery-hero-wrap .wrapper{padding-bottom: 0;}
-.secondery-hero-back-bg{width: 100%;}
-.secondery-hero-back-bg figure{padding: 0 15px; max-width: 1236px; margin: 0 auto;}
-.secondery-hero-back-bg figure img{width: 100%;}
-.secondery-hero-inner{width: 100%; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: column; justify-content: center; align-items: center}
-.secondery-hero-inner h2{text-align: center; max-width: 800px; margin-bottom: 1.25rem; position: relative; z-index: 1;}
-.secondery-hero-inner p{text-align: center; max-width: 325px; position: relative; z-index: 2;}
-.secondery-hero-inner figure{width: 100%; margin-top: -26px; position: relative; z-index: 1;}
-.secondery-hero-inner figure img{max-width: 448px; margin: 0 auto;}
-.job-seekers-hero .secondery-hero-inner figure img { max-width: 270px;}
+.secondery-hero-wrap {
+    position: relative;
+}
+.secondery-hero-wrap:after {
+    content: '';
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 14.8%;
+    background-color: #2070ad;
+}
+.secondery-hero-wrap .wrapper {
+    padding-bottom: 0;
+}
+.secondery-hero-back-bg {
+    width: 100%;
+}
+.secondery-hero-back-bg figure {
+    padding: 0 15px;
+    max-width: 1236px;
+    margin: 0 auto;
+}
+.secondery-hero-back-bg figure img {
+    width: 100%;
+}
+.secondery-hero-inner {
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.secondery-hero-inner h2 {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+.secondery-hero-inner p {
+    text-align: center;
+    max-width: 325px;
+    position: relative;
+    z-index: 2;
+}
+.secondery-hero-inner figure {
+    width: 100%;
+    margin-top: -26px;
+    position: relative;
+    z-index: 1;
+}
+.secondery-hero-inner figure img {
+    max-width: 448px;
+    margin: 0 auto;
+}
+.job-seekers-hero .secondery-hero-inner figure img {
+    max-width: 270px;
+}
 /*End Secondery Hero Style*/
 
 /*Start Job Seekers Hero Style*/
-.job-seekers-hero.secondery-hero-wrap .wrapper{padding-top: 5.5rem; padding-bottom: 10rem;}
-.job-seekers-hero .secondery-hero-inner h2{order: 2}
-.job-seekers-hero .secondery-hero-inner p{order: 3}
-.job-seekers-hero .secondery-hero-inner figure{order: 1; margin-bottom: 2rem;}
-.job-seekers-hero .secondery-hero-inner h2 img{position: absolute; margin-left: 10px; margin-top: 7px;}
-.lottie-wrapper{width: 100%; margin-top: -26px; position: relative; z-index: 1;}
-.lottie-wrapper lottie-player{max-width: 448px; margin: 0 auto;}
-.job-seekers-hero .lottie-wrapper lottie-player { max-width: 270px;}
-.lottie-wrapper{order: 1; margin-bottom: 2rem;}
+.job-seekers-hero.secondery-hero-wrap .wrapper {
+    padding-top: 5.5rem;
+    padding-bottom: 10rem;
+}
+.job-seekers-hero .secondery-hero-inner h2 {
+    order: 2;
+}
+.job-seekers-hero .secondery-hero-inner p {
+    order: 3;
+}
+.job-seekers-hero .secondery-hero-inner figure {
+    order: 1;
+    margin-bottom: 2rem;
+}
+.job-seekers-hero .secondery-hero-inner h2 img {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+.lottie-wrapper {
+    width: 100%;
+    margin-top: -26px;
+    position: relative;
+    z-index: 1;
+}
+.lottie-wrapper lottie-player {
+    max-width: 448px;
+    margin: 0 auto;
+}
+.job-seekers-hero .lottie-wrapper lottie-player {
+    max-width: 270px;
+}
+.lottie-wrapper {
+    order: 1;
+    margin-bottom: 2rem;
+}
 
-.job-seekers-hero .secondery-hero-back-bg figure{padding: 0 6.375rem 1.5rem}
-.job-seekers-hero.secondery-hero-wrap:after{display: none}
+.job-seekers-hero .secondery-hero-back-bg figure {
+    padding: 0 6.375rem 1.5rem;
+}
+.job-seekers-hero.secondery-hero-wrap:after {
+    display: none;
+}
 /*End Job Seekers Hero Style*/
 
-
 /*Start Why With Us Style*/
-.why-with-us-wrap { padding: 1rem 0;}
-.why-with-us-card-wrap{display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4rem; width: 100%; margin-top: 8rem;}
-.hire-tradesmen-btn.align-left { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4rem; width: 100%; }
-.why-with-us-card h5{margin-bottom: 1.5rem; line-height: 1.2; max-width: 243px; min-height: 44px; color: var(--secondery-balck);}
-.hire-tradesmen-btn{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center; margin-top: 5rem;}
-.hire-tradesmen-btn a.btn{background-color: var(--sun);}
+.why-with-us-wrap {
+    padding: 1rem 0;
+}
+.why-with-us-card-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    width: 100%;
+    margin-top: 8rem;
+}
+.hire-tradesmen-btn.align-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    width: 100%;
+}
+.why-with-us-card h5 {
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 243px;
+    min-height: 44px;
+    color: var(--secondery-balck);
+}
+.hire-tradesmen-btn {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.hire-tradesmen-btn a.btn {
+    background-color: var(--sun);
+}
 /*End Why With Us Style*/
 
 /*Start Job Seekers Why With Us Style*/
-.why-with-us-inner h2{max-width: 320px;}
+.why-with-us-inner h2 {
+    max-width: 320px;
+}
 /*End Job Seekers Why With Us Style*/
 
 /*Start How It Works Style*/
-.how-it-works-wrap{padding: 3rem 0 4rem;}
-.how-it-works-inner{margin-top: 13rem; padding: 2rem 0 5rem; position: relative;}
-.how-it-work-progress{position: absolute; top: 0; left: 50%; transform: translateX(-50%); border: 1px solid #F8B80E; background: var(--white); width: 20px; height: 100%;}
-.how-it-work-progress div{background-color: var(--sun)}
-.how-it-works-item-wrap{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: column;}
-.how-it-works-item{margin-top: 15rem; position: relative;}
-.how-it-works-item:after { content: ''; position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 41px; height: 41px; background: #ffffff; border-radius: 100%; border: 1px solid #F8B80E; transition: all 0.2s ease-in-out;}
-.how-it-works-item.active:after {background-color: var(--sun)}
-.how-it-works-item:first-child:after {top: -50px;}
-.how-it-works-item:first-child{margin-top: 0;}
-.how-it-works-item:nth-child(odd){display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: flex-end;}
-.how-it-works-item p{max-width: 433px; font-size: 24px; line-height: 1.2; font-weight: 300; opacity: 0; transform: scale(0); transition: all 0.2s ease-in-out;}
-.how-it-works-item.active p{opacity: 1; transform: scale(1)}
+.how-it-works-wrap {
+    padding: 3rem 0 4rem;
+}
+.how-it-works-inner {
+    margin-top: 13rem;
+    padding: 2rem 0 5rem;
+    position: relative;
+}
+.how-it-work-progress {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #f8b80e;
+    background: var(--white);
+    width: 20px;
+    height: 100%;
+}
+.how-it-work-progress div {
+    background-color: var(--sun);
+}
+.how-it-works-item-wrap {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+}
+.how-it-works-item {
+    margin-top: 15rem;
+    position: relative;
+}
+.how-it-works-item:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 41px;
+    height: 41px;
+    background: #ffffff;
+    border-radius: 100%;
+    border: 1px solid #f8b80e;
+    transition: all 0.2s ease-in-out;
+}
+.how-it-works-item.active:after {
+    background-color: var(--sun);
+}
+.how-it-works-item:first-child:after {
+    top: -50px;
+}
+.how-it-works-item:first-child {
+    margin-top: 0;
+}
+.how-it-works-item:nth-child(odd) {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+}
+.how-it-works-item p {
+    max-width: 433px;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+.how-it-works-item.active p {
+    opacity: 1;
+    transform: scale(1);
+}
 /*End How It Works Style*/
 
 /*Start Submit Job Style*/
-.texts-btn-wrap{padding-bottom: 5rem;}
-.texts-btn-inner h2{max-width: 690px; margin-bottom: 2rem; text-align: center;}
-.texts-btn-inner p{max-width: 370px; margin-bottom: 3rem; text-align: center;}
+.texts-btn-wrap {
+    padding-bottom: 5rem;
+}
+.texts-btn-inner h2 {
+    max-width: 690px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.texts-btn-inner p {
+    max-width: 370px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
 /*End Submit Job Style*/
 
 /*Start Workers Contribute Style*/
-.workers-contribute-inner{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: column; justify-content: center; align-items: center;}
-.workers-contribute-inner h2{max-width: 576px; text-align: center;}
-.workers-contribute-item-wrap{margin-top: 9.75rem; gap: 4.6rem}
-.workers-contribute-item:nth-child(3n+2){margin-top: 5rem;}
-.workers-contribute-item figure{margin-bottom: 1.25rem;}
-.workers-contribute-item figure img{border-radius: 8px;}
-.workers-contribute-item p{font-size: 18px; line-height: 1.5; font-family: var(--AntiqueOliveRegular); font-weight: normal; color: var(--secondery-balck);}
+.workers-contribute-inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.workers-contribute-inner h2 {
+    max-width: 576px;
+    text-align: center;
+}
+.workers-contribute-item-wrap {
+    margin-top: 9.75rem;
+    gap: 4.6rem;
+}
+.workers-contribute-item:nth-child(3n + 2) {
+    margin-top: 5rem;
+}
+.workers-contribute-item figure {
+    margin-bottom: 1.25rem;
+}
+.workers-contribute-item figure img {
+    border-radius: 8px;
+}
+.workers-contribute-item p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: var(--AntiqueOliveRegular);
+    font-weight: normal;
+    color: var(--secondery-balck);
+}
 /*End Workers Contribute Style*/
 
-
 /*Style Found Labourers Style*/
-.found-labourers-wrap h2{max-width: 475px; color: var(--secondery-balck);}
-.found-labourers-card-wrap{gap: 1.625rem; margin-top: 8rem;}
-.found-labourers-card{padding: 2rem 2.25rem 2.875rem 1.5rem; display: flex; flex-direction: column; flex-flow: row wrap; border-radius: 8px; border: 1px solid var(--black); position: relative;}
-.layerd-bg {position: absolute; top: 0; left: 0; transform: translate(0px, 0px); width: 100%; height: 100%; border-radius: 8px; background: var(--sun); border: 1px solid var(--black); z-index: -1; transition: all 0.4s ease-in-out; transition-delay: 0.4s}
-.anim-el.inView .layerd-bg {transform: translate(8px, 8px)}
-.found-labourers-author{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: row; align-items: center; margin-bottom: 1.5rem;}
-.found-labourers-author figure{max-width: 52px; margin-right: 1rem;}
-.found-labourers-author figure img{border-radius: 50%;}
-.found-labourers-author h4{font-size: 24px; line-height: 1.1; font-family: var(--Montserrat); font-weight: 600;}
-.found-labourers-card p{margin-bottom: 2rem; color: var(--secondery-balck);}
-.found-labourers-card a.btn{background-color: var(--sun);}
+.found-labourers-wrap h2 {
+    max-width: 475px;
+    color: var(--secondery-balck);
+}
+.found-labourers-card-wrap {
+    gap: 1.625rem;
+    margin-top: 8rem;
+}
+.found-labourers-card {
+    padding: 2rem 2.25rem 2.875rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    border-radius: 8px;
+    border: 1px solid var(--black);
+    position: relative;
+}
+.layerd-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0px, 0px);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: var(--sun);
+    border: 1px solid var(--black);
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.4s;
+}
+.anim-el.inView .layerd-bg {
+    transform: translate(8px, 8px);
+}
+.found-labourers-author {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.found-labourers-author figure {
+    max-width: 52px;
+    margin-right: 1rem;
+}
+.found-labourers-author figure img {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.found-labourers-author h4 {
+    font-size: 24px;
+    line-height: 1.1;
+    font-family: var(--Montserrat);
+    font-weight: 600;
+}
+.found-labourers-card p {
+    margin-bottom: 2rem;
+    color: var(--secondery-balck);
+}
+.found-labourers-card a.btn {
+    background-color: var(--sun);
+}
 /*End Found Labourers Style*/
 
-
 /*Start Faq Style*/
-.faq-main{max-width: 940px; background-color: var(--early-dawn); min-height: 940px; border-radius: 500px; width: 100%;}
-.faq-item-wrap{max-width: 538px;width: 100%; margin-top: 4rem;}
-.faq-item{font-family: var(--AntiqueOliveRegular); position: relative; border-bottom: 1px solid var(--black); margin-top: 1rem;}
-.faq-accordion-trigger { width: 100%; position: relative; cursor: pointer;}
+.faq-main {
+    max-width: 940px;
+    background-color: var(--early-dawn);
+    min-height: 940px;
+    border-radius: 500px;
+    width: 100%;
+}
+.faq-item-wrap {
+    max-width: 538px;
+    width: 100%;
+    margin-top: 4rem;
+}
+.faq-item {
+    font-family: var(--AntiqueOliveRegular);
+    position: relative;
+    border-bottom: 1px solid var(--black);
+    margin-top: 1rem;
+}
+.faq-accordion-trigger {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
 /*.faq-accordion-trigger:after {position: absolute; content: ''; top: 5px; right: 0;  transform: translateY(-50%);  width: 22px; height: 22px; border-radius: 4px; background-color: var(--black); padding: 3px; background-image: url(../../svgs/bottom-arrow.svg); box-shadow: 2px 2px 0 0 #B3B3B3; background-size: 10px 15px; background-position: center center; background-repeat: no-repeat;}*/
 
-.faq-accordion-trigger:after {position: absolute; content: ''; top: 5px; right: 0; /* transform: translateY(-50%); */ width: 22px; height: 22px; border-radius: 4px; background-color: var(--black); padding: 3px; box-shadow: 2px 2px 0 0 #B3B3B3; background-size: 10px 15px; background-position: center center; background-repeat: no-repeat;}
-.faq-accordion-trigger:before {position: absolute; content: ''; top: 13px; right: 9px; transform: rotate(-90deg); width: 10px; height: 15px; opacity: 1; background-image: url(../svgs/bottom-arrow.svg); background-size: 10px 15px; background-position: center center; background-repeat: no-repeat; z-index: 9; transition: all 0.4s ease;}
-.faq-accordion-trigger[aria-expanded=true]::before { transform: rotate(0deg); }
+.faq-accordion-trigger:after {
+    position: absolute;
+    content: '';
+    top: 5px;
+    right: 0; /* transform: translateY(-50%); */
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background-color: var(--black);
+    padding: 3px;
+    box-shadow: 2px 2px 0 0 #b3b3b3;
+    background-size: 10px 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.faq-accordion-trigger:before {
+    position: absolute;
+    content: '';
+    top: 13px;
+    right: 9px;
+    transform: rotate(-90deg);
+    width: 10px;
+    height: 15px;
+    opacity: 1;
+    background-image: url(../svgs/bottom-arrow.svg);
+    background-size: 10px 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 9;
+    transition: all 0.4s ease;
+}
+.faq-accordion-trigger[aria-expanded='true']::before {
+    transform: rotate(0deg);
+}
 
-.faq-accordion-trigger:after { background-color: var(--sun); box-shadow: 2px 2px 0 0 var(--black); border: 1px solid var(--black);}
+.faq-accordion-trigger:after {
+    background-color: var(--sun);
+    box-shadow: 2px 2px 0 0 var(--black);
+    border: 1px solid var(--black);
+}
 
-.faq-item h5{font-family: var(--AntiqueOliveRegular); color: var(--secondery-balck); max-width: 280px; padding-bottom: 1rem;}
+.faq-item h5 {
+    font-family: var(--AntiqueOliveRegular);
+    color: var(--secondery-balck);
+    max-width: 280px;
+    padding-bottom: 1rem;
+}
 
-.faq-hidden-content{width: 100%; margin-bottom: 0; max-height: 0; overflow: hidden; transition: all 300ms ease-in-out;}
-.faq-accordion-trigger[aria-expanded=true] + .faq-hidden-content { max-height: 16rem; transition: all 300ms ease-in-out;}
+.faq-hidden-content {
+    width: 100%;
+    margin-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+}
+.faq-accordion-trigger[aria-expanded='true'] + .faq-hidden-content {
+    max-height: 16rem;
+    transition: all 300ms ease-in-out;
+}
 
-.faq-hidden-content p{padding-bottom: 1rem;}
-.faq-main .hire-tradesmen-btn{margin-top: 3rem;}
-.faq-small-circle{position: absolute; top: 3.5rem; left: -38px; width: 266px; height: 266px; border-radius: 50%; background-color: var(--early-dawn);}
-.faq-big-circle { position: absolute; bottom: -44.638889%; right: -37.902778%; width: 65.27777777777777vw; height: 65.27777777777777vw; max-width: 940px; max-height: 940px; border-radius: 50%; background-color: var(--early-dawn); }
+.faq-hidden-content p {
+    padding-bottom: 1rem;
+}
+.faq-main .hire-tradesmen-btn {
+    margin-top: 3rem;
+}
+.faq-small-circle {
+    position: absolute;
+    top: 3.5rem;
+    left: -38px;
+    width: 266px;
+    height: 266px;
+    border-radius: 50%;
+    background-color: var(--early-dawn);
+}
+.faq-big-circle {
+    position: absolute;
+    bottom: -44.638889%;
+    right: -37.902778%;
+    width: 65.27777777777777vw;
+    height: 65.27777777777777vw;
+    max-width: 940px;
+    max-height: 940px;
+    border-radius: 50%;
+    background-color: var(--early-dawn);
+}
 /*End Faq Style*/
 
-
 /* Start provide-tradesmen Style */
-.tradesmen-accordion-item h3:after{background-color: var(--golden-tainoi); background-image: url(../svgs/bottom-arrow.svg); box-shadow: 2px 2px 0 0 var(--black); border: 1px solid var(--black); box-sizing: border-box;}
+.tradesmen-accordion-item h3:after {
+    background-color: var(--golden-tainoi);
+    background-image: url(../svgs/bottom-arrow.svg);
+    box-shadow: 2px 2px 0 0 var(--black);
+    border: 1px solid var(--black);
+    box-sizing: border-box;
+}
 /* End provide-tradesmen Style */
 
-
-
-
 @media only screen and (max-width: 500px) {
+    .job-seekers-hero .secondery-hero-inner h2 img {
+        width: 32px;
+        margin-top: 4px;
+    }
+    .secondery-hero-wrap:after {
+        height: 82px;
+    }
+    .secondery-hero-inner figure img {
+        max-width: 342px;
+    }
+    .job-seekers-hero.secondery-hero-wrap .wrapper {
+        padding-top: 5rem;
+        padding-bottom: 8rem;
+    }
+    .job-seekers-hero .secondery-hero-back-bg figure {
+        padding: 0 1rem 1rem;
+    }
 
-    
-    .job-seekers-hero .secondery-hero-inner h2 img{ width: 32px; margin-top: 4px; }
-    .secondery-hero-wrap:after { height: 82px;}
-    .secondery-hero-inner figure img { max-width: 342px;}
-    .job-seekers-hero.secondery-hero-wrap .wrapper { padding-top: 5rem; padding-bottom: 8rem; }
-    .job-seekers-hero .secondery-hero-back-bg figure { padding: 0 1rem 1rem; }
+    .why-with-us-card-wrap {
+        margin-top: 4rem;
+        grid-template-columns: 1fr;
+    }
+    .hire-tradesmen-btn.align-left {
+        grid-template-columns: 1fr;
+    }
+    .hire-tradesmen-btn.align-left div:nth-child(1),
+    .hire-tradesmen-btn.align-left div:nth-child(3) {
+        display: none;
+    }
+    .how-it-works-inner {
+        margin-top: 5rem;
+    }
+    .how-it-works-item {
+        padding-left: 3rem;
+        margin-top: 5rem;
+    }
+    .how-it-work-progress {
+        left: 0;
+        transform: unset;
+        width: 1rem;
+    }
+    .how-it-works-item:after {
+        left: -9px;
+        transform: unset;
+        width: 2rem;
+        height: 2rem;
+    }
+    .how-it-works-item p {
+        max-width: 420px;
+        font-size: 18px;
+    }
+    .how-it-works-item:nth-child(odd) {
+        justify-content: flex-start;
+    }
+    .texts-btn-wrap {
+        padding-bottom: 0;
+    }
+    .workers-contribute-item-wrap {
+        margin-top: 5rem;
+        gap: 0;
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+    .workers-contribute-item:nth-child(3n + 2) {
+        margin: 0;
+    }
 
-    .why-with-us-card-wrap{margin-top: 4rem; grid-template-columns: 1fr;}
-    .hire-tradesmen-btn.align-left { grid-template-columns: 1fr;}
-    .hire-tradesmen-btn.align-left div:nth-child(1), .hire-tradesmen-btn.align-left div:nth-child(3){display: none;}
-    .how-it-works-inner { margin-top: 5rem;}
-    .how-it-works-item{padding-left: 3rem; margin-top: 5rem;}
-    .how-it-work-progress { left: 0; transform: unset; width: 1rem;}
-    .how-it-works-item:after { left: -9px; transform: unset; width: 2rem; height: 2rem;}
-    .how-it-works-item p { max-width: 420px; font-size: 18px;}
-    .how-it-works-item:nth-child(odd){justify-content: flex-start;}
-    .texts-btn-wrap {padding-bottom: 0;}
-    .workers-contribute-item-wrap { margin-top: 5rem; gap: 0; grid-template-columns: 1fr; row-gap: 4rem;}
-    .workers-contribute-item:nth-child(3n+2){margin: 0;}
+    .construction-companies-item-wrap {
+        gap: 3.5rem;
+        margin-top: 5rem;
+        grid-template-columns: 1fr;
+        padding-right: 1rem;
+    }
+    .faq-small-circle {
+        width: 160px;
+        height: 160px;
+        top: -5rem;
+        left: -121px;
+    }
+    .faq-big-circle {
+        bottom: -20.638889%;
+        right: -42.902778%;
+    }
+    .faq-main {
+        min-height: auto;
+        padding: 4rem 1rem;
+    }
+    .faq-wrap .wrapper {
+        padding-inline: 0;
+    }
 
-    .construction-companies-item-wrap { gap: 3.5rem; margin-top: 5rem; grid-template-columns: 1fr; padding-right: 1rem; }
-    .faq-small-circle { width: 160px; height: 160px; top: -5rem; left: -121px; }
-    .faq-big-circle { bottom: -20.638889%; right: -42.902778%; }
-    .faq-main {min-height: auto; padding: 4rem 1rem;}
-    .faq-wrap .wrapper{padding-inline: 0;}
-
-    .found-labourers-card-wrap{grid-template-columns: 1fr; padding-right: .5rem;}
-    .faq-item-wrap { margin-top: 2rem; }
-    .faq-main{border-radius: 40px;}
-    
-
+    .found-labourers-card-wrap {
+        grid-template-columns: 1fr;
+        padding-right: 0.5rem;
+    }
+    .faq-item-wrap {
+        margin-top: 2rem;
+    }
+    .faq-main {
+        border-radius: 40px;
+    }
 }
 @media only screen and (max-width: 374px) {
-    .secondery-hero-inner figure img { max-width: 188px; }
-    .secondery-hero-wrap:after { height: 68px; }
-
+    .secondery-hero-inner figure img {
+        max-width: 188px;
+    }
+    .secondery-hero-wrap:after {
+        height: 68px;
+    }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 700px) {
+    .wrapper {
+        padding-inline: 4rem;
+    }
 
-    .wrapper { padding-inline: 4rem; }
+    .secondery-hero-inner h2 {
+        max-width: 480px;
+    }
+    .secondery-hero-inner h2 img {
+        width: 42px;
+    }
+    .job-seekers-hero .secondery-hero-inner h2 img {
+        width: 36px;
+        margin-top: 4px;
+    }
+    .secondery-hero-wrap:after {
+        height: 82px;
+    }
+    .secondery-hero-inner figure img {
+        max-width: 342px;
+    }
 
-    
-    .secondery-hero-inner h2 { max-width: 480px;}
-    .secondery-hero-inner h2 img{width: 42px;}
-    .job-seekers-hero .secondery-hero-inner h2 img{ width: 36px; margin-top: 4px; }
-    .secondery-hero-wrap:after { height: 82px;}
-    .secondery-hero-inner figure img { max-width: 342px;}
+    .why-with-us-card-wrap {
+        margin-top: 4rem;
+        grid-template-columns: 1fr;
+    }
+    .hire-tradesmen-btn.align-left {
+        grid-template-columns: 1fr;
+    }
+    .hire-tradesmen-btn.align-left div:nth-child(1),
+    .hire-tradesmen-btn.align-left div:nth-child(3) {
+        display: none;
+    }
 
-    .why-with-us-card-wrap{margin-top: 4rem; grid-template-columns: 1fr;}
-    .hire-tradesmen-btn.align-left { grid-template-columns: 1fr; }
-    .hire-tradesmen-btn.align-left div:nth-child(1), .hire-tradesmen-btn.align-left div:nth-child(3){display: none;}
+    .how-it-works-inner {
+        margin-top: 5rem;
+    }
+    .how-it-works-item {
+        padding-left: 3rem;
+        margin-top: 5rem;
+    }
+    .how-it-work-progress {
+        left: 0;
+        transform: unset;
+        width: 1rem;
+    }
+    .how-it-works-item:after {
+        left: -9px;
+        transform: unset;
+        width: 2rem;
+        height: 2rem;
+    }
+    .how-it-works-item p {
+        max-width: 420px;
+        font-size: 18px;
+    }
+    .how-it-works-item:nth-child(odd) {
+        justify-content: flex-start;
+    }
+    .texts-btn-wrap {
+        padding-bottom: 0;
+    }
+    .workers-contribute-item-wrap {
+        margin-top: 5rem;
+        gap: 0;
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+    .workers-contribute-item:nth-child(3n + 2) {
+        margin: 0;
+    }
 
-    .how-it-works-inner { margin-top: 5rem;}
-    .how-it-works-item{padding-left: 3rem; margin-top: 5rem;}
-    .how-it-work-progress { left: 0; transform: unset; width: 1rem;}
-    .how-it-works-item:after { left: -9px; transform: unset; width: 2rem; height: 2rem;}
-    .how-it-works-item p { max-width: 420px; font-size: 18px;}
-    .how-it-works-item:nth-child(odd){justify-content: flex-start;}
-    .texts-btn-wrap {padding-bottom: 0;}
-    .workers-contribute-item-wrap { margin-top: 5rem; gap: 0; grid-template-columns: 1fr; row-gap: 4rem;}
-    .workers-contribute-item:nth-child(3n+2){margin: 0;}
+    .construction-companies-item-wrap {
+        gap: 3.5rem;
+        margin-top: 5rem;
+        grid-template-columns: 1fr;
+        padding-right: 1rem;
+    }
+    .faq-small-circle {
+        width: 160px;
+        height: 160px;
+        top: -2rem;
+        left: -100px;
+    }
+    .faq-big-circle {
+        bottom: -49vw;
+        right: -42.902778%;
+    }
+    .faq-main {
+        min-height: auto;
+        padding: 4rem 1rem;
+        border-radius: 60px;
+    }
+    .faq-wrap .wrapper {
+        padding-inline: 0;
+    }
 
-    .construction-companies-item-wrap { gap: 3.5rem; margin-top: 5rem; grid-template-columns: 1fr; padding-right: 1rem; }
-    .faq-small-circle { width: 160px; height: 160px; top: -2rem; left: -100px; }
-    .faq-big-circle { bottom: -49vw; right: -42.902778%; }
-    .faq-main {min-height: auto; padding: 4rem 1rem; border-radius: 60px;}
-    .faq-wrap .wrapper{padding-inline: 0;}
-
-    .found-labourers-card-wrap{grid-template-columns: 1fr;}
-
+    .found-labourers-card-wrap {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media only screen and (min-width: 701px) and (max-width: 950px) {
+    .secondery-hero-wrap:after {
+        height: 107px;
+    }
 
-    .secondery-hero-wrap:after { height: 107px;}
-    
-    .job-seekers-hero .secondery-hero-inner h2 img{ margin-top: 4px; width: 38px;}
-    .why-with-us-card-wrap{gap: 1rem; margin-top: 5rem;}
-    .hire-tradesmen-btn.align-left {gap: 1rem; }
-    .card-thumb-ico {width: 36px; height: 36px; padding: 8px;}
-    
-    .how-it-works-wrap .wrapper{padding-inline: 2rem;}
-    .how-it-works-inner { margin-top: 7rem;}
-    .how-it-works-item p { max-width: 380px; width: 43%;}
+    .job-seekers-hero .secondery-hero-inner h2 img {
+        margin-top: 4px;
+        width: 38px;
+    }
+    .why-with-us-card-wrap {
+        gap: 1rem;
+        margin-top: 5rem;
+    }
+    .hire-tradesmen-btn.align-left {
+        gap: 1rem;
+    }
+    .card-thumb-ico {
+        width: 36px;
+        height: 36px;
+        padding: 8px;
+    }
 
-    .workers-contribute-item-wrap { margin-top: 6.75rem; gap: 1.5rem; }
-    .workers-contribute-item:nth-child(3n+2) { margin-top: 4rem; }
+    .how-it-works-wrap .wrapper {
+        padding-inline: 2rem;
+    }
+    .how-it-works-inner {
+        margin-top: 7rem;
+    }
+    .how-it-works-item p {
+        max-width: 380px;
+        width: 43%;
+    }
 
-    .faq-wrap .wrapper{padding-inline: 1rem;}
-    .faq-small-circle {top: -2.5rem; left: -100px; width: 220px; height: 220px;}
-    .faq-big-circle { bottom: -21.638889%; right: -47.902778%; }
+    .workers-contribute-item-wrap {
+        margin-top: 6.75rem;
+        gap: 1.5rem;
+    }
+    .workers-contribute-item:nth-child(3n + 2) {
+        margin-top: 4rem;
+    }
 
-    .found-labourers-wrap .wrapper{padding-inline: 2rem;}
-    .found-labourers-card-wrap{margin-top: 5rem;}
-    .found-labourers-card { padding: 2rem 1rem;}
-    .found-labourers-card a.btn{ padding: 12px 14px;}
+    .faq-wrap .wrapper {
+        padding-inline: 1rem;
+    }
+    .faq-small-circle {
+        top: -2.5rem;
+        left: -100px;
+        width: 220px;
+        height: 220px;
+    }
+    .faq-big-circle {
+        bottom: -21.638889%;
+        right: -47.902778%;
+    }
 
+    .found-labourers-wrap .wrapper {
+        padding-inline: 2rem;
+    }
+    .found-labourers-card-wrap {
+        margin-top: 5rem;
+    }
+    .found-labourers-card {
+        padding: 2rem 1rem;
+    }
+    .found-labourers-card a.btn {
+        padding: 12px 14px;
+    }
 }
 
 @media only screen and (min-width: 951px) and (max-width: 1024px) {
-
-    .how-it-works-inner { margin-top: 8rem;}
-    .workers-contribute-item-wrap { margin-top: 7rem; gap: 2.6rem; }
-    .how-it-works-item p { max-width: 332px;}
-    .faq-wrap .wrapper{padding-inline: 2rem;}
-    .faq-small-circle {top: 1.5rem; left: -70px;}
-    .faq-big-circle {bottom: -29.638889%; right: -44.902778%;}
-    .found-labourers-card a.btn{padding: 12px 16px;}
+    .how-it-works-inner {
+        margin-top: 8rem;
+    }
+    .workers-contribute-item-wrap {
+        margin-top: 7rem;
+        gap: 2.6rem;
+    }
+    .how-it-works-item p {
+        max-width: 332px;
+    }
+    .faq-wrap .wrapper {
+        padding-inline: 2rem;
+    }
+    .faq-small-circle {
+        top: 1.5rem;
+        left: -70px;
+    }
+    .faq-big-circle {
+        bottom: -29.638889%;
+        right: -44.902778%;
+    }
+    .found-labourers-card a.btn {
+        padding: 12px 16px;
+    }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
-
-    .workers-contribute-item-wrap { margin-top: 7rem; gap: 2.6rem; }
-    .how-it-works-item p { max-width: 370px;}
-    .faq-wrap .wrapper{padding-inline: 4rem;}
-    .faq-small-circle {top: 1.5rem; left: -70px;}
-    .faq-big-circle {bottom: -29.638889%; right: -44.902778%;}
+    .workers-contribute-item-wrap {
+        margin-top: 7rem;
+        gap: 2.6rem;
+    }
+    .how-it-works-item p {
+        max-width: 370px;
+    }
+    .faq-wrap .wrapper {
+        padding-inline: 4rem;
+    }
+    .faq-small-circle {
+        top: 1.5rem;
+        left: -70px;
+    }
+    .faq-big-circle {
+        bottom: -29.638889%;
+        right: -44.902778%;
+    }
 }
-
-
-
-
-
-
-
-

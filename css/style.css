@@ -505,7 +505,7 @@ button:focus {
 .wrapper {
     width: 100%;
     max-width: 1440px;
-    padding: 8rem 0 4rem;
+    padding: 6rem 4rem;
     padding-inline: 10rem;
 }
 .centerY {
@@ -932,7 +932,7 @@ html {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 9rem;
+    margin-top: 6rem;
 }
 .companies-icon {
     filter: grayscale(1);

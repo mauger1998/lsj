@@ -149,41 +149,131 @@ function toggleAccordion2() {
     }
 }
 
-let URL =
-    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27employersTestimonials%27%5D%7B%0A++review%2C%0A++%22logo%22%3A+logo.asset-%3Eurl%0A%7D&perspective=published'
+// Sanity Fetch
+async function fetchSanityData(url) {
+    const response = await fetch(url)
+    const sanityData = await response.json()
+    return sanityData
+}
 
-// fetch the content
-fetch(URL)
-    .then((res) => res.json())
-    .then(({ result }) => {
-        const companyWrap = document.querySelector(
-            '.construction-companies-item-wrap'
-        )
-        if (result.length > 0) {
-            companyWrap.innerHTML = ''
-            result.forEach((result) => {
-                let companyItem = document.createElement('div')
-                companyItem.classList.add(
-                    'construction-companies-item',
-                    'bg-early-dawn',
-                    'anim-el'
-                )
-                companyWrap.appendChild(companyItem)
+fetchSanityData(
+    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22projects%22%5D+%7B%0A++projectsContent%5B%5D+%7B%0A++++%22imageUrl%22%3A+image.asset-%3Eurl%2C%0A++++text%2C%0A++%7D%0A%7D%0A%0A'
+).then((project) => {
+    const { result } = project
+    const resolvedResult = result[0].projectsContent
 
-                let companyImage = document.createElement('figure')
-                companyItem.appendChild(companyImage)
+    const constructionWrap = document.querySelector(
+        '.workers-contribute-item-wrap'
+    )
+    if (resolvedResult.length > 0) {
+        constructionWrap.innerHTML = ''
+        resolvedResult.forEach((result) => {
+            let constructionItem = document.createElement('div')
+            constructionItem.classList.add('workers-contribute-item')
+            constructionWrap.appendChild(constructionItem)
 
-                let companyImageSrc = document.createElement('img')
-                companyImageSrc.src = result.logo
-                companyImage.appendChild(companyImageSrc)
+            let constructionImage = document.createElement('figure')
+            constructionImage.classList.add('anim-el', 'clip-anim')
+            constructionItem.appendChild(constructionImage)
 
-                let companyDesc = document.createElement('p')
-                companyDesc.textContent = result.review
-                companyItem.appendChild(companyDesc)
-            })
+            let constructionImageSrc = document.createElement('img')
+            constructionImageSrc.src = result.imageUrl
+            constructionImage.appendChild(constructionImageSrc)
+
+            let constructionDesc = document.createElement('p')
+            constructionDesc.textContent = result.text
+            constructionItem.appendChild(constructionDesc)
+        })
+        ScrollTrigger.refresh()
+    }
+})
+
+fetchSanityData(
+    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22employersTestimonials%22%5D+%7B%0A++employersTestimonialsContent%5B%5D+%7B%0A++++%22logoUrl%22%3A+logo.asset-%3Eurl%2C%0A++++review%0A++%7D%0A%7D%0A'
+).then((testimonial) => {
+    const { result } = testimonial
+    const resolvedResult = result[0].employersTestimonialsContent
+
+    const companyWrap = document.querySelector(
+        '.construction-companies-item-wrap'
+    )
+    if (resolvedResult.length > 0) {
+        companyWrap.innerHTML = ''
+        resolvedResult.forEach((result) => {
+            let companyItem = document.createElement('div')
+            companyItem.classList.add(
+                'construction-companies-item',
+                'bg-early-dawn',
+                'anim-el'
+            )
+            companyWrap.appendChild(companyItem)
+
+            let companyImage = document.createElement('figure')
+            companyItem.appendChild(companyImage)
+
+            let companyImageSrc = document.createElement('img')
+            companyImageSrc.src = result.logoUrl
+            companyImage.appendChild(companyImageSrc)
+
+            let companyDesc = document.createElement('p')
+            companyDesc.textContent = result.review
+            companyItem.appendChild(companyDesc)
+        })
+    }
+})
+
+fetchSanityData(
+    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22employersFaq%22%5D+%7B%0A++employersFaqContent%5B%5D+%7B%0A++++question%2C%0A++++answer%2C%0A++++%0A++%7D%0A%7D%0A'
+).then((faq) => {
+    const { result } = faq
+    console.log(result)
+    const resolvedResult = result[0].employersFaqContent
+
+    const accordionFaq = document.querySelector('.faq-item-wrap')
+    if (resolvedResult.length > 0) {
+        accordionFaq.innerHTML = ''
+        resolvedResult.forEach((result) => {
+            let accordionItem = document.createElement('div')
+            accordionItem.classList.add('faq-item')
+            accordionFaq.appendChild(accordionItem)
+
+            let accordionQuestion = document.createElement('div')
+            accordionQuestion.classList.add('faq-accordion-trigger')
+            accordionQuestion.setAttribute('aria-expanded', 'false')
+            accordionItem.appendChild(accordionQuestion)
+
+            let accordionTitle = document.createElement('h5')
+            accordionTitle.textContent = result.question
+            accordionQuestion.appendChild(accordionTitle)
+
+            let content = document.createElement('div')
+            content.classList.add('faq-hidden-content')
+
+            accordionItem.appendChild(content)
+
+            let contentP = document.createElement('p')
+            contentP.textContent = result.answer
+            content.appendChild(contentP)
+        })
+
+        // Accordian
+        const items = document.querySelectorAll('.faq-accordion-trigger')
+
+        items.forEach((item) => item.addEventListener('click', toggleAccordion))
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded')
+
+            for (let item of items) {
+                item.setAttribute('aria-expanded', false)
+            }
+
+            if (itemToggle === 'false') {
+                this.setAttribute('aria-expanded', true)
+            }
         }
-    })
-    .catch((err) => console.error(err))
+    }
+})
 
 let URLTWO =
     'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=%0A*%5B_type+%3D%3D+%22employersFaq%22%5D+%7C+order%28order%29'
@@ -241,35 +331,35 @@ fetch(URLTWO)
     })
     .catch((err) => console.error(err))
 
-let URLTHREE =
-    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27projects%27%5D%7B%0A++text%2C%0A++%22image%22%3A+image.asset-%3Eurl%0A%7D&perspective=published'
-// fetch the content
-fetch(URLTHREE)
-    .then((res) => res.json())
-    .then(({ result }) => {
-        const constructionWrap = document.querySelector(
-            '.workers-contribute-item-wrap'
-        )
-        if (result.length > 0) {
-            constructionWrap.innerHTML = ''
-            result.forEach((result) => {
-                let constructionItem = document.createElement('div')
-                constructionItem.classList.add('workers-contribute-item')
-                constructionWrap.appendChild(constructionItem)
+// let URLTHREE =
+//     'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27projects%27%5D%7B%0A++text%2C%0A++%22image%22%3A+image.asset-%3Eurl%0A%7D&perspective=published'
+// // fetch the content
+// fetch(URLTHREE)
+//     .then((res) => res.json())
+//     .then(({ result }) => {
+//         const constructionWrap = document.querySelector(
+//             '.workers-contribute-item-wrap'
+//         )
+//         if (result.length > 0) {
+//             constructionWrap.innerHTML = ''
+//             result.forEach((result) => {
+//                 let constructionItem = document.createElement('div')
+//                 constructionItem.classList.add('workers-contribute-item')
+//                 constructionWrap.appendChild(constructionItem)
 
-                let constructionImage = document.createElement('figure')
-                constructionImage.classList.add('anim-el', 'clip-anim')
-                constructionItem.appendChild(constructionImage)
+//                 let constructionImage = document.createElement('figure')
+//                 constructionImage.classList.add('anim-el', 'clip-anim')
+//                 constructionItem.appendChild(constructionImage)
 
-                let constructionImageSrc = document.createElement('img')
-                constructionImageSrc.src = result.image
-                constructionImage.appendChild(constructionImageSrc)
+//                 let constructionImageSrc = document.createElement('img')
+//                 constructionImageSrc.src = result.image
+//                 constructionImage.appendChild(constructionImageSrc)
 
-                let constructionDesc = document.createElement('p')
-                constructionDesc.textContent = result.text
-                constructionItem.appendChild(constructionDesc)
-            })
-            ScrollTrigger.refresh()
-        }
-    })
-    .catch((err) => console.error(err))
+//                 let constructionDesc = document.createElement('p')
+//                 constructionDesc.textContent = result.text
+//                 constructionItem.appendChild(constructionDesc)
+//             })
+//             ScrollTrigger.refresh()
+//         }
+//     })
+//     .catch((err) => console.error(err))

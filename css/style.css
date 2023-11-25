@@ -1705,6 +1705,7 @@ html {
 
 /*Preloader Style*/
 .preloader-wrap {
+    display: none;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;

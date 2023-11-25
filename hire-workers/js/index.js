@@ -6,74 +6,35 @@ async function fetchSanityData(url) {
 }
 
 fetchSanityData(
-    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22profiles%22%5D+%7B%0A++profilesContent%5B%5D+%7B%0A++++name%2C%0A++++yearsExperience%2C%0A++++%22imageUrl%22%3A+image.asset-%3Eurl%2C%0A++++trade%2C%0A++%7D%0A%7D'
-).then((profile) => {
-    const { result } = profile
-    const resolvedResult = result[0].profilesContent
+    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27trades%27%5D'
+).then((tradesData) => {
+    const { result } = tradesData
+    const tradesContent = result[0].tradesContent
 
-    const jobPoolWrap = document.querySelector('.job-pool-card-wrap ')
-    if (resolvedResult.length > 0) {
-        jobPoolWrap.innerHTML = ''
-        resolvedResult.forEach((result) => {
-            let jobPoolItem = document.createElement('div')
-            jobPoolItem.classList.add('job-pool-card')
-            jobPoolWrap.appendChild(jobPoolItem)
+    const tradesContainer = document.querySelector('.hero-main .wrapper')
 
-            let jobPoolImage = document.createElement('figure')
-            jobPoolItem.appendChild(jobPoolImage)
+    const tradesGrid = document.createElement('div')
+    tradesGrid.classList.add('trades-grid')
+    const tradesTitle = document.createElement('h1')
+    tradesTitle.textContent = 'Our Available Trades'
+    tradesContainer.appendChild(tradesTitle)
 
-            let jobPoolImageSrc = document.createElement('img')
-            jobPoolImageSrc.classList.add('anim-el', 'clip-anim')
+    const tradesSubtitle = document.createElement('p')
+    tradesSubtitle.textContent =
+        'We have a wide range of trades, select one to enquire now'
+    tradesContainer.appendChild(tradesSubtitle)
 
-            jobPoolImageSrc.src = result.imageUrl
-            jobPoolImage.appendChild(jobPoolImageSrc)
+    tradesContainer.appendChild(tradesGrid)
+    tradesContent.forEach((trade) => {
+        const card = document.createElement('div')
+        card.classList.add('card')
 
-            let jobPoolName = document.createElement('h4')
-            jobPoolName.textContent = result.name
-            jobPoolItem.appendChild(jobPoolName)
+        const title = document.createElement('h3')
+        title.textContent = trade
 
-            let jobPoolTitle = document.createElement('h5')
-            jobPoolTitle.textContent = result.jobTitle
-            jobPoolItem.appendChild(jobPoolTitle)
+        card.appendChild(title)
+        tradesGrid.appendChild(card)
+    })
 
-            let anchorButton = document.createElement('a')
-            anchorButton.classList.add('btn', 'btn-dark')
-            anchorButton.classList.add('anchor-button')
-            jobPoolItem.appendChild(anchorButton)
-            let anchorButtonSpan = document.createElement('span')
-            anchorButtonSpan.innerHTML = 'See details'
-            anchorButton.appendChild(anchorButtonSpan)
-
-            const popUp = document.querySelector('.pop-up')
-            const profilePopUp = document.querySelector('.profile-pop-up')
-            const hireMeButton = document.querySelector('.hire-me-btn')
-            const applicationImage = document.querySelector(
-                '.application-image-target img'
-            )
-
-            anchorButton.addEventListener('click', () => {
-                profilePopUp.classList.add('active')
-                applicationImage.src = result.imageUrl
-            })
-            // hireMeButton.addEventListener('click', () => {
-            //     popUp.classList.add('active')
-            //     profilePopUp.classList.remove('active')
-            // })
-            const xButton = document.querySelector('.pop-up .x-button')
-            xButton.addEventListener('click', () => {
-                popUp.classList.remove('active')
-            })
-            const profileXButton = document.querySelector(
-                '.profile-pop-up .x-button'
-            )
-            profileXButton.addEventListener('click', () => {
-                profilePopUp.classList.remove('active')
-            })
-        })
-    }
-    if (result.length < 1) {
-        document
-            .querySelector('.job-pool-inner')
-            .classList.add('show-empty-workers')
-    }
+    tradesContainer.appendChild(tradesGrid)
 })

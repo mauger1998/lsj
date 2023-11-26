@@ -103,7 +103,7 @@ fetchSanityData(
                 // Add event listener to the close button
                 closeButton.addEventListener('click', () => {
                     // Hide the pop-up
-                    document.querySelector('.pop-up').classList.remove('active')
+                    document.querySelector('.pop-up').classList.remove('active'
                 })
             })
         })

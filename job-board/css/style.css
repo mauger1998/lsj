@@ -740,3 +740,7 @@ iframe {
         padding-inline: 4rem;
     }
 }
+
+footer a {
+    color: black !important;
+}

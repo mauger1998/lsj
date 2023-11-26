@@ -10,4 +10,8 @@
 .contact-section .wrapper .contact-form {
   max-width: 800px;
   margin-inline: auto;
+}
+
+footer a {
+  color: black !important;
 }/*# sourceMappingURL=main.css.map */

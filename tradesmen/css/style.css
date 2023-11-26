@@ -811,3 +811,7 @@
         right: -44.902778%;
     }
 }
+
+footer a {
+    color: black !important;
+}

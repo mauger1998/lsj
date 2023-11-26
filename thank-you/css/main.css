@@ -1,0 +1,16 @@
+main {
+  background-color: var(--early-dawn);
+}
+main .wrapper {
+  text-align: center;
+}
+main .wrapper h1 {
+  text-align: center;
+}
+main .wrapper p {
+  text-align: center;
+  margin-block-start: 1rem;
+}
+main .wrapper a {
+  margin-block-start: 1.5rem;
+}/*# sourceMappingURL=main.css.map */

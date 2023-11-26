@@ -72,10 +72,10 @@
                                     rel="external nofollow"
                                     target="_blank"
                                     href="https://www.instagram.com/labour_suppliers_jersey/"
-                                    class="social-btn social-btn-dark"
+                                    class="social-btn social-btn-dark instagram-button"
                                     ><img src="svgs/insta.svg" alt="Instagram"
                                 /></a>
-                                <a href="#" class="social-btn"
+                                <a href="#" class="social-btn facebook-button"
                                     ><img src="svgs/fb.svg" alt="Facebook"
                                 /></a>
                             </div>
@@ -89,10 +89,14 @@
                                 </ul>
                             </nav>
                             <div class="header-btns flex-box">
-                                <a href="job-board/" class="btn"
+                                <a
+                                    href="job-board/"
+                                    class="btn job-board-button"
                                     ><span>See job board</span></a
                                 >
-                                <a href="hire-workers/" class="btn btn-dark"
+                                <a
+                                    href="available-trades/"
+                                    class="btn btn-dark see-trades-button"
                                     ><span>See trades now</span></a
                                 >
                             </div>
@@ -231,7 +235,9 @@
                                             without the commitment of a full
                                             time contract.
                                         </p>
-                                        <a href="#" class="btn btn-dark"
+                                        <a
+                                            href="#"
+                                            class="btn btn-dark see-trades-button"
                                             ><span class="desk"
                                                 >See trades now</span
                                             ><span class="mobi"
@@ -259,7 +265,9 @@
                                             CV's with our pre vetted talent
                                             pool.
                                         </p>
-                                        <a href="#" class="btn btn-dark"
+                                        <a
+                                            href="#"
+                                            class="btn btn-dark see-trades-button"
                                             ><span class="desk"
                                                 >See trades now</span
                                             ><span class="mobi"
@@ -293,7 +301,7 @@
                                             rates of pay in comparrison to
                                             industry standards.
                                         </p>
-                                        <a href="#" class="btn"
+                                        <a class="btn job-board-button" href="#"
                                             ><span class="desk"
                                                 >See job board</span
                                             ><span class="mobi"
@@ -319,7 +327,7 @@
                                             Find short term positions without
                                             commiting to one company full time.
                                         </p>
-                                        <a href="#" class="btn"
+                                        <a class="btn job-board-button" href="#"
                                             ><span class="desk"
                                                 >See job board</span
                                             ><span class="mobi"
@@ -364,7 +372,7 @@
                                 <div class="provide-tradesmen-btn">
                                     <a
                                         href="/available-trades/"
-                                        class="btn btn-dark"
+                                        class="btn btn-dark see-trades-button"
                                         ><span>See trades now</span></a
                                     >
                                 </div>
@@ -484,7 +492,9 @@
                                     </div>
                                 </div>
                                 <div class="provide-tradesmen-btn">
-                                    <a href="#" class="btn btn-dark"
+                                    <a
+                                        href="#"
+                                        class="btn btn-dark see-trades-button"
                                         ><span>See trades now</span></a
                                     >
                                 </div>
@@ -589,7 +599,7 @@
                                     Companies 😏
                                 </h2>
                                 <div class="cta-btn flex">
-                                    <a href="/job-seekers/" class="btn"
+                                    <a href="/tradesmen/" class="btn"
                                         ><span>Tradesmen</span></a
                                     >
                                     <a href="/employers/" class="btn btn-dark"
@@ -625,6 +635,12 @@
                                 region: 'eu1',
                                 portalId: '143358931',
                                 formId: '2acb2244-9853-401a-a279-069dac5ac773',
+                                onFormSubmit: function ($form) {
+                                    gtag('event', 'form_submit', {
+                                        event_category: 'form',
+                                        event_label: 'HubSpot form',
+                                    })
+                                },
                             })
                         </script>
                     </div>
@@ -644,7 +660,9 @@
                                 /></a>
                             </div>
                             <div class="footer-widget">
-                                <h6>Home</h6>
+                                <a href="/">
+                                    <h6>Home</h6>
+                                </a>
                                 <ul>
                                     <li>
                                         <a href="#why-choose-us"
@@ -659,7 +677,9 @@
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                <h6>Employers</h6>
+                                <a href="/employers/">
+                                    <h6>Employers</h6>
+                                </a>
                                 <ul>
                                     <li>
                                         <a href="employers/#why-hire-with-us"
@@ -690,7 +710,9 @@
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                <h6>Tradesmen</h6>
+                                <a href="/tradesmen/">
+                                    <h6>Tradesmen</h6>
+                                </a>
                                 <ul>
                                     <li>
                                         <a href="job-seekers/#why-us"
@@ -716,32 +738,27 @@
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                <h6>Candidate Pool</h6>
+                                <a href="/available-trades/">
+                                    <h6>Available Trades</h6>
+                                </a>
                                 <ul>
                                     <li>
-                                        <a href="hire-workers/#hire-tradesman"
+                                        <a
+                                            href="available-trades/#hire-tradesman"
                                             >Hire Tradesman</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="hire-workers/#submit-your-job"
-                                            >Submit Your job</a
                                         >
                                     </li>
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                <h6>Vacancies</h6>
+                                <a href="/job-board/">
+                                    <h6>Job Board</h6>
+                                </a>
                                 <ul>
                                     <li>
                                         <a
                                             href="job-board/#current-opportunities"
                                             >Current Opportunities</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="job-board/#submit-your-profile"
-                                            >Submit your profile</a
                                         >
                                     </li>
                                 </ul>
@@ -759,7 +776,7 @@
                             <div class="footer-social">
                                 <ul>
                                     <li>
-                                        <a href="#"
+                                        <a class="facebook-button" href="#"
                                             ><img
                                                 src="svgs/Facebook.svg"
                                                 alt="Facebook"
@@ -767,6 +784,7 @@
                                     </li>
                                     <li>
                                         <a
+                                            class="instagram-button"
                                             rel="external nofollow"
                                             target="_blank"
                                             href="https://www.instagram.com/labour_suppliers_jersey/"

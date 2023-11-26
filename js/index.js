@@ -129,7 +129,7 @@ fetchSanityData(
         <h1 class="anim-load">${heroSection.title}</h1>
         <p class="anim-load">${heroSection.text}</p>
         <div class="anim-load hero-btn">
-            <a class="btn" href="/job-seekers/">Tradesmen</a>
+            <a class="btn" href="/tradesmen/">Tradesmen</a>
             <a class="btn btn-dark" href="/employers/">Employers</a>
         </div>
         <a class="anim-load scroll-next" href="#social-proof">
@@ -172,7 +172,7 @@ fetchSanityData(
                             </div>
                             <h3>${card.title}</h3>
                             <p>${card.text}</p>
-                            <a href="/available-trades/" class="btn btn-dark">
+                            <a href="/available-trades/" class="btn btn-dark see-trades-button">
                                 <span>See trades now</span>
                             </a>
                         </div>
@@ -203,7 +203,7 @@ fetchSanityData(
                         </div>
                         <h3>${card.title}</h3>
                         <p>${card.text}</p>
-                        <a href="/job-board/" class="btn btn-dark">
+                        <a  href="/job-board/" class="btn btn-dark job-board-button">
                             <span >See jobs now</span>
                             
                         </a>
@@ -216,4 +216,175 @@ fetchSanityData(
 `
     let itemWrap = document.querySelector('.employers-tradesmen-item-wrap')
     itemWrap.innerHTML += whySectionTwoHTML
+})
+
+// Gtag Events
+let allJobBoardButtons = document.querySelectorAll('.job-board-button')
+let allTradesButtons = document.querySelectorAll('.see-trades-button')
+
+allJobBoardButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'job_board_button_clicked', {
+            event_name: 'Job Board Button Clicked',
+        })
+    })
+})
+
+allTradesButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'see_trades_button_clicked', {
+            event_name: 'See Trades Button Clicked',
+        })
+    })
+})
+
+fetchSanityData(
+    `https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27trades%27%5D+`
+).then((data) => {
+    const trades = data.result[0].tradesContent
+
+    // Get the accordion wrap and the h2 element
+    const accordionWrap = document.querySelector(
+        '.tradesmen-accordion-item-wrap'
+    )
+    const h2 = document.querySelector('.provide-tradesmen-content h2')
+
+    // Get the first em element
+    const firstEm = h2.querySelector('em')
+
+    // Remove existing spans from first em
+    const spans = firstEm.querySelectorAll('span')
+    spans.forEach((span) => span.remove())
+
+    // Remove existing accordion items
+    accordionWrap.innerHTML = ''
+
+    // Iterate over the trades
+    trades.forEach((trade) => {
+        // Create accordion item
+        const accordionItem = document.createElement('div')
+        accordionItem.className = 'tradesmen-accordion-item anim-el clip-anim'
+        accordionItem.innerHTML = /*html*/ `
+            <h3 aria-expanded="false">${trade}</h3>
+            <div class="tradesmen-accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        `
+
+        // Append accordion item to accordion wrap
+        accordionWrap.appendChild(accordionItem)
+
+        // Create span for animation
+        const span = document.createElement('span')
+        span.className = 'word'
+        span.textContent = trade
+
+        // Append span to first em
+        firstEm.appendChild(span)
+    })
+    // Accordian
+    const items2 = document.querySelectorAll('.tradesmen-accordion-item h3')
+    items2.forEach((item2) => item2.addEventListener('click', toggleAccordion2))
+    function toggleAccordion2() {
+        const itemToggle2 = this.getAttribute('aria-expanded')
+        for (let item2 of items2) {
+            item2.setAttribute('aria-expanded', false)
+        }
+        if (itemToggle2 === 'false') {
+            this.setAttribute('aria-expanded', true)
+        }
+    }
+    if (document.querySelector('.word') === null) {
+    } else {
+        //Changing Word Animation
+        var words = document.getElementsByClassName('word')
+        var wordArray = []
+        var currentWord = 0
+
+        words[currentWord].style.opacity = 1
+        for (var i = 0; i < words.length; i++) {
+            splitLetters(words[i])
+        }
+
+        function changeWord() {
+            var cw = wordArray[currentWord]
+            var nw =
+                currentWord == words.length - 1
+                    ? wordArray[0]
+                    : wordArray[currentWord + 1]
+            for (var i = 0; i < cw.length; i++) {
+                animateLetterOut(cw, i)
+            }
+
+            for (var i = 0; i < nw.length; i++) {
+                nw[i].className = 'letter behind'
+                nw[0].parentElement.style.opacity = 1
+                animateLetterIn(nw, i)
+            }
+
+            currentWord =
+                currentWord == wordArray.length - 1 ? 0 : currentWord + 1
+        }
+
+        function animateLetterOut(cw, i) {
+            setTimeout(function () {
+                cw[i].className = 'letter out'
+            }, i * 80)
+        }
+
+        function animateLetterIn(nw, i) {
+            setTimeout(function () {
+                nw[i].className = 'letter in'
+            }, 340 + i * 80)
+        }
+
+        function splitLetters(word) {
+            var content = word.innerHTML
+            word.innerHTML = ''
+            var letters = []
+            for (var i = 0; i < content.length; i++) {
+                var letter = document.createElement('span')
+                letter.className = 'letter'
+                letter.innerHTML = content.charAt(i)
+                word.appendChild(letter)
+                letters.push(letter)
+            }
+
+            wordArray.push(letters)
+        }
+
+        changeWord()
+        setInterval(changeWord, 3000)
+    }
+})
+window.onload = function () {
+    let hash = window.location.hash
+    if (hash) {
+        // Remove the # character from the beginning of the hash
+        let id = hash.substring(1)
+        let element = document.getElementById(id)
+        if (element) {
+            element.scrollIntoView()
+            console.log('scrolled into view')
+        }
+    }
+}
+
+const facebookButtons = document.querySelectorAll('.facebook-button')
+const instagramButtons = document.querySelectorAll('.instagram-button')
+
+facebookButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'facebook_button_clicked', {
+            event_name: 'Facebook Button Clicked',
+        })
+    })
+})
+
+instagramButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'instagram_button_clicked', {
+            event_name: 'Instagram Button Clicked',
+        })
+    })
 })

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
-        <title>LSJ | Job Seekers</title>
+        <title>LSJ | Tradesmen</title>
 
         <link rel="shortcut icon" href="../svgs/main-logo.svg" type="image/x-icon">
         <link type="text/css" rel="stylesheet" href="../css/style.css">
@@ -42,12 +42,12 @@
                                 <ul>
                                     <li><a href="../">Home</a></li>
                                     <li><a href="../employers">Employers</a></li>
-                                    <li><a href="../job-seekers">Job Seekers</a></li>
+                                    <li><a href="../job-seekers">Tradesmen</a></li>
                                 </ul>
                             </nav>
                             <div class="header-btns flex-box">
-                                <a href="../job-board" class="btn"><span>Find work now</span></a>
-                                <a href="" class="btn btn-dark"><span>Hire tradesmen</span></a>
+                                <a href="../job-board" class="btn"><span>See job board</span></a>
+                                <a href="" class="btn btn-dark"><span>See trades now</span></a>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                         <div class="texts-btn-inner flex-common">
                             <h2>Don’t see anything that suits your needs? Submit your job to be added to our job vacancies board 😱</h2>
                             <p>Submit your job now and you will be notified when it gets filled.</p>
-                            <a href="../hire-workers" class="btn btn-dark"><span>Submit now</span></a>
+                            <a href="../available-trades" class="btn btn-dark"><span>Submit now</span></a>
                         </div>
                     </div>
                 </section>
@@ -154,7 +154,7 @@
                                     </form>
                                 </div>
                                 <div class="newsletter-form seekers-newsletter">
-                                    <h6>Job Seekers</h6>
+                                    <h6>Tradesmen</h6>
                                     <form action="#">
                                         <input type="email" placeholder="Email...">
                                         <input type="submit"  value="Employers">
@@ -191,13 +191,13 @@
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                <h6>Job Seekers</h6>
+                                <h6>Tradesmen</h6>
                                 <ul>
                                     <li><a href="../job-seekers/#why-search-for-us">Why Search for us</a></li>
                                     <li><a href="../job-seekers/#how-search-works">How Search Works</a></li>
                                     <li><a href="../job-seekers/#construction-projects">Construction Projects</a></li>
                                     <li><a href="../job-seekers/#testimonial-from-tradesmens">Testimonial from Tradesmens</a></li>
-                                    <li><a href="job-seekers/#job-seekers-faq">Job Seekers Faq</a></li>
+                                    <li><a href="job-seekers/#job-seekers-faq">Tradesmen Faq</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget">

@@ -1,0 +1,13 @@
+.contact-section .wrapper .contact-titles {
+  margin-block: 0 4rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+.contact-section .wrapper .contact-titles p {
+  max-width: 50ch;
+  margin-block: 1rem 0;
+}
+.contact-section .wrapper .contact-form {
+  max-width: 800px;
+  margin-inline: auto;
+}/*# sourceMappingURL=main.css.map */

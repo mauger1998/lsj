@@ -1,0 +1,45 @@
+.hero-main .wrapper {
+  padding-block: 8rem 0;
+}
+.hero-main .wrapper h1 {
+  text-align: center;
+}
+.hero-main .wrapper p {
+  text-align: center;
+  margin-block-start: 1rem;
+  max-width: 50ch;
+  margin-inline: auto;
+}
+.hero-main .wrapper .trades-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  place-content: center;
+  margin-block: 4rem;
+}
+.hero-main .wrapper .trades-grid a {
+  color: black;
+}
+.hero-main .wrapper .trades-grid .card {
+  background-color: #f8b80e;
+  padding: 2rem;
+  display: grid;
+  place-content: center;
+  border-radius: 0.25rem;
+  box-shadow: 6px 6px 0 0 var(--black);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-main .wrapper .trades-grid .card:hover {
+  box-shadow: 3px 3px 0 0 var(--black);
+  transform: translate(3px, 3px);
+}
+@media (max-width: 600px) {
+  .hero-main .wrapper {
+    padding-block: 4rem;
+  }
+  .hero-main .wrapper .trades-grid {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=main.css.map */

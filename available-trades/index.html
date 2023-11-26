@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
         <meta name="format-detection" content="telephone=no" />
-        <title>LSJ | Job Board</title>
+        <title>LSJ | Hire Workers</title>
 
         <link
             rel="shortcut icon"
@@ -14,7 +14,7 @@
             type="image/x-icon" />
         <link type="text/css" rel="stylesheet" href="../css/style.css" />
         <link type="text/css" rel="stylesheet" href="css/style.css" />
-
+        <link rel="stylesheet" href="css/main.css" />
         <script
             charset="utf-8"
             type="text/javascript"
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <!--  Beginning header section  -->
-            <header class="main-header-section bg-early-dawn">
+            <header class="main-header-section">
                 <div class="wrapper clear">
                     <div class="header-inner flex-box flex-vertical-align">
                         <div class="logo-wrap">
@@ -86,12 +86,10 @@
                                 </ul>
                             </nav>
                             <div class="header-btns flex-box">
-                                <a href="" class="btn"
+                                <a href="../job-board" class="btn"
                                     ><span>See job board</span></a
                                 >
-                                <a
-                                    href="../available-trades"
-                                    class="btn btn-dark"
+                                <a href="" class="btn btn-dark"
                                     ><span>See trades now</span></a
                                 >
                             </div>
@@ -99,146 +97,44 @@
                     </div>
                 </div>
             </header>
-            <!-- //End header section -->
+            <main class="hero-main">
+                <div class="wrapper"></div>
+            </main>
 
-            <!-- Beginning main content section  -->
-            <section class="main-content-wrap">
-                <!-- Hero Section -->
-                <section
-                    class="secondery-hero-wrap job-board-hero bg-early-dawn">
-                    <div class="wrapper">
-                        <div class="secondery-hero-back-bg position-bottom">
-                            <figure>
-                                <img src="svgs/job-board.svg" alt="" />
-                            </figure>
-                        </div>
-                        <div class="secondery-hero-inner">
-                            <h2 class="h2 anim-load">Vacancies @ lsj.je</h2>
+            <!-- Texts Btn Section -->
+            <section class="texts-btn-wrap" id="submit-your-job">
+                <div class="wrapper">
+                    <div class="pop-up">
+                        <div class="pop-up-container">
+                            <script
+                                charset="utf-8"
+                                type="text/javascript"
+                                src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                            <div class="title-container">
+                                <h2>Enquire now</h2>
+                            </div>
+                            <div id="form-container"></div>
 
-                            <a
-                                href="#current-opportunities"
-                                class="btn anim-load"
-                                ><span>Get started</span></a
-                            >
-                        </div>
-                        <div class="companies-icon-wrap">
-                            <div class="companies-icon anim-load">
-                                <img src="../svgs/ap-cons.svg" alt="" />
-                            </div>
-                            <div class="companies-icon anim-load">
-                                <img src="../svgs/hacquoil.svg" alt="" />
-                            </div>
-                            <div class="companies-icon anim-load">
-                                <img src="../svgs/rnd.svg" alt="" />
-                            </div>
-                            <div class="companies-icon anim-load">
-                                <img src="../svgs/jersey-dev-comp.svg" alt="" />
-                            </div>
+                            <button class="close-button">
+                                <img
+                                    src="../../job-board/svgs/close-ellipse-svgrepo-com.svg"
+                                    alt="Close Button" />
+                            </button>
                         </div>
                     </div>
-                </section>
-                <!-- Hero Section -->
+                    <div class="texts-btn-inner flex-common">
+                        <h2>
+                            Don’t see anything that suits your needs? Contact us
+                            now and make a request.
+                        </h2>
 
-                <!--Job Vacancies Section-->
-                <section class="vacancies-wrap" id="current-opportunities">
-                    <div class="wrapper">
-                        <div class="vacancies-inner flex-common">
-                            <h2 class="anim-el clip-anim">
-                                Current opportunities
-                            </h2>
-
-                            <div class="vacancies-container">
-                                <div class="vacancies-title-bar bg-black">
-                                    <div class="vacancies-title">
-                                        <h6>Position</h6>
-                                    </div>
-                                    <div class="vacancies-title-icon">
-                                        <img
-                                            src="svgs/Star.svg"
-                                            alt="Star Ico" />
-                                    </div>
-                                </div>
-                                <div
-                                    class="vacancies-accordion-wrap"
-                                    id="vacancies-accordion-wrap"></div>
-                                <div class="load-more-btn" id="loadmore">
-                                    <a href="javascript:void(0)" class="btn"
-                                        ><span>Load More</span></a
-                                    >
-                                </div>
-                            </div>
-                            <div class="empty-vacancies-wrap">
-                                <div class="empty-vacancies-thumb flex">
-                                    <lottie-player
-                                        src="../lottie/animation_lmsyu0vx.json"
-                                        background="transparent"
-                                        speed="1"
-                                        loop
-                                        autoplay></lottie-player>
-                                </div>
-                                <div class="empty-vacancies-content">
-                                    <h2>
-                                        Looks like there’s no vacancies
-                                        available. Leave your email to sign up
-                                        and be notified when we have more.
-                                    </h2>
-                                </div>
-                                <div class="empty-vacancies-form flex">
-                                    <form action="#">
-                                        <input
-                                            type="email"
-                                            placeholder="Email..." />
-                                        <input
-                                            type="submit"
-                                            value="Employers" />
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/#contact" class="btn btn-dark"
+                            ><span>Contact us</span></a
+                        >
                     </div>
-                </section>
-                <!--Job Vacancies Section-->
-
-                <!-- Texts Btn Section -->
-                <section
-                    class="texts-btn-wrap job-board"
-                    id="submit-your-profile">
-                    <div class="wrapper">
-                        <div class="pop-up">
-                            <div class="pop-up-container">
-                                <script
-                                    charset="utf-8"
-                                    type="text/javascript"
-                                    src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-                                <div class="title-container">
-                                    <h2>Apply now</h2>
-                                </div>
-                                <div id="form-container"></div>
-
-                                <button class="close-button">
-                                    <img
-                                        src="../../job-board/svgs/close-ellipse-svgrepo-com.svg"
-                                        alt="Close Button" />
-                                </button>
-                            </div>
-                        </div>
-                        <div class="texts-btn-inner flex-common">
-                            <h2>
-                                Don’t worry if you don’t see any roles you want
-                                to apply for.
-                            </h2>
-                            <p>
-                                Register your interest now to be notified when
-                                new roles get posted.
-                            </p>
-                            <a href="/#contact" class="btn submit-job-button"
-                                ><span>Contact now</span></a
-                            >
-                        </div>
-                    </div>
-                </section>
-                <!-- Texts Btn Section -->
+                </div>
             </section>
+            <!-- Texts Btn Section -->
             <!-- //End main content section -->
 
             <!-- Beginning footer section-->
@@ -331,12 +227,12 @@
                                 <h6>Candidate Pool</h6>
                                 <ul>
                                     <li>
-                                        <a href="../#hire-tradesman"
+                                        <a href="#hire-tradesman"
                                             >Hire Tradesman</a
                                         >
                                     </li>
                                     <li>
-                                        <a href="../#submit-your-job"
+                                        <a href="#submit-your-job"
                                             >Submit Your job</a
                                         >
                                     </li>
@@ -346,12 +242,14 @@
                                 <h6>Vacancies</h6>
                                 <ul>
                                     <li>
-                                        <a href="#current-opportunities"
+                                        <a
+                                            href="../job-board/#current-opportunities"
                                             >Current Opportunities</a
                                         >
                                     </li>
                                     <li>
-                                        <a href="#submit-your-profile"
+                                        <a
+                                            href="../job-board/#submit-your-profile"
                                             >Submit your profile</a
                                         >
                                     </li>
@@ -396,13 +294,10 @@
         </main>
 
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <!-- <script defer src="/js/require.min.js"></script> -->
-
         <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-            crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../js/common-scripts.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+            type="text/javascript"
+            src="../js/common-scripts.js"
+            defer></script>
+        <script type="text/javascript" src="js/index.js" defer></script>
     </body>
 </html>

@@ -339,6 +339,7 @@ body {
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* Global style */
@@ -619,6 +620,7 @@ button:focus {
 
 section,
 footer,
+main,
 header {
     float: left;
     width: 100%;
@@ -1705,6 +1707,7 @@ html {
 
 /*Preloader Style*/
 .preloader-wrap {
+    display: none;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;

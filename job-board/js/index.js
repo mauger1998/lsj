@@ -1,12 +1,13 @@
+let selectedJobTitle
+
 // Sanity Fetch
 async function fetchSanityData(url) {
     const response = await fetch(url)
     const sanityData = await response.json()
     return sanityData
 }
-
 fetchSanityData(
-    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22vacancies%22%5D+%7B%0A++vacanciesContent%5B%5D+%7B%0A++++skills%2C%0A++++companyName%2C%0A++++jobTitle%2C%0A++++description%2C%0A++++startData%2C%0A++++duration%0A++%7D%0A%7D'
+    'https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22vacancies%22%5D+%7B%0A++vacanciesContent%5B%5D+%7B%0A++++jobTitle%2C%0A++++description%0A++%7D%0A%7D'
 ).then((vacancy) => {
     const { result } = vacancy
     const resolvedResult = result[0].vacanciesContent
@@ -15,8 +16,6 @@ fetchSanityData(
 
     if (resolvedResult.length > 0) {
         vacanciesWrap.innerHTML = ''
-
-        // Testing select
 
         resolvedResult.forEach((result) => {
             let vacanciesItem = document.createElement('div')
@@ -36,21 +35,9 @@ fetchSanityData(
             vacanciesItemtitle.classList.add('vacancies-accordion-title')
             vacanciesItemTitleBar.appendChild(vacanciesItemtitle)
 
-            let vacanciesItemJobTitle = document.createElement('h6')
+            let vacanciesItemJobTitle = document.createElement('h3')
             vacanciesItemJobTitle.textContent = result.jobTitle
             vacanciesItemtitle.appendChild(vacanciesItemJobTitle)
-
-            let vacanciesItemStartDate = document.createElement('h6')
-            vacanciesItemStartDate.textContent = result.startDate
-            vacanciesItemtitle.appendChild(vacanciesItemStartDate)
-
-            let vacanciesItemDuration = document.createElement('h6')
-            vacanciesItemDuration.textContent = result.duration
-            vacanciesItemtitle.appendChild(vacanciesItemDuration)
-
-            let vacanciesItemIcon = document.createElement('div')
-            vacanciesItemIcon.classList.add('vacancies-accordion-title-icon')
-            vacanciesItemTitleBar.appendChild(vacanciesItemIcon)
 
             let vacanciesAccordionContent = document.createElement('div')
             vacanciesAccordionContent.classList.add(
@@ -58,85 +45,66 @@ fetchSanityData(
             )
             vacanciesItem.appendChild(vacanciesAccordionContent)
 
-            let vacanciesAccordionContentItem1 = document.createElement('div')
-            vacanciesAccordionContentItem1.classList.add(
+            let vacanciesAccordionContentItem = document.createElement('div')
+            vacanciesAccordionContentItem.classList.add(
                 'vacancies-accordion-content-item'
             )
-            vacanciesAccordionContent.appendChild(
-                vacanciesAccordionContentItem1
-            )
+            vacanciesAccordionContent.appendChild(vacanciesAccordionContentItem)
 
-            let vacanciesAccordionContentTitle = document.createElement('h6')
-            vacanciesAccordionContentTitle.textContent = 'Company:'
-            vacanciesAccordionContentItem1.appendChild(
+            let vacanciesAccordionContentTitle = document.createElement('h4')
+            vacanciesAccordionContentTitle.textContent = 'Description:'
+            vacanciesAccordionContentItem.appendChild(
                 vacanciesAccordionContentTitle
-            )
-
-            let vacanciesAccordionCompanyName = document.createElement('p')
-            vacanciesAccordionCompanyName.textContent = result.companyName
-            vacanciesAccordionContentItem1.appendChild(
-                vacanciesAccordionCompanyName
-            )
-
-            let vacanciesAccordionContentItem2 = document.createElement('div')
-            vacanciesAccordionContentItem2.classList.add(
-                'vacancies-accordion-content-item'
-            )
-            vacanciesAccordionContent.appendChild(
-                vacanciesAccordionContentItem2
-            )
-
-            let vacanciesAccordionContentTitle2 = document.createElement('h6')
-            vacanciesAccordionContentTitle2.textContent = 'Skills:'
-            vacanciesAccordionContentItem2.appendChild(
-                vacanciesAccordionContentTitle2
-            )
-
-            let vacanciesAccordionContentSkills = document.createElement('ul')
-            vacanciesAccordionContentItem2.appendChild(
-                vacanciesAccordionContentSkills
-            )
-            let jobSkills = result.skills
-            for (let i = 0; i < jobSkills.length; i++) {
-                let li = document.createElement('li')
-                li.innerText = jobSkills[i]
-                vacanciesAccordionContentSkills.appendChild(li)
-            }
-
-            let vacanciesAccordionContentItem3 = document.createElement('div')
-            vacanciesAccordionContentItem3.classList.add(
-                'vacancies-accordion-content-item'
-            )
-            vacanciesAccordionContent.appendChild(
-                vacanciesAccordionContentItem3
-            )
-
-            let vacanciesAccordionContentTitle3 = document.createElement('h6')
-            vacanciesAccordionContentTitle3.textContent = 'Description:'
-            vacanciesAccordionContentItem3.appendChild(
-                vacanciesAccordionContentTitle3
             )
 
             let vacanciesAccordionDesc = document.createElement('p')
             vacanciesAccordionDesc.textContent = result.description
-            vacanciesAccordionContentItem3.appendChild(vacanciesAccordionDesc)
+            vacanciesAccordionContentItem.appendChild(vacanciesAccordionDesc)
 
-            let anchorButton = document.createElement('a')
-            // anchorButton.setAttribute('href', '')
-            anchorButton.classList.add('btn', 'btn-dark')
-            anchorButton.classList.add('anchor-button')
-            vacanciesAccordionContentItem3.appendChild(anchorButton)
-            let anchorButtonSpan = document.createElement('span')
-            anchorButtonSpan.innerHTML = 'Apply now'
-            anchorButton.appendChild(anchorButtonSpan)
+            // Create a button
+            let applyButton = document.createElement('button')
+            applyButton.textContent = 'Apply'
+            applyButton.classList.add('apply-button')
+            vacanciesAccordionContentItem.appendChild(applyButton)
+            applyButton.classList.add('btn')
+            applyButton.classList.add('btn-dark')
 
-            const popUp = document.querySelector('.pop-up')
-            anchorButton.addEventListener('click', () => {
+            // Add event listener to the button
+            applyButton.addEventListener('click', () => {
+                // Open the pop-up
+                let popUp = document.querySelector('.pop-up')
+                console.log(popUp)
                 popUp.classList.add('active')
-            })
-            const xButton = document.querySelector('.x-button')
-            xButton.addEventListener('click', () => {
-                popUp.classList.remove('active')
+
+                // Store the job title in the global variable
+                selectedJobTitle = result.jobTitle
+
+                // Create the HubSpot form
+                hbspt.forms.create({
+                    region: 'eu1',
+                    portalId: '143358931',
+                    formId: '2acb2244-9853-401a-a279-069dac5ac773',
+                    target: '#form-container',
+                    onFormReady: function ($form, ctx) {
+                        let hiddenInput = $form.find(
+                            'input[name="vacancy_applied_for"]'
+                        )
+                        if (hiddenInput.length) {
+                            hiddenInput.val(selectedJobTitle)
+                            console.log(hiddenInput.val())
+                        } else {
+                            console.log('Hidden input field not found')
+                        }
+                    },
+                })
+                // Get the close button
+                let closeButton = document.querySelector('.close-button')
+
+                // Add event listener to the close button
+                closeButton.addEventListener('click', () => {
+                    // Hide the pop-up
+                    document.querySelector('.pop-up').classList.remove('active')
+                })
             })
         })
 
@@ -201,12 +169,12 @@ fetchSanityData(
 
 //Submit Button
 
-const submitButton = document.querySelector('.texts-btn-inner .btn')
-const submitPopUp = document.querySelector('.texts-btn-wrap .pop-up')
-submitButton.addEventListener('click', () => {
-    submitPopUp.classList.add('active')
-})
-const xButton = document.querySelector('.texts-btn-wrap .x-button')
-xButton.addEventListener('click', () => {
-    submitPopUp.classList.remove('active')
-})
+// const submitButton = document.querySelector('.texts-btn-inner .btn')
+// const submitPopUp = document.querySelector('.texts-btn-wrap .pop-up')
+// submitButton.addEventListener('click', () => {
+//     submitPopUp.classList.add('active')
+// })
+// const xButton = document.querySelector('.texts-btn-wrap .x-button')
+// xButton.addEventListener('click', () => {
+//     submitPopUp.classList.remove('active')
+// })

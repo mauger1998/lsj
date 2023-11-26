@@ -96,6 +96,12 @@ fetchSanityData(
                             console.log('Hidden input field not found')
                         }
                     },
+                    onFormSubmit: function ($form) {
+                        gtag('event', 'job_board_form_submit', {
+                            event_category: 'form',
+                            event_label: 'HubSpot form',
+                        })
+                    },
                 })
                 // Get the close button
                 let closeButton = document.querySelector('.close-button')
@@ -178,3 +184,35 @@ fetchSanityData(
 // xButton.addEventListener('click', () => {
 //     submitPopUp.classList.remove('active')
 // })
+
+window.onload = function () {
+    let hash = window.location.hash
+    if (hash) {
+        // Remove the # character from the beginning of the hash
+        let id = hash.substring(1)
+        let element = document.getElementById(id)
+        if (element) {
+            element.scrollIntoView()
+            console.log('scrolled into view')
+        }
+    }
+}
+
+const facebookButtons = document.querySelectorAll('.facebook-button')
+const instagramButtons = document.querySelectorAll('.instagram-button')
+
+facebookButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'facebook_button_clicked', {
+            event_name: 'Facebook Button Clicked',
+        })
+    })
+})
+
+instagramButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'instagram_button_clicked', {
+            event_name: 'Instagram Button Clicked',
+        })
+    })
+})

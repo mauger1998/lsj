@@ -42,7 +42,7 @@
                                 <ul>
                                     <li><a href="../">Home</a></li>
                                     <li><a href="../employers">Employers</a></li>
-                                    <li><a href="../job-seekers">Tradesmen</a></li>
+                                    <li><a href="../tradesmen">Tradesmen</a></li>
                                 </ul>
                             </nav>
                             <div class="header-btns flex-box">
@@ -544,11 +544,11 @@
                             <div class="footer-widget">
                                 <h6>Tradesmen</h6>
                                 <ul>
-                                    <li><a href="../job-seekers/#why-search-for-us">Why Search for us</a></li>
-                                    <li><a href="../job-seekers/#how-search-works">How Search Works</a></li>
-                                    <li><a href="../job-seekers/#construction-projects">Construction Projects</a></li>
-                                    <li><a href="../job-seekers/#testimonial-from-tradesmens">Testimonial from Tradesmens</a></li>
-                                    <li><a href="../job-seekers/#job-seekers-faq">Tradesmen Faq</a></li>
+                                    <li><a href="../tradesmen/#why-search-for-us">Why Search for us</a></li>
+                                    <li><a href="../tradesmen/#how-search-works">How Search Works</a></li>
+                                    <li><a href="../tradesmen/#construction-projects">Construction Projects</a></li>
+                                    <li><a href="../tradesmen/#testimonial-from-tradesmens">Testimonial from Tradesmens</a></li>
+                                    <li><a href="../tradesmen/#job-seekers-faq">Tradesmen Faq</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget">

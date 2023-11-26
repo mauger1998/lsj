@@ -444,3 +444,54 @@ fetchSanityData(
         setInterval(changeWord, 3000)
     }
 })
+
+window.onload = function () {
+    let hash = window.location.hash
+    if (hash) {
+        // Remove the # character from the beginning of the hash
+        let id = hash.substring(1)
+        let element = document.getElementById(id)
+        if (element) {
+            element.scrollIntoView()
+            console.log('scrolled into view')
+        }
+    }
+}
+// Gtag Events
+let allJobBoardButtons = document.querySelectorAll('.job-board-button')
+let allTradesButtons = document.querySelectorAll('.see-trades-button')
+
+allJobBoardButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'job_board_button_clicked', {
+            event_name: 'Job Board Button Clicked',
+        })
+    })
+})
+
+allTradesButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'see_trades_button_clicked', {
+            event_name: 'See Trades Button Clicked',
+        })
+    })
+})
+
+const facebookButtons = document.querySelectorAll('.facebook-button')
+const instagramButtons = document.querySelectorAll('.instagram-button')
+
+facebookButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'facebook_button_clicked', {
+            event_name: 'Facebook Button Clicked',
+        })
+    })
+})
+
+instagramButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        gtag('event', 'instagram_button_clicked', {
+            event_name: 'Instagram Button Clicked',
+        })
+    })
+})

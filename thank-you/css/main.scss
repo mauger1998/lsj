@@ -1,0 +1,17 @@
+main {
+    background-color: var(--early-dawn);
+    .wrapper {
+        text-align: center;
+
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            margin-block-start: 1rem;
+        }
+        a {
+            margin-block-start: 1.5rem;
+        }
+    }
+}

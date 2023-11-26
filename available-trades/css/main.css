@@ -42,4 +42,8 @@
   .hero-main .wrapper .trades-grid {
     grid-template-columns: 1fr;
   }
+}
+
+footer a {
+  color: black !important;
 }/*# sourceMappingURL=main.css.map */

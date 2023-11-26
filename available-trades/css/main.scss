@@ -1,12 +1,14 @@
 .hero-main {
     .wrapper {
-        padding-block: 12rem;
+        padding-block: 8rem 0;
         h1 {
             text-align: center;
         }
         p {
             text-align: center;
             margin-block-start: 1rem;
+            max-width: 50ch;
+            margin-inline: auto;
         }
         .trades-grid {
             display: grid;
@@ -15,6 +17,10 @@
             gap: 2rem;
             place-content: center;
             margin-block: 4rem;
+
+            a {
+                color: black;
+            }
 
             .card {
                 background-color: #f8b80e;
@@ -33,6 +39,14 @@
                     box-shadow: 3px 3px 0 0 var(--black);
                     transform: translate(3px, 3px);
                 }
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        .wrapper {
+            padding-block: 4rem;
+            .trades-grid {
+                grid-template-columns: 1fr;
             }
         }
     }

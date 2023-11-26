@@ -208,6 +208,9 @@ a {
     flex-flow: row wrap;
     align-items: center;
 }
+.vacancies-accordion .btn {
+    margin-block-start: 2rem;
+}
 .vacancies-accordion-title-bar:after {
     content: '';
     position: absolute;
@@ -343,8 +346,9 @@ a {
     pointer-events: all;
     display: block;
 }
-.vacancies-wrap .wrapper .pop-up .x-button {
+.vacancies-wrap .wrapper .pop-up .close-button {
     position: absolute;
+    border: 10px solid red;
     width: 2.5rem;
     background-color: transparent !important;
     border: none;
@@ -353,7 +357,7 @@ a {
     cursor: pointer;
     transition: scale 500ms ease;
 }
-.vacancies-wrap .wrapper .pop-up .x-button:hover {
+.vacancies-wrap .wrapper .pop-up .close-button:hover {
     scale: 0.95;
     transition: scale 500ms ease;
 }
@@ -406,29 +410,29 @@ iframe {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 10000000;
     padding: 4rem 2rem;
     display: none;
-    /* pointer-events: none; */
+    pointer-events: none;
     overflow: scroll;
     max-height: 750px;
 }
 .texts-btn-wrap .wrapper .pop-up.active {
-    opacity: 1;
-    pointer-events: all;
-    display: block;
+    opacity: 1 !important;
+    pointer-events: all !important;
+    display: block !important;
 }
-.texts-btn-wrap .wrapper .pop-up .x-button {
+.texts-btn-wrap .wrapper .pop-up .close-button {
     position: absolute;
     width: 2.5rem;
     background-color: transparent !important;
     border: none;
     top: 2rem;
     right: 2rem;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: scale 500ms ease;
 }
-.texts-btn-wrap .wrapper .pop-up .x-button:hover {
+.texts-btn-wrap .wrapper .pop-up .close-button:hover {
     scale: 0.95;
     transition: scale 500ms ease;
 }

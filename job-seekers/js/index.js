@@ -156,7 +156,7 @@ function appendElement(parent, child) {
     parent.appendChild(child)
 }
 fetchSanityData(
-    `https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27employers%27%5D`
+    `https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27jobSeekers%27%5D+%7B%0A++title%2C%0A++%22content%22%3A+content%5B%5D%7B%0A++++...%2C%0A++++%22cards%22%3A+cards%5B%5D%7B%0A++++++...%2C%0A++++++%22image%22%3A+image.asset-%3Eurl%0A++++%7D%0A++%7D%0A%7D`
 ).then((data) => {
     const { result } = data
     const heroContainer = document.querySelector('.job-seekers-hero')
@@ -218,7 +218,7 @@ fetchSanityData(
                             <img src="../svgs/group.svg" alt="${card.iconAlt}" />
                         </div>
                         <figure class="anim-el clip-anim">
-                            <img src="img/job-search-2.png" alt="${card.imageAlt}" />
+                            <img src=${card.image} alt="${card.imageAlt}" />
                         </figure>
                     </div>
                     <h5>${card.title}</h5>
@@ -231,7 +231,7 @@ fetchSanityData(
         <div class="hire-tradesmen-btn align-left">
             <div></div>
             <div>
-                <a href="../job-board" class="btn"><span>Find work now</span></a>
+                <a href="../job-board" class="btn"><span>See job board</span></a>
             </div>
             <div></div>
         </div>

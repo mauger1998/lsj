@@ -195,7 +195,7 @@ a {
     pointer-events: all;
     display: block;
 }
-.job-pool-wrap .wrapper .pop-up .x-button {
+.job-pool-wrap .wrapper .pop-up .close-button {
     position: absolute;
     width: 2.5rem;
     background-color: transparent !important;
@@ -205,7 +205,7 @@ a {
     cursor: pointer;
     transition: scale 500ms ease;
 }
-.job-pool-wrap .wrapper .pop-up .x-button:hover {
+.job-pool-wrap .wrapper .pop-up .close-button:hover {
     scale: 0.95;
     transition: scale 500ms ease;
 }
@@ -270,7 +270,7 @@ a {
     pointer-events: all;
     display: block;
 }
-.texts-btn-wrap .wrapper .pop-up .x-button {
+.texts-btn-wrap .wrapper .pop-up .close-button {
     position: absolute;
     width: 2.5rem;
     background-color: transparent !important;
@@ -280,7 +280,7 @@ a {
     cursor: pointer;
     transition: scale 500ms ease;
 }
-.texts-btn-wrap .wrapper .pop-up .x-button:hover {
+.texts-btn-wrap .wrapper .pop-up .close-button:hover {
     scale: 0.95;
     transition: scale 500ms ease;
 }

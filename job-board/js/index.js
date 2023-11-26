@@ -1,3 +1,5 @@
+let selectedJobTitle
+
 // Sanity Fetch
 async function fetchSanityData(url) {
     const response = await fetch(url)
@@ -58,9 +60,53 @@ fetchSanityData(
             let vacanciesAccordionDesc = document.createElement('p')
             vacanciesAccordionDesc.textContent = result.description
             vacanciesAccordionContentItem.appendChild(vacanciesAccordionDesc)
-        })
 
-        // Rest of your code...
+            // Create a button
+            let applyButton = document.createElement('button')
+            applyButton.textContent = 'Apply'
+            applyButton.classList.add('apply-button')
+            vacanciesAccordionContentItem.appendChild(applyButton)
+            applyButton.classList.add('btn')
+            applyButton.classList.add('btn-dark')
+
+            // Add event listener to the button
+            applyButton.addEventListener('click', () => {
+                // Open the pop-up
+                let popUp = document.querySelector('.pop-up')
+                console.log(popUp)
+                popUp.classList.add('active')
+
+                // Store the job title in the global variable
+                selectedJobTitle = result.jobTitle
+
+                // Create the HubSpot form
+                hbspt.forms.create({
+                    region: 'eu1',
+                    portalId: '143358931',
+                    formId: '2acb2244-9853-401a-a279-069dac5ac773',
+                    target: '#form-container',
+                    onFormReady: function ($form, ctx) {
+                        let hiddenInput = $form.find(
+                            'input[name="vacancy_applied_for"]'
+                        )
+                        if (hiddenInput.length) {
+                            hiddenInput.val(selectedJobTitle)
+                            console.log(hiddenInput.val())
+                        } else {
+                            console.log('Hidden input field not found')
+                        }
+                    },
+                })
+                // Get the close button
+                let closeButton = document.querySelector('.close-button')
+
+                // Add event listener to the close button
+                closeButton.addEventListener('click', () => {
+                    // Hide the pop-up
+                    document.querySelector('.pop-up').classList.remove('active')
+                })
+            })
+        })
 
         // Accordian
         const items = document.querySelectorAll(
@@ -123,12 +169,12 @@ fetchSanityData(
 
 //Submit Button
 
-const submitButton = document.querySelector('.texts-btn-inner .btn')
-const submitPopUp = document.querySelector('.texts-btn-wrap .pop-up')
-submitButton.addEventListener('click', () => {
-    submitPopUp.classList.add('active')
-})
-const xButton = document.querySelector('.texts-btn-wrap .x-button')
-xButton.addEventListener('click', () => {
-    submitPopUp.classList.remove('active')
-})
+// const submitButton = document.querySelector('.texts-btn-inner .btn')
+// const submitPopUp = document.querySelector('.texts-btn-wrap .pop-up')
+// submitButton.addEventListener('click', () => {
+//     submitPopUp.classList.add('active')
+// })
+// const xButton = document.querySelector('.texts-btn-wrap .x-button')
+// xButton.addEventListener('click', () => {
+//     submitPopUp.classList.remove('active')
+// })

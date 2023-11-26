@@ -81,16 +81,18 @@
                                         <a href="../employers">Employers</a>
                                     </li>
                                     <li>
-                                        <a href="../job-seekers">Job Seekers</a>
+                                        <a href="../job-seekers">Tradesmen</a>
                                     </li>
                                 </ul>
                             </nav>
                             <div class="header-btns flex-box">
                                 <a href="" class="btn"
-                                    ><span>Find work now</span></a
+                                    ><span>See job board</span></a
                                 >
-                                <a href="../hire-workers" class="btn btn-dark"
-                                    ><span>Hire tradesmen</span></a
+                                <a
+                                    href="../available-trades"
+                                    class="btn btn-dark"
+                                    ><span>See trades now</span></a
                                 >
                             </div>
                         </div>
@@ -112,11 +114,10 @@
                         </div>
                         <div class="secondery-hero-inner">
                             <h2 class="h2 anim-load">Vacancies @ lsj.je</h2>
-                            <p class="anim-load">
-                                Without the hassle or commitment of full time
-                                employment
-                            </p>
-                            <a href="#" class="btn anim-load"
+
+                            <a
+                                href="#current-opportunities"
+                                class="btn anim-load"
                                 ><span>Get started</span></a
                             >
                         </div>
@@ -141,45 +142,15 @@
                 <!--Job Vacancies Section-->
                 <section class="vacancies-wrap" id="current-opportunities">
                     <div class="wrapper">
-                        <div class="pop-up">
-                            <div class="pop-up-container">
-                                <div class="application-content">
-                                    <h3>You are applying for</h3>
-                                    <div class="application-wrapper">
-                                        <div class="application-item">
-                                            <h4>Job:</h4>
-                                            <p>Carpenter</p>
-                                        </div>
-                                        <div class="application-item">
-                                            <h4>Company:</h4>
-                                            <p>AP Construction</p>
-                                        </div>
-                                        <div class="application-item">
-                                            <h4>Duration:</h4>
-                                            <p>4 Weeks</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="x-button">
-                                    <img
-                                        src="svgs/close-ellipse-svgrepo-com.svg"
-                                        alt="Close Button" />
-                                </button>
-                            </div>
-                        </div>
                         <div class="vacancies-inner flex-common">
                             <h2 class="anim-el clip-anim">
                                 Current opportunities
                             </h2>
-                            <a style="margin-block-start: 2rem" class="btn">
-                                Submit Jobs Now
-                            </a>
+
                             <div class="vacancies-container">
                                 <div class="vacancies-title-bar bg-black">
                                     <div class="vacancies-title">
-                                        <h6>Job Title</h6>
-                                        <h6>Start Date</h6>
-                                        <h6>Duration</h6>
+                                        <h6>Position</h6>
                                     </div>
                                     <div class="vacancies-title-icon">
                                         <img
@@ -235,24 +206,16 @@
                     <div class="wrapper">
                         <div class="pop-up">
                             <div class="pop-up-container">
-                                <div
-                                    style="
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                    "
-                                    class="application-content">
-                                    <h3
-                                        style="
-                                            line-height: 1.4;
-                                            max-width: 26ch;
-                                            text-align: center;
-                                        ">
-                                        Submit your job to be added to our
-                                        vacancies board.
-                                    </h3>
+                                <script
+                                    charset="utf-8"
+                                    type="text/javascript"
+                                    src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                                <div class="title-container">
+                                    <h2>Apply now</h2>
                                 </div>
-                                <button class="x-button">
+                                <div id="form-container"></div>
+
+                                <button class="close-button">
                                     <img
                                         src="../../job-board/svgs/close-ellipse-svgrepo-com.svg"
                                         alt="Close Button" />
@@ -262,15 +225,14 @@
                         <div class="texts-btn-inner flex-common">
                             <h2>
                                 Don’t worry if you don’t see any roles you want
-                                to apply for. 😱
+                                to apply for.
                             </h2>
                             <p>
-                                Register your interest now to be added to our
-                                talent pool and notified when new roles get
-                                posted
+                                Register your interest now to be notified when
+                                new roles get posted.
                             </p>
-                            <a class="btn submit-job-button"
-                                ><span>Register now</span></a
+                            <a href="/#contact" class="btn submit-job-button"
+                                ><span>Contact now</span></a
                             >
                         </div>
                     </div>
@@ -283,51 +245,6 @@
             <footer class="main-footer-section">
                 <div class="wrapper">
                     <div class="footer-inner flex">
-                        <div class="newsletter-wrap flex">
-                            <div class="newsletter-content">
-                                <h5>
-                                    Leave your <span>email</span> to be
-                                    <span>notified</span> when we have new
-                                    positions <span>available</span> or when we
-                                    have <span>new</span> candidates
-                                </h5>
-
-                                <p>
-                                    Leave your email in the relevant box and you
-                                    will be notified when new vacancies or
-                                    tradesmen become available.
-                                </p>
-                            </div>
-                            <div class="newsletter-form-wrap">
-                                <div
-                                    class="newsletter-form employers-newsletter">
-                                    <h6>Employers</h6>
-                                    <form action="#">
-                                        <input
-                                            type="email"
-                                            placeholder="Email..." />
-                                        <input
-                                            type="submit"
-                                            value="Employers" />
-                                    </form>
-                                </div>
-                                <div class="newsletter-form seekers-newsletter">
-                                    <h6>Job Seekers</h6>
-                                    <form action="#">
-                                        <input
-                                            type="email"
-                                            placeholder="Email..." />
-                                        <input
-                                            type="submit"
-                                            value="Employers" />
-                                    </form>
-                                </div>
-                                <p>
-                                    By subscribing you agree to with our
-                                    <a href="#">Privacy Policy</a>
-                                </p>
-                            </div>
-                        </div>
                         <div class="footer-widget-wrap flex">
                             <div class="footer-widget footer-logo">
                                 <a href="../"
@@ -383,7 +300,7 @@
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                <h6>Job Seekers</h6>
+                                <h6>Tradesmen</h6>
                                 <ul>
                                     <li>
                                         <a href="../job-seekers/#why-us"
@@ -485,10 +402,7 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
             crossorigin="anonymous"></script>
-        <script
-            type="text/javascript"
-            src="../js/common-scripts.js"
-            defer></script>
-        <script type="text/javascript" src="js/index.js" defer></script>
+        <script type="text/javascript" src="../js/common-scripts.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

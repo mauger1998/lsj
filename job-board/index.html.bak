@@ -42,12 +42,12 @@
                                 <ul>
                                     <li><a href="../">Home</a></li>
                                     <li><a href="../employers">Employers</a></li>
-                                    <li><a href="../job-seekers">Job Seekers</a></li>
+                                    <li><a href="../job-seekers">Tradesmen</a></li>
                                 </ul>
                             </nav>
                             <div class="header-btns flex-box">
-                                <a href="" class="btn"><span>Find work now</span></a>
-                                <a href="../hire-workers" class="btn btn-dark"><span>Hire tradesmen</span></a>
+                                <a href="" class="btn"><span>See job board</span></a>
+                                <a href="../available-trades" class="btn btn-dark"><span>See trades now</span></a>
                             </div>
                         </div>
                     </div>
@@ -505,7 +505,7 @@
                                     </form>
                                 </div>
                                 <div class="newsletter-form seekers-newsletter">
-                                    <h6>Job Seekers</h6>
+                                    <h6>Tradesmen</h6>
                                     <form action="#">
                                         <input type="email" placeholder="Email...">
                                         <input type="submit"  value="Employers">
@@ -542,20 +542,20 @@
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                <h6>Job Seekers</h6>
+                                <h6>Tradesmen</h6>
                                 <ul>
                                     <li><a href="../job-seekers/#why-search-for-us">Why Search for us</a></li>
                                     <li><a href="../job-seekers/#how-search-works">How Search Works</a></li>
                                     <li><a href="../job-seekers/#construction-projects">Construction Projects</a></li>
                                     <li><a href="../job-seekers/#testimonial-from-tradesmens">Testimonial from Tradesmens</a></li>
-                                    <li><a href="../job-seekers/#job-seekers-faq">Job Seekers Faq</a></li>
+                                    <li><a href="../job-seekers/#job-seekers-faq">Tradesmen Faq</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget">
                                 <h6>Candidate Pool</h6>
                                 <ul>
-                                    <li><a href="../hire-workers/#hire-workers">Hire Workers</a></li>
-                                    <li><a href="../hire-workers/#get-Started">Get Started</a></li>
+                                    <li><a href="../available-trades/#hire-workers">Hire Workers</a></li>
+                                    <li><a href="../available-trades/#get-Started">Get Started</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget">

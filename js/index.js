@@ -107,7 +107,7 @@ function appendElement(parent, child) {
 }
 
 fetchSanityData(
-    `https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27home%27%5D`
+    `https://1r3pn5o9.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%27home%27%5D+%7B%0A++title%2C%0A++%22content%22%3A+content%5B%5D%7B%0A++++...%2C%0A++++%22cards%22%3A+cards%5B%5D%7B%0A++++++...%2C%0A++++++%22image%22%3A+image.asset-%3Eurl%0A++++%7D%0A++%7D%0A%7D`
 ).then((data) => {
     const { result } = data
     const heroSectionContainerWrapper = document.querySelector('.hero-wrap')
@@ -129,10 +129,10 @@ fetchSanityData(
         <h1 class="anim-load">${heroSection.title}</h1>
         <p class="anim-load">${heroSection.text}</p>
         <div class="anim-load hero-btn">
-            <a class="btn" href="#">Tradesmen</a>
-            <a class="btn btn-dark" href="#">Employers</a>
+            <a class="btn" href="/job-seekers/">Tradesmen</a>
+            <a class="btn btn-dark" href="/employers/">Employers</a>
         </div>
-        <a class="anim-load scroll-next" href="#socialproof">
+        <a class="anim-load scroll-next" href="#social-proof">
             <svg width="30" height="45" viewBox="0 0 30 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.928406" y="0.962891" width="28.1432" height="42.792" rx="14.0716" stroke="black" />
                 <circle id="circle" cx="15" cy="32.4067" r="7.91455" fill="black" />
@@ -167,14 +167,13 @@ fetchSanityData(
                                     <img src="svgs/commitments.svg" alt="${card.title}" />
                                 </div>
                                 <figure class="anim-el clip-anim">
-                                    <img src="img/employers-1.jpg" alt="${card.title}" />
+                                    <img src=${card.image} alt="${card.title}" />
                                 </figure>
                             </div>
                             <h3>${card.title}</h3>
                             <p>${card.text}</p>
-                            <a href="#" class="btn btn-dark">
-                                <span class="desk">Hire tradesmen</span>
-                                <span class="mobi">Hire now</span>
+                            <a href="/available-trades/" class="btn btn-dark">
+                                <span>See trades now</span>
                             </a>
                         </div>
                     `
@@ -199,14 +198,14 @@ fetchSanityData(
                                 <img src="svgs/commitments.svg" alt="${card.title}" />
                             </div>
                             <figure class="anim-el clip-anim">
-                                <img src="img/employers-1.jpg" alt="${card.title}" />
+                                <img src=${card.image} alt="${card.title}" />
                             </figure>
                         </div>
                         <h3>${card.title}</h3>
                         <p>${card.text}</p>
-                        <a href="#" class="btn btn-dark">
-                            <span class="desk">Hire tradesmen</span>
-                            <span class="mobi">Hire now</span>
+                        <a href="/job-board/" class="btn btn-dark">
+                            <span >See jobs now</span>
+                            
                         </a>
                     </div>
                 `

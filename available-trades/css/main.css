@@ -1,5 +1,5 @@
 .hero-main .wrapper {
-  padding-block: 12rem;
+  padding-block: 8rem 0;
 }
 .hero-main .wrapper h1 {
   text-align: center;
@@ -7,6 +7,8 @@
 .hero-main .wrapper p {
   text-align: center;
   margin-block-start: 1rem;
+  max-width: 50ch;
+  margin-inline: auto;
 }
 .hero-main .wrapper .trades-grid {
   display: grid;
@@ -15,6 +17,9 @@
   gap: 2rem;
   place-content: center;
   margin-block: 4rem;
+}
+.hero-main .wrapper .trades-grid a {
+  color: black;
 }
 .hero-main .wrapper .trades-grid .card {
   background-color: #f8b80e;
@@ -29,4 +34,12 @@
 .hero-main .wrapper .trades-grid .card:hover {
   box-shadow: 3px 3px 0 0 var(--black);
   transform: translate(3px, 3px);
+}
+@media (max-width: 600px) {
+  .hero-main .wrapper {
+    padding-block: 4rem;
+  }
+  .hero-main .wrapper .trades-grid {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=main.css.map */

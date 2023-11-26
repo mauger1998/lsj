@@ -360,6 +360,7 @@
 }
 .faq-hidden-content p {
     padding-bottom: 1rem;
+    font-family: var(--Montserrat);
 }
 .faq-main .hire-tradesmen-btn {
     margin-top: 3rem;
